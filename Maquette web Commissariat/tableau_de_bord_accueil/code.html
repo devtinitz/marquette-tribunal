@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "secondary": "#8a5100",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#171c22",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-highest": "#dee3eb",
+              "tertiary": "#3a5296",
+              "inverse-surface": "#2c3137",
+              "surface-container-low": "#f0f4fd",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-container": "#643900",
+              "secondary-container": "#fe9800",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "tertiary-container": "#536bb0",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-bright": "#f8f9ff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-container-high": "#e4e8f1",
+              "outline": "#6f7a69",
+              "surface-container": "#eaeef7",
+              "surface-tint": "#006e00",
+              "on-surface-variant": "#3f4a3a",
+              "on-tertiary-container": "#eff0ff",
+              "on-background": "#171c22",
+              "inverse-on-surface": "#edf1fa",
+              "inverse-primary": "#72de5e",
+              "surface-dim": "#d6dae3",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-variant": "#dee3eb",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary": "#ffffff",
+              "primary": "#006400",
+              "primary-fixed": "#8dfb77",
+              "on-primary-container": "#ccffba",
+              "primary-container": "#008000",
+              "outline-variant": "#becab6",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "background": "#f8f9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .no-line { border: none !important; }
+        .tonal-layering { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] z-40 bg-slate-50/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)] flex flex-col p-6 space-y-8">
+<div class="flex flex-col items-center gap-4">
+<img alt="Armoiries de la Côte d'Ivoire" class="w-16 h-auto opacity-90" data-alt="Official coat of arms of Ivory Coast featuring an elephant head and national colors in a professional administrative style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoVDjAFvTwIfNpgyxUw04tKoWkmTvmS5vdroxcwNXbukxZpGCmUFXFfb4OPrx92foPSvNh_bDOHGADHhHbFT8oHL_VWyuHAPtb_Uu3OeRDYR7FCt-_88MIVcPlOaMGTNwW6iw7w4cXi9GtD7WULdRJGNbIJJl96DiQMnOSSc3dK_Q3w-hz0gjsCVZJ_yCzDVAn3hNOjSRGUjIalO7A-8wX0Wr8zXg8GN8-ieIGbj2vzflPdXPL_zUHej_zYGdhvuEnwNgdfLkqNVs"/>
+<div class="text-center">
+<h1 class="text-xl font-bold tracking-tighter text-green-900 dark:text-green-500">Tribunal de Yopougon</h1>
+<p class="text-[10px] uppercase tracking-wider font-medium text-slate-500">Suivi des Plaintes</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-green-900 dark:text-green-400 font-bold bg-white/50 dark:bg-slate-900/50 rounded-lg active:scale-[0.97] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-semibold tracking-tight">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg active:scale-[0.97] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="text-sm font-semibold tracking-tight">Plaintes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg active:scale-[0.97] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="send_and_archive">send_and_archive</span>
+<span class="text-sm font-semibold tracking-tight">Transmission Parquet</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg active:scale-[0.97] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-sm font-semibold tracking-tight">Rapports</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 pt-6 bg-slate-200/50 dark:bg-slate-800/50 -mx-6 px-6">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-xl font-bold text-sm shadow-lg active:scale-[0.97] transition-all mb-4">
+                Nouvelle Plainte
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-green-700 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-xs font-medium uppercase tracking-wider">Mon Profil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-green-700 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-xs font-medium uppercase tracking-wider">Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-red-500 hover:text-red-700 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-xs font-medium uppercase tracking-wider">Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8 tonal-layering no-line">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-green-500/20" placeholder="Rechercher une plainte, un prévenu..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-2">
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2 text-slate-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2 text-slate-500">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-200 dark:border-slate-800">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-on-surface">Agent Judiciaire</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Commissariat Central</p>
+</div>
+<img alt="Avatar de l'Agent Judiciaire" class="w-10 h-10 rounded-full bg-surface-container-high" data-alt="Professional portrait avatar of a male judicial agent in a minimalist modern style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAeh1EtZfrIM2Jh8FbKM20nE406wkZnP0oBZ-dsmaxlls3RfB5hZjATBJVb57zItE8-GGN6BRQHsLN65qlFzu8naAl7Cw1eTzAuV0VDHN0cVGc8-tqqwSW-O-wXK_jIpoJ1cNInoZrznFcJQt-ox-Dcb-ffM4zrhjspG4l7wZMMiUX4mYlh1A6ZuU7cDAkforsMaunbT9H1lAnOCMojZQCj8WE3JE-f3BqtwqMKfPxZy4hzhEpVzfSQantyHcWalF9BApb8r_Fkog"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-24 pb-12 px-10 min-h-screen bg-surface-container-low">
+<!-- Welcome Section -->
+<section class="mb-12">
+<h2 class="text-[2.75rem] font-extrabold tracking-tight text-on-surface leading-none mb-2">Tableau de bord</h2>
+<p class="text-on-surface-variant text-lg">Aperçu quotidien de l'activité judiciaire — 24 Octobre 2023</p>
+</section>
+<!-- Stats Grid (Indicators) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Indicator Card 1: Reçues -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.04)] flex flex-col justify-between h-48 group hover:translate-y-[-4px] transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="assignment_late">assignment_late</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Aujourd'hui</span>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-on-surface">42</p>
+<p class="text-sm font-medium text-on-surface-variant">Plaintes reçues</p>
+</div>
+<div class="w-full bg-slate-100 h-1 rounded-full overflow-hidden mt-4">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+</div>
+<!-- Indicator Card 2: En cours -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.04)] flex flex-col justify-between h-48 group hover:translate-y-[-4px] transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-secondary-container/10 p-3 rounded-lg text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Traitement</span>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-on-surface">18</p>
+<p class="text-sm font-medium text-on-surface-variant">En cours d'instruction</p>
+</div>
+<div class="w-full bg-slate-100 h-1 rounded-full overflow-hidden mt-4">
+<div class="bg-secondary-container h-full w-1/2"></div>
+</div>
+</div>
+<!-- Indicator Card 3: Transmises -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.04)] flex flex-col justify-between h-48 group hover:translate-y-[-4px] transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-tertiary/10 p-3 rounded-lg text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="verified">verified</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Finalisé</span>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-on-surface">25</p>
+<p class="text-sm font-medium text-on-surface-variant">Transmises au Parquet</p>
+</div>
+<div class="w-full bg-slate-100 h-1 rounded-full overflow-hidden mt-4">
+<div class="bg-tertiary h-full w-[85%]"></div>
+</div>
+</div>
+</section>
+<!-- Recent Activity Section -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-1.5rem font-semibold text-on-surface-variant">Dernières Plaintes Récentes</h3>
+<button class="text-tertiary font-medium text-sm flex items-center gap-2 hover:underline">
+                    Voir tout l'historique <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)]">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">ID Dossier</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">Plaignant</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">Type de Litige</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">Status</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">Date</th>
+<th class="px-8 py-4 text-right"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-4 font-mono text-xs font-bold text-tertiary">#YOP-2023-4581</td>
+<td class="px-8 py-4 text-sm font-medium">Kouassi Kouamé Jean</td>
+<td class="px-8 py-4 text-sm">Différend commercial</td>
+<td class="px-8 py-4">
+<span class="bg-secondary-container/20 text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">EN ATTENTE</span>
+</td>
+<td class="px-8 py-4 text-sm text-slate-500">14:20 - Aujourd'hui</td>
+<td class="px-8 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="visibility">visibility</span></button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-4 font-mono text-xs font-bold text-tertiary">#YOP-2023-4580</td>
+<td class="px-8 py-4 text-sm font-medium">Konan Aya Mireille</td>
+<td class="px-8 py-4 text-sm">Abus de confiance</td>
+<td class="px-8 py-4">
+<span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">RESOLU</span>
+</td>
+<td class="px-8 py-4 text-sm text-slate-500">11:05 - Aujourd'hui</td>
+<td class="px-8 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="visibility">visibility</span></button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-4 font-mono text-xs font-bold text-tertiary">#YOP-2023-4579</td>
+<td class="px-8 py-4 text-sm font-medium">Diarrassouba Moussa</td>
+<td class="px-8 py-4 text-sm">Nuisances sonores</td>
+<td class="px-8 py-4">
+<span class="bg-tertiary-container/20 text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">LEGAL REVIEW</span>
+</td>
+<td class="px-8 py-4 text-sm text-slate-500">09:45 - Aujourd'hui</td>
+<td class="px-8 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="visibility">visibility</span></button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-4 font-mono text-xs font-bold text-tertiary">#YOP-2023-4578</td>
+<td class="px-8 py-4 text-sm font-medium">Bakayoko Ibrahim</td>
+<td class="px-8 py-4 text-sm">Vol avec effraction</td>
+<td class="px-8 py-4">
+<span class="bg-secondary-container/20 text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">EN ATTENTE</span>
+</td>
+<td class="px-8 py-4 text-sm text-slate-500">Hier - 17:30</td>
+<td class="px-8 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="visibility">visibility</span></button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-4 font-mono text-xs font-bold text-tertiary">#YOP-2023-4577</td>
+<td class="px-8 py-4 text-sm font-medium">Ouattara Alassane B.</td>
+<td class="px-8 py-4 text-sm">Dommages aux biens</td>
+<td class="px-8 py-4">
+<span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">RESOLU</span>
+</td>
+<td class="px-8 py-4 text-sm text-slate-500">Hier - 15:15</td>
+<td class="px-8 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="visibility">visibility</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Summary Footer or Additional Visual -->
+<section class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-tertiary text-white p-10 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-2xl font-bold mb-4">Transmission au Parquet</h4>
+<p class="text-white/80 max-w-sm mb-8 leading-relaxed">Le dossier #YOP-2023-4580 a été validé par le substitut du procureur. La transmission finale est prête.</p>
+<button class="bg-white text-tertiary px-6 py-3 rounded-lg font-bold text-sm hover:bg-slate-100 transition-colors">Transmettre maintenant</button>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[12rem] opacity-10 rotate-12" data-icon="send_and_archive">send_and_archive</span>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-xl flex items-center gap-8">
+<div class="flex-1">
+<h4 class="text-xl font-bold text-on-surface mb-2">Aide et Support</h4>
+<p class="text-on-surface-variant text-sm mb-6">Besoin d'aide pour qualifier une infraction ? Consultez le guide de procédure numérique.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-white p-2 rounded-lg"><span class="material-symbols-outlined" data-icon="menu_book">menu_book</span></button>
+<button class="bg-secondary text-white p-2 rounded-lg"><span class="material-symbols-outlined" data-icon="contact_support">contact_support</span></button>
+</div>
+</div>
+<div class="w-32 h-32 rounded-full border-4 border-white shadow-xl overflow-hidden bg-slate-200">
+<img alt="Aide visuelle" class="w-full h-full object-cover" data-alt="Abstract geometric shapes in blue and gold representing administrative order and support" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvUcmEdmTOkiqYBvk_mh3Wl7vKTMY_pmraACD0CN0X9deuJqUArE_yxn5pbkqaVi7p_LxevMrgp0HJl5-XpXgdVzEM6DyDXER7s-yMYwWMJFeBw7TIFFEdBzbBcPR2NbW6sAYrFGYBr8pg0XUOdEmyNSOha08qKFUexSp0GSkmTIPv-KlaeYetGopFFgb1nEFEIhBRzW_4zlaDsBUmxo6zeesdh6jmB1X4mMFJeWGFMjSBDMAkp0X6UGnmwdEqlmpbg8fz7fc5Mas"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Contextual FAB (Shared Component Style Logic) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-[0px_24px_48px_-12px_rgba(0,100,0,0.3)] flex items-center justify-center active:scale-95 transition-all z-50 group">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+<span class="absolute right-20 bg-on-surface text-surface text-xs font-bold py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Nouvelle Plainte</span>
+</button>
+</body></html>

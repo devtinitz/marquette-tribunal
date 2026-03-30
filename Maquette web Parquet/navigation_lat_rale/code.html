@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e3e0",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e8e8e5",
+              "on-background": "#1a1c1a",
+              "tertiary": "#3a5296",
+              "secondary-fixed": "#ffdcbd",
+              "on-tertiary-fixed": "#00174a",
+              "outline-variant": "#becab6",
+              "secondary": "#8a5100",
+              "inverse-on-surface": "#f1f1ee",
+              "on-error-container": "#93000a",
+              "surface-variant": "#e2e3e0",
+              "tertiary-container": "#536bb0",
+              "inverse-primary": "#72de5e",
+              "on-secondary-fixed": "#2c1600",
+              "on-error": "#ffffff",
+              "outline": "#6f7a69",
+              "surface-dim": "#dadad7",
+              "surface-container-low": "#f3f4f1",
+              "error": "#ba1a1a",
+              "surface-bright": "#f9f9f6",
+              "inverse-surface": "#2f312f",
+              "primary-fixed": "#8dfb77",
+              "on-primary-fixed": "#002200",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "primary": "#006400",
+              "error-container": "#ffdad6",
+              "surface-tint": "#006e00",
+              "surface": "#f9f9f6",
+              "on-secondary-container": "#643900",
+              "on-primary-container": "#ccffba",
+              "on-secondary-fixed-variant": "#693c00",
+              "tertiary-fixed": "#dbe1ff",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "primary-fixed-dim": "#72de5e",
+              "secondary-container": "#fe9800",
+              "on-surface": "#1a1c1a",
+              "on-tertiary-container": "#eff0ff",
+              "on-primary-fixed-variant": "#005300",
+              "secondary-fixed-dim": "#ffb86f",
+              "background": "#f9f9f6",
+              "on-surface-variant": "#3f4a3a",
+              "primary-container": "#008000",
+              "surface-container": "#eeeeeb"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Sidebar Navigation (The Anchor) -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-surface-container-low flex flex-col py-6 px-4 shadow-[24px_0_24px_rgba(26,28,26,0.06)] z-50">
+<!-- Header Section -->
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Armoiries de la République de Côte d'Ivoire" class="w-10 h-10 object-contain" data-alt="Official coat of arms of Ivory Coast featuring an elephant head flanked by palm trees in gold and green tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXRFPBq4F9egUkgT4oCE8izszOFMLwTJYZIGfRM0eY5m3xF3lvsnjXwgZ-cOaSwoG_bcHNTMADpA30-gMelecnnrIwNRtedM5NYlAXL3SI0GTXLzpCxC9GG7els6gktIFN5eBDkV7u2bUnz6jRcPOJL6CBWIOEthFw9AVg4BD-aVwEhbhh04w9q1P-H2at_YKxbejynF0h5Z2YpXoaNrnCHGQKZN0xIYRdg_WKE4tkYtDeLiHLLuHhpnLF8bNwfs9gpkxeEQhf_u8"/>
+<div>
+<h1 class="text-lg font-bold tracking-tighter text-on-background">Parquet de Yopougon</h1>
+<p class="font-['Inter'] uppercase tracking-[0.05em] text-[10px] font-bold text-outline">Ministère de la Justice</p>
+</div>
+</div>
+<!-- Main CTA -->
+<button class="w-full flex items-center justify-center gap-2 py-4 px-6 bg-primary text-on-primary rounded-xl font-bold active:scale-[0.98] transition-transform shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add_circle</span>
+<span class="text-sm">Nouveau Dossier</span>
+</button>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-grow space-y-1">
+<!-- Active State: Accueil -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-sm tracking-tight">Accueil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-background hover:bg-surface-container-high transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="text-sm tracking-tight">Dossiers reçus</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-background hover:bg-surface-container-high transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="text-sm tracking-tight">Audiences</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-background hover:bg-surface-container-high transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm tracking-tight">Rapports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-background hover:bg-surface-container-high transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-sm tracking-tight">Profil magistrat</span>
+</a>
+</nav>
+<!-- Footer Section -->
+<div class="mt-auto pt-6 border-t border-outline-variant/15 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-background hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm tracking-tight">Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-secondary-fixed/30 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm tracking-tight font-bold">Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- Content Canvas (Presentation Background) -->
+<main class="ml-72 min-h-screen bg-surface p-12 flex flex-col">
+<!-- TopAppBar (Simplified for Focus) -->
+<header class="flex justify-between items-center mb-12">
+<div>
+<span class="font-['Inter'] uppercase tracking-[0.05em] text-xs font-bold text-tertiary">Tableau de bord</span>
+<h2 class="text-3xl font-black tracking-tight text-on-background mt-1">TRIBUNAL DE YOPOUGON</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full cursor-pointer transition-all">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span>
+</div>
+<div class="flex items-center gap-3 pl-6 border-l border-outline-variant/20">
+<div class="text-right">
+<p class="text-sm font-bold leading-none">M. le Magistrat KOUADIO</p>
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest mt-1">Président de Chambre</p>
+</div>
+<img alt="Profil du Magistrat" class="w-12 h-12 rounded-full object-cover border-2 border-primary/20" data-alt="Professional portrait of a West African man in a business suit, neutral background, soft professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuJyuF25hVioCFuJgsMAP5VMSND5JU_q5LvezNnYnoHYHYFbolVeem4NOt0kN9YDqumeat8y-XPBIeykCxStcJYZzjcTd0nIO_vPTo2GIWwPSZHtzEQs8P8q8ZJ7_CxwmaClIg5ot3dijg_ooXRICgz1eCGpbAjT6rLN-9bGk3Do4Dyac6hJqbe87MqvUJ_Cx8ufxY8yYyxqeHpcgQbjbkgxwmAWldBejn6AYD1mlSLqlY8vizeYzYWTT3xM61EJRq-eaj6LNGgA"/>
+</div>
+</div>
+</header>
+<!-- Bento Grid Presentation -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Main Hero Stats -->
+<div class="col-span-8 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between min-h-[300px] relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-sm font-bold text-primary mb-2 uppercase tracking-widest">Activité Récente</h3>
+<p class="text-4xl font-black text-on-surface max-w-md">Gestion dématérialisée des procédures judiciaires.</p>
+</div>
+<div class="flex gap-4 mt-8 relative z-10">
+<div class="bg-surface-container-lowest p-6 rounded-lg flex-1 shadow-sm">
+<p class="text-outline text-xs font-bold uppercase tracking-tighter mb-1">Dossiers en cours</p>
+<p class="text-3xl font-black text-primary">124</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg flex-1 shadow-sm">
+<p class="text-outline text-xs font-bold uppercase tracking-tighter mb-1">Audiences ce jour</p>
+<p class="text-3xl font-black text-tertiary">08</p>
+</div>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] opacity-10">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+</div>
+<!-- Quick Access Card -->
+<div class="col-span-4 bg-tertiary text-on-tertiary rounded-xl p-8 flex flex-col shadow-xl">
+<span class="material-symbols-outlined text-4xl mb-4">gavel</span>
+<h4 class="text-xl font-bold mb-4">Calendrier des Audiences</h4>
+<p class="text-on-tertiary/80 text-sm mb-8 leading-relaxed">Consultez l'ordre du jour et les vacations prévues pour la semaine en cours.</p>
+<button class="mt-auto bg-white/10 hover:bg-white/20 py-3 rounded-lg text-sm font-bold backdrop-blur-md border border-white/20 transition-all">
+                    Accéder au planning
+                </button>
+</div>
+<!-- Judicial Data Table Sample -->
+<div class="col-span-12 bg-surface-container-lowest rounded-xl p-8 mt-4 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-bold tracking-tight">Derniers Dossiers Assignés</h3>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                        Voir tout <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-outline text-[10px] font-bold uppercase tracking-widest">
+<th class="pb-6">N° Dossier</th>
+<th class="pb-6">Parties</th>
+<th class="pb-6">Nature</th>
+<th class="pb-6">Statut</th>
+<th class="pb-6">Délai</th>
+</tr>
+</thead>
+<tbody class="text-sm font-medium">
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="py-4 font-bold">#YOPOU-2024-0012</td>
+<td class="py-4">Koffi vs. Société Transport Abidjanais</td>
+<td class="py-4">Civil / Commercial</td>
+<td class="py-4">
+<span class="px-3 py-1 bg-primary-container text-on-primary-fixed-variant rounded-full text-[10px] font-bold uppercase tracking-wider">Poursuites</span>
+</td>
+<td class="py-4 text-outline">J-3</td>
+</tr>
+<tr class="group hover:bg-surface-container-low transition-colors bg-surface-container-low/30">
+<td class="py-4 font-bold">#YOPOU-2024-0015</td>
+<td class="py-4">Ministère Public vs. Anonyme</td>
+<td class="py-4">Correctionnel</td>
+<td class="py-4">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-fixed-variant rounded-full text-[10px] font-bold uppercase tracking-wider">Instruction</span>
+</td>
+<td class="py-4 text-outline">Demain</td>
+</tr>
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="py-4 font-bold">#YOPOU-2023-0988</td>
+<td class="py-4"> Succession Traoré</td>
+<td class="py-4">Succession / Héritage</td>
+<td class="py-4">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-wider">Classement</span>
+</td>
+<td class="py-4 text-outline">Archivé</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>

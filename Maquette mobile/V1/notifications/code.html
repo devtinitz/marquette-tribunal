@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - Tribunal de Yopougon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "outline-variant": "#becab6",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface-container-low": "#f3f3f3",
+              "surface-container": "#eeeeee",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#6f7a69",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "on-surface-variant": "#3f4a3a",
+              "surface-variant": "#e2e2e2",
+              "on-tertiary-container": "#eff0ff",
+              "surface": "#f9f9f9",
+              "primary-container": "#008000",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-bright": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "inverse-surface": "#2f3131",
+              "error-container": "#ffdad6",
+              "surface-tint": "#006e00",
+              "inverse-primary": "#72de5e",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-high": "#e8e8e8",
+              "on-error": "#ffffff",
+              "on-surface": "#1a1c1c",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary-fixed-variant": "#693c00",
+              "secondary-container": "#fe9800",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "on-primary-container": "#ccffba",
+              "tertiary-container": "#536bb0",
+              "tertiary": "#3a5296",
+              "tertiary-fixed": "#dbe1ff",
+              "error": "#ba1a1a",
+              "primary-fixed": "#8dfb77",
+              "surface-container-highest": "#e2e2e2",
+              "secondary": "#8a5100",
+              "primary": "#006400",
+              "background": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "inverse-on-surface": "#f1f1f1",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#643900"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-800" data-icon="account_balance">account_balance</span>
+<h1 class="text-green-900 font-black text-sm uppercase tracking-widest">TRIBUNAL DE YOPOUGON</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-100 p-2 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Title & Stats Bento Section -->
+<div class="mb-8">
+<h2 class="text-4xl font-bold tracking-tight text-on-surface mb-2">Notifications</h2>
+<p class="text-on-surface-variant font-medium">Suivi de vos dossiers juridiques en temps réel.</p>
+</div>
+<!-- Notification Timeline -->
+<div class="space-y-4">
+<!-- Category Header -->
+<div class="pt-2 pb-1">
+<span class="text-xs font-bold uppercase tracking-wider text-outline">Aujourd'hui</span>
+</div>
+<!-- Notification Card: Audience -->
+<div class="bg-surface-container-low rounded-xl p-5 flex gap-4 items-start relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-container"></div>
+<div class="bg-secondary-container/10 p-3 rounded-full text-secondary">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface leading-snug">Audience fixée le 15/06 à 09h</h3>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">09:41</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-3">Votre présence est requise à la salle d'audience 4 pour l'affaire N°2023-YP-0452.</p>
+<div class="flex gap-2">
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-lg text-xs font-bold shadow-sm transition-all active:scale-95">Voir le dossier</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-lg text-xs font-bold transition-all active:scale-95">Ajouter au calendrier</button>
+</div>
+</div>
+</div>
+<!-- Notification Card: Transmise -->
+<div class="bg-surface-container-low rounded-xl p-5 flex gap-4 items-start group">
+<div class="bg-tertiary-container/10 p-3 rounded-full text-tertiary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface leading-snug">Transmise au parquet</h3>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Il y a 2h</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Le dossier de plainte relative au litige foncier a été officiellement transmis au Procureur de la République.</p>
+</div>
+</div>
+<!-- Category Header -->
+<div class="pt-6 pb-1">
+<span class="text-xs font-bold uppercase tracking-wider text-outline">Hier</span>
+</div>
+<!-- Notification Card: Enregistrée -->
+<div class="bg-surface-container-low rounded-xl p-5 flex gap-4 items-start group">
+<div class="bg-primary-container/10 p-3 rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface leading-snug">Plainte enregistrée</h3>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Hier, 14:20</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Votre dépôt de plainte en ligne a été validé par les services du greffe. Numéro de suivi : #88219-YP.</p>
+</div>
+</div>
+<!-- Notification Card: Document Reçu -->
+<div class="bg-surface-container-low rounded-xl p-5 flex gap-4 items-start group">
+<div class="bg-outline/10 p-3 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface leading-snug">Nouveau document disponible</h3>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Hier, 11:05</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Le récépissé de dépôt est désormais consultable dans votre espace "Mes Plaintes".</p>
+</div>
+</div>
+<!-- Empty State Spacer -->
+<div class="py-10 flex flex-col items-center justify-center opacity-40">
+<span class="material-symbols-outlined text-6xl mb-2" data-icon="history">history</span>
+<p class="text-sm font-bold">Fin de l'historique récent</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/80 backdrop-blur-md z-50 rounded-t-3xl border-t border-slate-100 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-green-600" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="home">home</span>
+<span class="text-[11px] font-semibold tracking-tight">Accueil</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-green-600" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="gavel">gavel</span>
+<span class="text-[11px] font-semibold tracking-tight">Mes Plaintes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-green-600" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="add_circle">add_circle</span>
+<span class="text-[11px] font-semibold tracking-tight">Déposer</span>
+</a>
+<!-- ACTIVE ITEM: Contextually "Notifications" sits under "Profil" or as a floating state, here we highlight Profil as the base -->
+<a class="flex flex-col items-center justify-center bg-green-50 text-green-800 rounded-2xl px-5 py-2 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[11px] font-semibold tracking-tight">Profil</span>
+</a>
+</nav>
+<!-- Contextual Info Card (Asymmetric Layout element) -->
+<div class="fixed right-6 bottom-28 w-16 h-16 bg-primary text-on-primary rounded-full shadow-xl flex items-center justify-center group cursor-pointer active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<div class="absolute right-20 bg-inverse-surface text-inverse-on-surface text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Aide juridique</div>
+</div>
+</body></html>

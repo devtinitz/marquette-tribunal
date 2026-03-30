@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "secondary": "#8a5100",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#171c22",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-highest": "#dee3eb",
+              "tertiary": "#3a5296",
+              "inverse-surface": "#2c3137",
+              "surface-container-low": "#f0f4fd",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-container": "#643900",
+              "secondary-container": "#fe9800",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "tertiary-container": "#536bb0",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-bright": "#f8f9ff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-container-high": "#e4e8f1",
+              "outline": "#6f7a69",
+              "surface-container": "#eaeef7",
+              "surface-tint": "#006e00",
+              "on-surface-variant": "#3f4a3a",
+              "on-tertiary-container": "#eff0ff",
+              "on-background": "#171c22",
+              "inverse-on-surface": "#edf1fa",
+              "inverse-primary": "#72de5e",
+              "surface-dim": "#d6dae3",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-variant": "#dee3eb",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary": "#ffffff",
+              "primary": "#006400",
+              "primary-fixed": "#8dfb77",
+              "on-primary-container": "#ccffba",
+              "primary-container": "#008000",
+              "outline-variant": "#becab6",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "background": "#f8f9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-hidden">
+<!-- SideNavBar Component (Shared Component Implementation) -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] z-40 bg-slate-50/70 backdrop-blur-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)] flex flex-col h-full p-6 space-y-8">
+<!-- Brand Header Section -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center p-1 overflow-hidden">
+<img alt="Drapeau Côte d'Ivoire" class="w-full h-auto" data-alt="Coat of arms or national flag of Côte d'Ivoire in a clean minimalist shield frame for an official government institution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD68eThnVBHjLdSGorhZJkGPPRWyNfSmegllFLG0Od8DKrLTzJRRr8TXRXQ74GoE7Ya980IpIukRMEwWXZp-kLFqpBQfC94CidzH66fH-8cvMEuyPxJoxdUKjVsHP7OU7U1uR-7ynxYYZYEcuwl8N-wgpTBKfMTUuhHBISgM_-7cBB2UxekmnbJdOzRtnMObB9HZUHP1fI-fDBIQPahKT2-jHaPet2FLpTUsJWSObb3VHAQ4qGtNvsNbsR5Gx0Maelchi6Ib04iYKQ"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tighter text-green-900 leading-tight">Tribunal de Yopougon</span>
+<span class="text-[10px] uppercase tracking-wider font-medium text-slate-500">Suivi des Plaintes</span>
+</div>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white py-3 px-4 rounded-lg font-semibold text-sm shadow-lg active:scale-[0.97] transition-all duration-200">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+                Nouvelle Plainte
+            </button>
+</div>
+<!-- Main Navigation Links -->
+<nav class="flex-1 space-y-2">
+<!-- Active Tab Logic: Tableau de bord -->
+<a class="flex items-center gap-3 px-4 py-3 text-green-900 font-bold bg-white/50 rounded-lg transition-transform active:scale-[0.97]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 hover:bg-slate-100/80 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="text-sm">Plaintes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 hover:bg-slate-100/80 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="send_and_archive">send_and_archive</span>
+<span class="text-sm">Transmission Parquet</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 hover:bg-slate-100/80 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-sm">Rapports</span>
+</a>
+</nav>
+<!-- Footer Navigation Section -->
+<div class="pt-6 border-t border-slate-200/50 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 hover:bg-slate-100/80 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-sm">Mon Profil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 hover:bg-slate-100/80 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error/80 hover:text-error hover:bg-error-container/20 transition-all duration-200 rounded-lg mt-4" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-sm">Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar Component Implementation -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 z-30 bg-white/80 backdrop-blur-md flex items-center justify-between px-8">
+<div class="flex items-center gap-4 bg-slate-100 rounded-full px-4 py-2 w-96 focus-within:ring-2 focus-within:ring-green-500/20 transition-all">
+<span class="material-symbols-outlined text-slate-400" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400" placeholder="Rechercher un dossier ou une plainte..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-50 rounded-full p-2 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button class="text-slate-500 hover:bg-slate-50 rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-semibold text-on-surface">M. Kouassi</p>
+<p class="text-[10px] text-slate-500 uppercase font-medium">Magistrat</p>
+</div>
+<img alt="Avatar de l'Agent Judiciaire" class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed" data-alt="Professional headshot of a West African man in formal business attire, clean background, corporate photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGw3kPmqXS2bwE4nfiC-ZE1NbM76hXosDNtBrsuGnVs_sjw9mIwvi6Gt6xCVhd2qUqeCuFmAuiqHucMfFbs5dYKSvFgC18mSyw_6SpO5BEGEXj6FaG9Nu2TJfQFxadICJnTjTMqTgBodtN20oCd4YSdCcM91Lg_yXd098sF43L-4xemc0TE7XLJuoJ5WkZA6YbuQMVSC4VbAnpPrzz6L6ZhTuJNX8Af1Yq8rHW9norq-wiXiObGS-xz-dTz0p8ERq5CE1R4HCquUE"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-16 min-h-screen bg-surface-container-low p-8">
+<div class="max-w-7xl mx-auto">
+<!-- Greeting Section -->
+<div class="mb-12">
+<h1 class="text-[2.75rem] font-bold tracking-tight text-on-surface mb-2 leading-none">Bonjour, Monsieur le Magistrat</h1>
+<p class="text-on-surface-variant text-lg">Voici l'état actuel des dossiers en cours au Tribunal de Yopougon.</p>
+</div>
+<!-- Dashboard Stats Bento Grid -->
+<div class="grid grid-cols-12 gap-6 mb-12">
+<div class="col-span-12 md:col-span-4 bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-container/10 rounded-xl">
+<span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
+</div>
+<span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-1 rounded-full">+12%</span>
+</div>
+<h3 class="text-slate-500 text-sm font-medium uppercase tracking-wider mb-1">Plaintes actives</h3>
+<p class="text-3xl font-bold text-on-surface">1,284</p>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary-container/10 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+</div>
+<span class="text-slate-400 text-xs font-bold bg-slate-50 px-2 py-1 rounded-full">Stable</span>
+</div>
+<h3 class="text-slate-500 text-sm font-medium uppercase tracking-wider mb-1">Dossiers transmis</h3>
+<p class="text-3xl font-bold text-on-surface">856</p>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-tertiary-container/10 rounded-xl">
+<span class="material-symbols-outlined text-tertiary" data-icon="timer">timer</span>
+</div>
+<span class="text-error text-xs font-bold bg-error-container/20 px-2 py-1 rounded-full">-5%</span>
+</div>
+<h3 class="text-slate-500 text-sm font-medium uppercase tracking-wider mb-1">En attente parquet</h3>
+<p class="text-3xl font-bold text-on-surface">42</p>
+</div>
+</div>
+<!-- Recent Activity Tonal Layering Section -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Recent Complaints -->
+<div class="col-span-12 lg:col-span-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-on-surface">Dernières Plaintes</h2>
+<button class="text-tertiary text-sm font-semibold hover:underline">Voir tout</button>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden">
+<div class="divide-y divide-slate-100">
+<!-- Complaint Item 1 -->
+<div class="p-6 flex items-center gap-6 hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold group-hover:bg-primary-container/20 group-hover:text-primary transition-colors">
+                                    BK
+                                </div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Affaire Bertin Koffi vs. SODEFOR</h4>
+<p class="text-sm text-slate-500">Litige foncier - District de Yopougon-Andokoi</p>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 bg-secondary-container/20 text-on-secondary-container text-[10px] font-bold uppercase tracking-wider rounded-full">En attente</span>
+<p class="text-[10px] text-slate-400 mt-2">Il y a 2 heures</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-tertiary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Complaint Item 2 -->
+<div class="p-6 flex items-center gap-6 hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold group-hover:bg-primary-container/20 group-hover:text-primary transition-colors">
+                                    MT
+                                </div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Plainte Marie Touré</h4>
+<p class="text-sm text-slate-500">Nuisances sonores et troubles du voisinage</p>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 bg-primary-container/20 text-on-primary-container text-[10px] font-bold uppercase tracking-wider rounded-full">Transmis</span>
+<p class="text-[10px] text-slate-400 mt-2">Hier, 16:45</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-tertiary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Complaint Item 3 -->
+<div class="p-6 flex items-center gap-6 hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold group-hover:bg-primary-container/20 group-hover:text-primary transition-colors">
+                                    JS
+                                </div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Ministère Public vs. Jean Sery</h4>
+<p class="text-sm text-slate-500">Vol qualifié en réunion - Flagrant délit</p>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 bg-tertiary-container/20 text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-full">Instruction</span>
+<p class="text-[10px] text-slate-400 mt-2">24 Oct 2023</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-tertiary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Panel Contextual -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-surface-container-high p-8 rounded-3xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[80px]" data-icon="gavel">gavel</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-4">Aperçu Hebdomadaire</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-1.5 h-12 bg-primary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">14 dossiers conclus</p>
+<p class="text-xs text-slate-500">Semaine du 17 Octobre</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-1.5 h-12 bg-secondary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">22 transmissions parquet</p>
+<p class="text-xs text-slate-500">Objectif atteint à 85%</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-1.5 h-12 bg-tertiary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">0 retard critique</p>
+<p class="text-xs text-slate-500">Excellente performance du greffe</p>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full bg-white text-on-surface py-3 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-shadow">
+                            Générer le rapport complet
+                        </button>
+</div>
+<div class="bg-gradient-to-br from-tertiary to-tertiary-container p-8 rounded-3xl text-white">
+<h3 class="font-bold text-lg mb-2">Support Technique</h3>
+<p class="text-white/80 text-sm mb-6 leading-relaxed">Besoin d'aide avec la transmission numérique des dossiers ? Notre équipe est à votre disposition.</p>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="text-sm font-medium">Contacter l'assistance</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

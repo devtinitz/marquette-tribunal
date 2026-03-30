@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "secondary": "#8a5100",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#171c22",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-highest": "#dee3eb",
+              "tertiary": "#3a5296",
+              "inverse-surface": "#2c3137",
+              "surface-container-low": "#f0f4fd",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-container": "#643900",
+              "secondary-container": "#fe9800",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "tertiary-container": "#536bb0",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-bright": "#f8f9ff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-container-high": "#e4e8f1",
+              "outline": "#6f7a69",
+              "surface-container": "#eaeef7",
+              "surface-tint": "#006e00",
+              "on-surface-variant": "#3f4a3a",
+              "on-tertiary-container": "#eff0ff",
+              "on-background": "#171c22",
+              "inverse-on-surface": "#edf1fa",
+              "inverse-primary": "#72de5e",
+              "surface-dim": "#d6dae3",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-variant": "#dee3eb",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary": "#ffffff",
+              "primary": "#006400",
+              "primary-fixed": "#8dfb77",
+              "on-primary-container": "#ccffba",
+              "primary-container": "#008000",
+              "outline-variant": "#becab6",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "background": "#f8f9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-line { border: none !important; }
+        .tonal-layering { background-color: var(--tw-bg-opacity); }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] z-40 bg-slate-50/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)] flex flex-col p-6 space-y-8">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<img alt="Armoiries de la Côte d'Ivoire" class="w-12 h-12 object-contain" data-alt="Official national coat of arms of Ivory Coast featuring an elephant and palm trees in gold on a green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS1qH61p-ttPZ8srH0ntWGfNxodMdOBDZEiSYj3CiQsRNU6YLLrnSNT-zC0yKmr2I_zAGMRQra7Y2AzEzarV9T2lmMmPHnnKuf2qcEnpix-GnNA9vsr6XZR2H7k8-aPPix0xatgM0S5tWKClolbW1WvUXIqrCxQ51kJrCKDIM3Asw7v9I8GSEdgMOMwCMDfJHGSbrXCdq2xyIFLx4YijkL_P3Za1l197o-qCQXxVFaE3WTLrgLa7d-FlfzGBs88EHY0jwG-GTEnJU"/>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tighter text-green-900 dark:text-green-500">Tribunal de Yopougon</span>
+<span class="text-[10px] uppercase tracking-wider font-medium text-slate-500">Suivi des Plaintes</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-green-900 dark:text-green-400 font-bold bg-white/50 dark:bg-slate-900/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="gavel" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="text-sm font-medium">Plaintes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="send_and_archive">send_and_archive</span>
+<span class="text-sm font-medium">Transmission Parquet</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-sm font-medium">Rapports</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-slate-200/50 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-100/80 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-sm font-medium">Mon Profil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-100/80 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm font-medium">Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 transition-all rounded-lg mt-4" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-sm font-medium">Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar Component -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8">
+<div class="flex items-center gap-4 bg-surface-container-high/50 px-4 py-2 rounded-full w-96">
+<span class="material-symbols-outlined text-slate-400" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="Rechercher un dossier, un plaignant..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2 text-slate-500 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2 text-slate-500">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-200">
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">M. Koffi Kouadio</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Magistrat Instructeur</p>
+</div>
+<img alt="Avatar de l'Agent Judiciaire" class="w-10 h-10 rounded-full border-2 border-primary/20" data-alt="Professional portrait of a West African magistrate in formal attire, clean studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvibq_LsaL1i0cxEISF5He1wzRmhPChStU_SsnbiS0gm8yiLkOkUKS4oemC_FJuYdmixmDYW03vJFruyz6gtD8XoYiLokxhOFLwnU9yyiVYTQKUwcefW8woCgq9rAT08zQWNVWUqhLEZlqKvwWGwh05YnAxU0932PCjGNx9eQjxw9fEwN82KQ1Or6QrkNNq2bzQ4xfhksrda8YT902tGluQCPzaqhpD-sJHwfmR4hMU9esEFiINxoDnTRneAFYGe9TNP5Mi_KhvCs"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-24 pb-12 px-12 min-h-screen bg-surface-container-low">
+<div class="max-w-5xl mx-auto">
+<!-- Header Section -->
+<div class="mb-10">
+<nav class="flex items-center gap-2 text-xs text-slate-500 mb-4">
+<span>Plaintes</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Nouvelle Plainte</span>
+</nav>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Enregistrement de Plainte</h1>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">Formulaire de saisine officielle. Veuillez renseigner avec précision les informations relatives au plaignant et aux faits reprochés.</p>
+</div>
+<!-- Bento Form Layout -->
+<form class="space-y-8">
+<!-- Section 1: Identité -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-sm space-y-6">
+<div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="person_add">person_add</span>
+<h2 class="text-lg font-bold tracking-tight uppercase text-[12px] text-slate-500">Identité du Plaignant</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Nom Complet / Raison Sociale</label>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-3 text-sm" placeholder="Ex: Jean-Baptiste Konan" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Numéro de CNI / Passeport</label>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-3 text-sm" placeholder="Ex: C000000000" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Contact Téléphonique</label>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-3 text-sm" placeholder="+225 00 00 00 00 00" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Adresse de Résidence</label>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-3 text-sm" placeholder="Commune, Quartier, Lot..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Objet & Faits -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 space-y-8">
+<!-- Faits -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-sm space-y-6">
+<div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="description">description</span>
+<h2 class="text-lg font-bold tracking-tight uppercase text-[12px] text-slate-500">Exposé des Faits</h2>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Description détaillée</label>
+<textarea class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-4 text-sm resize-none" placeholder="Relatez les faits de manière chronologique et précise..." rows="8"></textarea>
+</div>
+</section>
+</div>
+<div class="space-y-8">
+<!-- Objet -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-sm space-y-6 h-full">
+<div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="label">label</span>
+<h2 class="text-lg font-bold tracking-tight uppercase text-[12px] text-slate-500">Nature du Litige</h2>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Type de Plainte</label>
+<select class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-3 text-sm appearance-none">
+<option>Vol / Escroquerie</option>
+<option>Abus de confiance</option>
+<option>Diffamation</option>
+<option>Litige Foncier</option>
+<option>Autre...</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Date des Faits</label>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-lg focus:ring-2 focus:ring-primary/20 p-3 text-sm" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">Degré d'Urgence</label>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 py-2 rounded text-[10px] font-bold border border-slate-200 hover:bg-slate-50" type="button">NORMAL</button>
+<button class="flex-1 py-2 rounded text-[10px] font-bold border border-secondary text-secondary bg-secondary-fixed" type="button">URGENT</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Section 3: Pièces Jointes -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="attach_file">attach_file</span>
+<h2 class="text-lg font-bold tracking-tight uppercase text-[12px] text-slate-500">Pièces Jointes &amp; Preuves</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="border-2 border-dashed border-slate-200 rounded-2xl p-10 flex flex-col items-center justify-center text-center space-y-4 hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="upload_file">upload_file</span>
+</div>
+<div>
+<p class="text-sm font-bold">Déposer vos documents ici</p>
+<p class="text-xs text-slate-500 mt-1">PDF, JPG, PNG (Max. 10MB par fichier)</p>
+</div>
+<button class="text-xs font-bold text-primary px-4 py-2 border border-primary/20 rounded-lg hover:bg-primary/5" type="button">Parcourir les fichiers</button>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-high rounded-xl flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div class="flex flex-col">
+<span class="text-xs font-bold">CNI_Recto_Verso.pdf</span>
+<span class="text-[10px] text-slate-500">2.4 MB • Prêt pour envoi</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-error">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="p-4 bg-surface-container-high rounded-xl flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400" data-icon="image">image</span>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Preuve_Capture_Ecran_01.jpg</span>
+<span class="text-[10px] text-slate-500">1.1 MB • Prêt pour envoi</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-error">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Actions -->
+<div class="flex items-center justify-between pt-8 border-t border-slate-200">
+<button class="px-6 py-3 text-slate-500 text-sm font-medium hover:text-on-surface transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="history_edu">history_edu</span>
+                        Sauvegarder en brouillon
+                    </button>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-surface-container-high text-on-surface text-sm font-bold rounded-lg hover:bg-slate-200 transition-colors" type="button">Annuler</button>
+<button class="px-10 py-3 bg-gradient-to-br from-primary to-primary-container text-white text-sm font-bold rounded-lg shadow-lg hover:opacity-90 active:scale-[0.97] transition-all flex items-center gap-3" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="check_circle">check_circle</span>
+                            Enregistrer la plainte
+                        </button>
+</div>
+</div>
+</form>
+</div>
+</main>
+<!-- Contextual Details Side Panel (Implicit 3rd column) -->
+<div class="fixed right-0 top-16 h-[calc(100vh-64px)] w-80 bg-surface-container-high z-20 p-6 hidden xl:block shadow-[-12px_0_30px_-15px_rgba(0,0,0,0.05)]">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Informations de Saisie</h3>
+<div class="space-y-6">
+<div class="bg-surface-container-lowest p-4 rounded-xl space-y-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase">Référence Interne</span>
+<span class="text-sm font-mono font-bold text-tertiary">#TP-2023-0842</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase">Bureau de Dépôt</span>
+<span class="text-sm font-bold">Secrétariat Central - Box 3</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase">Date d'ouverture</span>
+<span class="text-sm font-bold">24 Octobre 2023 • 09:42</span>
+</div>
+</div>
+<div class="p-4 rounded-xl border-2 border-primary/10 bg-primary/5 space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified_user">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-tight">Vérification CNI</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Assurez-vous que la pièce d'identité jointe est en cours de validité pour éviter tout rejet administratif automatique.</p>
+</div>
+<div class="mt-auto">
+<img alt="Illustrative decorative texture" class="rounded-lg opacity-40 grayscale" data-alt="Subtle abstract texture of high-quality parchment paper with light shadows and a hint of a judicial watermark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpccRj93n5IpqfvdmFF5OkzCf_xf7WbDzp1-5cd7Gfqjj_ZRdpr8-Y_qt_rnQvv8QYuD0hpzdMVItNlH6vpkyw-QdjOzhUzGF9MYGt4hoSebnHJnRWVZzskeqnmkUvtm0FAtYAXlD4nvlpYQGmVC9ps1L8SZyVjjk8OjM9SDHqGYY2-HIpCeSLnQ2VHq0GEsLAzH87k8_HqW6a1WRwp1I2RF5ly0dl-qp0g_5pZVnhH4mHNz9XUxEA6NxVcddcACNCV48tZlkd5vA"/>
+</div>
+</div>
+</div>
+</body></html>

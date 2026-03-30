@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tribunal de Yopougon - Suivi des Plaintes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#536bb0",
+              "secondary-container": "#fe9800",
+              "surface-container-high": "#e4e8f1",
+              "on-primary-fixed-variant": "#005300",
+              "outline": "#6f7a69",
+              "on-tertiary-container": "#eff0ff",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-tint": "#006e00",
+              "on-error": "#ffffff",
+              "surface-container": "#eaeef7",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#643900",
+              "inverse-primary": "#72de5e",
+              "error": "#ba1a1a",
+              "on-background": "#171c22",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-dim": "#d6dae3",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#ffdcbd",
+              "inverse-surface": "#2c3137",
+              "on-primary-fixed": "#002200",
+              "surface-container-highest": "#dee3eb",
+              "surface-variant": "#dee3eb",
+              "secondary-fixed-dim": "#ffb86f",
+              "primary-fixed": "#8dfb77",
+              "primary-fixed-dim": "#72de5e",
+              "surface-container-low": "#f0f4fd",
+              "outline-variant": "#becab6",
+              "on-surface-variant": "#3f4a3a",
+              "surface": "#f8f9ff",
+              "primary-container": "#008000",
+              "surface-bright": "#f8f9ff",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "primary": "#006400",
+              "on-secondary-fixed": "#2c1600",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "error-container": "#ffdad6",
+              "secondary": "#8a5100",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#00174a",
+              "inverse-on-surface": "#edf1fa",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#171c22",
+              "tertiary": "#3a5296",
+              "background": "#f8f9ff",
+              "on-primary-container": "#ccffba"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ivorian-gradient {
+            background: linear-gradient(135deg, #006400 0%, #008000 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col items-center justify-center overflow-hidden">
+<!-- Subtle Background Texture -->
+<div class="fixed inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJi6CXHNPbAM5wi1ayH5JnLqTbOAL66lT96VNM6ky9AFxir5reGE5D0esZ9X6LxvtwQcOULU7H1uwGX_V0NOAVvwW_u8ZTnhLN_qEFG1O1EgM5u6DPZG8wpr8WgA58jFtucUBUjva1MiWx3KU_hiQwyel6CqBf5vTCd90jDCJypWl5AW8ZJBXGvcJD369P0wl-sHwpx9utsR4vOrRfj-3MZo8GqBJCrY_JExSm1n3fpvoO9QXslDJRLoLKRlNW6Wxkmvou9ae2I9M');">
+</div>
+<!-- Main Splash Container -->
+<main class="relative z-10 flex flex-col items-center w-full max-w-lg px-8 text-center">
+<!-- Animated Hero Icon Group -->
+<div class="relative mb-12">
+<!-- Decorative Glow -->
+<div class="absolute inset-0 bg-primary/10 blur-[64px] rounded-full scale-150"></div>
+<!-- Icon Composition -->
+<div class="relative flex items-center justify-center">
+<!-- Outer Glass Ring -->
+<div class="absolute w-32 h-32 border-2 border-primary/10 rounded-full"></div>
+<!-- Center Symbol -->
+<div class="w-24 h-24 bg-surface-container-lowest rounded-full shadow-[0_8px_24px_rgba(23,28,34,0.06)] flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="gavel">gavel</span>
+<!-- Reflective Sweep -->
+<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent"></div>
+</div>
+<!-- Floating Accessory -->
+<div class="absolute -bottom-2 -right-2 w-10 h-10 bg-secondary-container text-on-secondary-container rounded-xl shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="balance">balance</span>
+</div>
+</div>
+</div>
+<!-- Typography Branding -->
+<div class="space-y-4">
+<div class="flex flex-col items-center">
+<!-- Brand Title with Asymmetric Accent -->
+<div class="flex items-center gap-3">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface uppercase font-headline">
+                        TRIBUNAL DE YOPOUGON
+                    </h1>
+<!-- Ivorian Flag Accent (As per Design System 7.0) -->
+<div class="flex w-[16px] h-[10px] overflow-hidden rounded-[1px] shadow-sm">
+<div class="w-1/3 bg-[#fe9800]"></div>
+<div class="w-1/3 bg-white"></div>
+<div class="w-1/3 bg-[#008000]"></div>
+</div>
+</div>
+<!-- Subheadline -->
+<div class="mt-2 inline-flex items-center px-4 py-1.5 bg-tertiary/5 rounded-full">
+<span class="text-tertiary font-bold tracking-widest text-[10px] uppercase font-label">
+                        Suivi des Plaintes &amp; Services Civiques
+                    </span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm max-w-[280px] mx-auto leading-relaxed opacity-80">
+                Accédez à la justice en toute transparence et suivez l'évolution de vos dossiers en temps réel.
+            </p>
+</div>
+<!-- Loading / Progress Indicator -->
+<div class="mt-16 w-48 space-y-3">
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3 rounded-full"></div>
+</div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-widest animate-pulse">
+                Initialisation Sécurisée
+            </p>
+</div>
+</main>
+<!-- Footer Identity -->
+<footer class="fixed bottom-12 w-full text-center px-6">
+<div class="flex flex-col items-center gap-6">
+<!-- Institutional Seal Shadow -->
+<div class="flex items-center gap-8 opacity-40">
+<img alt="" class="h-8 w-auto grayscale contrast-125" data-alt="Official minimalist seal of the Ivorian Ministry of Justice in monochrome grey, elegant line art on a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ9puFNB0qIXk09vUH5KQ2YNlYZcbc8Qlptq03q4uF7EVGoB2ehslzjVDX2rLV-5xN0cbZn3z_Nx-jwasFbl2RE4CG90eLdAhg9aEvCC783ZyW0Lv1qIKYMLq6enfJcn3NKe7JmuzHsaJpDC2hvjei8s7kMEH8AbonawhBw5ovWmMKdC1hazQisBKynTRUlprILknOmnK5XVO01kNSbB5kFJ_pWI0-xSA3urjTiPoLC9Knz_7Qik3pJXp8ShXaV3CCjClyjnmveiM"/>
+<div class="h-8 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col items-start leading-none">
+<span class="text-[9px] font-bold text-on-surface-variant uppercase tracking-tighter">République de</span>
+<span class="text-[11px] font-extrabold text-on-surface uppercase tracking-tight">Côte d'Ivoire</span>
+</div>
+</div>
+<!-- Policy Links (Editorial Style) -->
+<div class="flex gap-4 text-[10px] font-bold text-tertiary/60 uppercase tracking-wide">
+<span class="hover:text-tertiary cursor-pointer transition-colors">Mentions Légales</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full my-auto"></span>
+<span class="hover:text-tertiary cursor-pointer transition-colors">Confidentialité</span>
+</div>
+</div>
+</footer>
+<!-- Decorative Corner Elements (Editorial Flair) -->
+<div class="fixed top-0 left-0 p-10 hidden lg:block">
+<div class="text-[10px] font-bold text-outline-variant uppercase vertical-text tracking-[0.4em] rotate-180" style="writing-mode: vertical-rl;">
+            Institution Judiciaire • District d'Abidjan
+        </div>
+</div>
+<div class="fixed bottom-0 right-0 p-10 hidden lg:block">
+<div class="text-[10px] font-bold text-outline-variant uppercase vertical-text tracking-[0.4em]" style="writing-mode: vertical-rl;">
+            Version Numérique 2.0.4
+        </div>
+</div>
+</body></html>

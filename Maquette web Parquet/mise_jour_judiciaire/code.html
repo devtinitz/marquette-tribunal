@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mise à jour Judiciaire - Parquet de Yopougon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e3e0",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e8e8e5",
+              "on-background": "#1a1c1a",
+              "tertiary": "#3a5296",
+              "secondary-fixed": "#ffdcbd",
+              "on-tertiary-fixed": "#00174a",
+              "outline-variant": "#becab6",
+              "secondary": "#8a5100",
+              "inverse-on-surface": "#f1f1ee",
+              "on-error-container": "#93000a",
+              "surface-variant": "#e2e3e0",
+              "tertiary-container": "#536bb0",
+              "inverse-primary": "#72de5e",
+              "on-secondary-fixed": "#2c1600",
+              "on-error": "#ffffff",
+              "outline": "#6f7a69",
+              "surface-dim": "#dadad7",
+              "surface-container-low": "#f3f4f1",
+              "error": "#ba1a1a",
+              "surface-bright": "#f9f9f6",
+              "inverse-surface": "#2f312f",
+              "primary-fixed": "#8dfb77",
+              "on-primary-fixed": "#002200",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "primary": "#006400",
+              "error-container": "#ffdad6",
+              "surface-tint": "#006e00",
+              "surface": "#f9f9f6",
+              "on-secondary-container": "#643900",
+              "on-primary-container": "#ccffba",
+              "on-secondary-fixed-variant": "#693c00",
+              "tertiary-fixed": "#dbe1ff",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "primary-fixed-dim": "#72de5e",
+              "secondary-container": "#fe9800",
+              "on-surface": "#1a1c1a",
+              "on-tertiary-container": "#eff0ff",
+              "on-primary-fixed-variant": "#005300",
+              "secondary-fixed-dim": "#ffb86f",
+              "background": "#f9f9f6",
+              "on-surface-variant": "#3f4a3a",
+              "primary-container": "#008000",
+              "surface-container": "#eeeeeb"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#f3f4f1] dark:bg-slate-900 shadow-[24px_0_24px_rgba(26,28,26,0.06)] z-50">
+<div class="flex flex-col h-full py-6 px-4">
+<div class="flex items-center gap-4 mb-10 px-2">
+<img alt="Armoiries de la République de Côte d'Ivoire" class="w-10 h-10 object-contain" data-alt="Official coat of arms of Ivory Coast featuring an elephant head with fine gold details on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwiM7hFR2I0wqqPDt-rs7LalTLchBGNu4nqSoPBYaBvxpkO3miDWxOtH-jk_zsUYxgH5IJezgrMjQ1591tpH2eZrJ2HYR-qcOgNFNakqXslrM12XOdxaN5JrHpcx-fWPTcVQ4-AHap54zD7IecZGcv004zwU2gcfW48YtNPhhCKSx8jPDWLsxtTrwWJ4XizTA6z6Y0zzeRdLYlzMznOno9MZfv7PnRjOS6gimplnr9Re8IwpXP79GTtdFj2xHMXj3316lu9lsl-hs"/>
+<div>
+<h1 class="text-lg font-bold tracking-tighter text-[#1a1c1a] dark:text-slate-100">Parquet de Yopougon</h1>
+<p class="text-[10px] uppercase tracking-widest text-outline">Ministère de la Justice</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-[#1a1c1a] dark:hover:text-slate-100 transition-colors hover:bg-[#e8e8e5] dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-sm tracking-tight">Accueil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#006400] dark:text-emerald-400 font-bold border-r-4 border-[#006400] bg-[#e8e8e5] dark:bg-slate-800" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span class="font-medium text-sm tracking-tight">Dossiers reçus</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-[#1a1c1a] dark:hover:text-slate-100 transition-colors hover:bg-[#e8e8e5] dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="font-medium text-sm tracking-tight">Audiences</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-[#1a1c1a] dark:hover:text-slate-100 transition-colors hover:bg-[#e8e8e5] dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-medium text-sm tracking-tight">Rapports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-[#1a1c1a] dark:hover:text-slate-100 transition-colors hover:bg-[#e8e8e5] dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-medium text-sm tracking-tight">Profil magistrat</span>
+</a>
+</nav>
+<button class="mt-auto bg-primary text-on-primary py-4 rounded-xl font-bold text-sm tracking-tight shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+                Nouveau Dossier
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-72 h-20 z-40 bg-[#f9f9f6]/80 backdrop-blur-xl border-b border-[#becab6]/15">
+<div class="flex justify-between items-center px-8 h-full">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-black tracking-tight text-[#1a1c1a]">TRIBUNAL DE YOPOUGON</h2>
+<span class="h-4 w-[1px] bg-outline-variant/30"></span>
+<span class="font-['Inter'] uppercase tracking-[0.05em] text-xs font-bold text-outline">MISE À JOUR DE PROCÉDURE</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-low border-none rounded-full px-6 py-2 text-sm w-80 focus:ring-2 focus:ring-tertiary outline-none" placeholder="Rechercher un numéro de dossier..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-[#f3f4f1] rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-on-surface" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-[#f3f4f1] rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-on-surface" data-icon="flag">flag</span>
+</button>
+<div class="flex items-center gap-3 ml-2 pl-4 border-l border-outline-variant/20">
+<div class="text-right">
+<p class="text-xs font-bold leading-tight">M. LE MAGISTRAT</p>
+<p class="text-[10px] text-outline tracking-wider">CHAMBRE CIVILE</p>
+</div>
+<img alt="Profil du Magistrat" class="w-10 h-10 rounded-full bg-surface-container-high object-cover" data-alt="Close-up portrait of a professional magistrate in judicial robes against a minimalist studio background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB4PB4RsKKI7RaEQT_eoIC_vfVD9uQNYX8D8PtW-GClx4eic-3FXSYIWAIwozI-eX_m0Z6zoYS2LK9qAsk_vCd9qgNIJ7hPpgLW-I_zkL0ET7V4E1d4wKfiKYy9KawZPqPpMUXM_uEln61hGmWlgWuUy4GyZlbaCmSIasvFHFM287EM7PtD2gEXTqFugh-_Sn77e_g-Y7W__2H1-9lUvCZ31GNsR7P1uQO9jG35eR5F5d7EUqYOoJ63-2EBJ1rT5sJp4RN-LFvCwg"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-72 pt-28 pb-12 px-12 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<div class="mb-12 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-3 py-1 bg-primary-container text-on-primary-fixed-variant text-[10px] font-bold tracking-widest uppercase rounded-full">Procédure en cours</span>
+<span class="text-outline text-xs font-medium">Réf: YOP-2024-0892-BIS</span>
+</div>
+<h3 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Dossier N° 442/2024</h3>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">Mise à jour des éléments constitutifs du dossier civil opposant la Société Ivoirienne de Construction aux Consorts Kouamé.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 text-sm font-bold border border-outline-variant text-on-surface hover:bg-surface-container transition-all rounded-lg">
+                        Annuler les modifications
+                    </button>
+<button class="px-8 py-3 text-sm font-bold bg-tertiary text-on-tertiary hover:bg-tertiary-container transition-all rounded-lg shadow-md">
+                        Enregistrer la Mise à jour
+                    </button>
+</div>
+</div>
+<!-- Bento Layout Content -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Form Section -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Form Card 1: Status & Decision -->
+<section class="bg-surface-container-low rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-tertiary" data-icon="gavel">gavel</span>
+<h4 class="text-sm font-bold tracking-widest uppercase">Statut et Décision</h4>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[10px] font-black uppercase tracking-widest text-outline">Nouveau Statut</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary">
+<option>En attente d'audience</option>
+<option>Délibéré prorogé</option>
+<option>Mise en délibéré</option>
+<option>Clôture de l'instruction</option>
+<option>Jugement rendu</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-black uppercase tracking-widest text-outline">Type d'Ordonnance</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary">
+<option>Ordonnance de clôture</option>
+<option>Ordonnance de soit-communiqué</option>
+<option>Ordonnance d'injonction</option>
+<option>Aucune</option>
+</select>
+</div>
+<div class="col-span-2 space-y-2">
+<label class="text-[10px] font-black uppercase tracking-widest text-outline">Commentaires Officiels (Visible au Greffe)</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary resize-none placeholder:italic" placeholder="Saisir les observations juridiques ou les motifs de la décision..." rows="5"></textarea>
+</div>
+</div>
+</section>
+<!-- Form Card 2: Schedule -->
+<section class="bg-surface-container-low rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_month">calendar_month</span>
+<h4 class="text-sm font-bold tracking-widest uppercase">Calendrier Judiciaire</h4>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[10px] font-black uppercase tracking-widest text-outline">Date de Prochaine Audience</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-black uppercase tracking-widest text-outline">Heure de l'audience</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary" type="time" value="08:30"/>
+</div>
+</div>
+<div class="col-span-2 space-y-2">
+<label class="text-[10px] font-black uppercase tracking-widest text-outline">Lieu / Salle d'audience</label>
+<div class="flex gap-4">
+<label class="flex-1 flex items-center justify-center gap-2 py-3 bg-surface-container-lowest rounded-lg text-sm border-2 border-primary/20 hover:border-primary cursor-pointer transition-all">
+<input class="text-primary focus:ring-primary" name="room" type="radio"/> Salle A (Grands Procès)
+                                    </label>
+<label class="flex-1 flex items-center justify-center gap-2 py-3 bg-surface-container-lowest rounded-lg text-sm border border-transparent hover:border-primary/50 cursor-pointer transition-all">
+<input class="text-primary focus:ring-primary" name="room" type="radio"/> Salle B (Affaires Civiles)
+                                    </label>
+<label class="flex-1 flex items-center justify-center gap-2 py-3 bg-surface-container-lowest rounded-lg text-sm border border-transparent hover:border-primary/50 cursor-pointer transition-all">
+<input class="text-primary focus:ring-primary" name="room" type="radio"/> Chambre du Conseil
+                                    </label>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Contextual Info & Attachments -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Context Card -->
+<section class="bg-tertiary text-on-tertiary rounded-xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute -right-8 -top-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]" data-icon="balance">balance</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-[10px] font-black uppercase tracking-widest mb-4 opacity-80">Résumé de l'Affaire</h4>
+<div class="space-y-4">
+<div>
+<p class="text-xs opacity-70">Demandeur</p>
+<p class="font-bold text-sm">Société Ivoirienne de Construction (SIC)</p>
+</div>
+<div>
+<p class="text-xs opacity-70">Défendeur</p>
+<p class="font-bold text-sm">Consorts Kouamé &amp; Fils</p>
+</div>
+<div>
+<p class="text-xs opacity-70">Objet</p>
+<p class="font-bold text-sm">Rupture abusive de contrat de bail commercial</p>
+</div>
+<div class="pt-4 border-t border-white/10 flex justify-between items-center">
+<div>
+<p class="text-xs opacity-70">Dernière Action</p>
+<p class="text-[11px] font-medium">Renvoi au 12/05/2024</p>
+</div>
+<button class="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pièces Jointes / Attachments -->
+<section class="bg-surface-container-high rounded-xl p-6">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-[10px] font-black uppercase tracking-widest">Pièces &amp; Preuves</h4>
+<button class="text-primary text-[10px] font-bold hover:underline">TOUT VOIR</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-lg hover:shadow-md transition-all group">
+<span class="material-symbols-outlined text-tertiary" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate">Assignation_Initiale.pdf</p>
+<p class="text-[9px] text-outline uppercase">2.4 MB • 15 Jan 2024</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-lg" data-icon="download">download</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-lg hover:shadow-md transition-all group">
+<span class="material-symbols-outlined text-tertiary" data-icon="description">description</span>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate">Conclusions_Defendeur.docx</p>
+<p class="text-[9px] text-outline uppercase">840 KB • 22 Avr 2024</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-lg" data-icon="download">download</span>
+</div>
+<button class="w-full mt-4 border-2 border-dashed border-outline-variant/50 rounded-lg py-4 flex flex-col items-center justify-center gap-1 hover:border-primary/50 hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-outline-variant" data-icon="upload_file">upload_file</span>
+<span class="text-[10px] font-bold text-outline">AJOUTER UNE PIÈCE JOINTE</span>
+</button>
+</div>
+</section>
+<!-- Logs/History -->
+<section class="p-2">
+<h4 class="text-[10px] font-black uppercase tracking-widest text-outline mb-4 px-4">Historique Récent</h4>
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30">
+<div class="relative">
+<div class="absolute -left-[19px] top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface"></div>
+<p class="text-[11px] font-bold leading-none">Aujourd'hui, 09:12</p>
+<p class="text-[10px] text-on-surface-variant">Consultation du dossier par le Magistrat.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[19px] top-1 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-surface"></div>
+<p class="text-[11px] font-bold leading-none">14 Mai, 16:45</p>
+<p class="text-[10px] text-on-surface-variant">Dépôt de nouvelles conclusions (Greffe).</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- Success Toast (Hidden) -->
+<div class="fixed bottom-8 right-8 bg-on-background text-inverse-on-surface px-6 py-4 rounded-xl shadow-2xl flex items-center gap-4 transform translate-y-24 transition-transform duration-500 pointer-events-none">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="check_circle">check_circle</span>
+<div class="text-sm">
+<p class="font-bold">Mise à jour effectuée</p>
+<p class="text-xs opacity-70">Le statut du dossier a été synchronisé avec le Greffe.</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "secondary": "#8a5100",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#171c22",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-highest": "#dee3eb",
+              "tertiary": "#3a5296",
+              "inverse-surface": "#2c3137",
+              "surface-container-low": "#f0f4fd",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-container": "#643900",
+              "secondary-container": "#fe9800",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "tertiary-container": "#536bb0",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-bright": "#f8f9ff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-container-high": "#e4e8f1",
+              "outline": "#6f7a69",
+              "surface-container": "#eaeef7",
+              "surface-tint": "#006e00",
+              "on-surface-variant": "#3f4a3a",
+              "on-tertiary-container": "#eff0ff",
+              "on-background": "#171c22",
+              "inverse-on-surface": "#edf1fa",
+              "inverse-primary": "#72de5e",
+              "surface-dim": "#d6dae3",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-variant": "#dee3eb",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary": "#ffffff",
+              "primary": "#006400",
+              "primary-fixed": "#8dfb77",
+              "on-primary-container": "#ccffba",
+              "primary-container": "#008000",
+              "outline-variant": "#becab6",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "background": "#f8f9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-line-border {
+            border: none !important;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex items-center justify-center relative overflow-hidden">
+<!-- Background Subtle Textures -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-tertiary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+</div>
+<main class="relative z-10 w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 bg-surface-container-low rounded-xl overflow-hidden shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)] mx-4">
+<!-- Left Side: Visual/Branding -->
+<div class="hidden md:flex flex-col justify-between p-12 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-20" data-alt="close up of a bronze lady justice statue holding scales with a clean professional courthouse background in soft light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0WKEa2EVR1nfO-YQK2Ss0aOO1-1P4mN_m-3ziKGwUbTvUnrpAtcl-a_Slt9BQMhYugQ3y8OHcZ-8f0BmqbWbXrmKiVgvF-hh1LTr-ss_sGdjLV7PqxAmDGnXXLLAykJ7CH7YZHGvKY25u0vRW3lho-2yZtsLUwb7GDgzNWGGh_p1M8rM21MLgdna_lyHZLHP0TV-LuTDseO5GuWuhs7x4komI3amasj4q9do20Govqok4eMyF0pc_oiTG0Y9HFEG0cesJjTWIqJo'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-container/80"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-2 shadow-lg">
+<img alt="Drapeau CI" class="w-full h-auto object-contain" data-alt="National flag of Ivory Coast with orange white and green vertical stripes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEcGV6fRvCunTepnG4rWNDBONxOHgKKMtCQMDuZt41he_46EuU9aesH0yEsm7H4ebwFo_smwWjVZB6QxL1HtLbpBDj-JT_Nk1piphFZ6haqRxIrV2jHAMlaVWR_CV1VpzIkPgDey5FIf8PE7L9jm8TNZyRRdmHL_vEdk_PU2MT_M_kExyDw8UJq_zp1LERyEVcWnwwOKnDv7qnTIFIulI434MKk4v7z5Qmy9Dj1emCiJcv_DXPnzJiGYj1htJmM2KXf2EpgT8rKuw"/>
+</div>
+<div class="text-white">
+<h1 class="text-xl font-bold tracking-tighter leading-none">TRIBUNAL DE YOPOUGON</h1>
+<p class="text-[10px] uppercase tracking-widest font-medium opacity-80">République de Côte d'Ivoire</p>
+</div>
+</div>
+<div class="mt-20">
+<h2 class="text-4xl font-extrabold text-white leading-tight tracking-tighter mb-4">La Justice au service du Citoyen.</h2>
+<p class="text-on-primary-container/90 text-lg max-w-md leading-relaxed">Accédez à l'interface sécurisée de gestion des plaintes et du suivi judiciaire du Commissariat de Yopougon.</p>
+</div>
+</div>
+<div class="relative z-10 flex items-center gap-4 text-white/60 text-xs">
+<span>© 2024 Ministère de la Justice et des Droits de l'Homme</span>
+<span class="w-1 h-1 bg-white/40 rounded-full"></span>
+<span>Portail Magistrat v2.4</span>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="flex flex-col justify-center p-8 md:p-16 bg-surface-container-lowest">
+<div class="mb-10 text-center md:text-left">
+<h3 class="text-2xl font-bold text-on-surface tracking-tight mb-2">Bienvenue</h3>
+<p class="text-on-surface-variant text-sm">Veuillez entrer vos identifiants pour accéder à votre session.</p>
+</div>
+<form class="space-y-6">
+<!-- Matricule Input -->
+<div class="space-y-1.5">
+<label class="text-[10px] uppercase tracking-wider font-semibold text-tertiary" for="matricule">Matricule Professionnel</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-high border-none rounded-lg text-on-surface text-sm placeholder:text-outline/60 focus:ring-2 focus:ring-primary/20 transition-all duration-200" id="matricule" name="matricule" placeholder="Ex: CI-728-P" type="text"/>
+</div>
+</div>
+<!-- Code Secret Input -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-end">
+<label class="text-[10px] uppercase tracking-wider font-semibold text-tertiary" for="password">Code Secret</label>
+<a class="text-[10px] font-medium text-tertiary hover:underline" href="#">Code oublié ?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="block w-full pl-11 pr-12 py-4 bg-surface-container-high border-none rounded-lg text-on-surface text-sm placeholder:text-outline/60 focus:ring-2 focus:ring-primary/20 transition-all duration-200" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-4 flex items-center text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me & Biometric Option -->
+<div class="flex items-center justify-between py-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">Rester connecté</span>
+</label>
+<button class="flex items-center gap-2 text-primary hover:bg-primary/5 px-3 py-1.5 rounded-full transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+<span class="text-xs font-semibold">Biométrie</span>
+</button>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-3 group" type="submit">
+<span>Se connecter</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">login</span>
+</button>
+</form>
+<!-- Footer Links -->
+<div class="mt-12 pt-8 border-t border-outline-variant/10 flex flex-col items-center gap-4">
+<p class="text-xs text-on-surface-variant">Besoin d'assistance technique ?</p>
+<div class="flex gap-6">
+<a class="flex items-center gap-2 text-tertiary text-xs font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+                        Support DSI
+                    </a>
+<a class="flex items-center gap-2 text-tertiary text-xs font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">security</span>
+                        Charte de Sécurité
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<!-- Decorative watermark logo in background -->
+<div class="fixed bottom-[-5%] right-[-5%] opacity-[0.03] pointer-events-none select-none">
+<span class="material-symbols-outlined text-[500px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+</body></html>

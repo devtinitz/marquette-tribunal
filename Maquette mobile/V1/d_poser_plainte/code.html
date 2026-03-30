@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "outline-variant": "#becab6",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface-container-low": "#f3f3f3",
+              "surface-container": "#eeeeee",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#6f7a69",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "on-surface-variant": "#3f4a3a",
+              "surface-variant": "#e2e2e2",
+              "on-tertiary-container": "#eff0ff",
+              "surface": "#f9f9f9",
+              "primary-container": "#008000",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-bright": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "inverse-surface": "#2f3131",
+              "error-container": "#ffdad6",
+              "surface-tint": "#006e00",
+              "inverse-primary": "#72de5e",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-high": "#e8e8e8",
+              "on-error": "#ffffff",
+              "on-surface": "#1a1c1c",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary-fixed-variant": "#693c00",
+              "secondary-container": "#fe9800",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "on-primary-container": "#ccffba",
+              "tertiary-container": "#536bb0",
+              "tertiary": "#3a5296",
+              "tertiary-fixed": "#dbe1ff",
+              "error": "#ba1a1a",
+              "primary-fixed": "#8dfb77",
+              "surface-container-highest": "#e2e2e2",
+              "secondary": "#8a5100",
+              "primary": "#006400",
+              "background": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "inverse-on-surface": "#f1f1f1",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#643900"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 glass-effect shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-800" data-icon="account_balance">account_balance</span>
+<span class="text-green-900 font-black text-sm uppercase tracking-widest">TRIBUNAL DE YOPOUGON</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-slate-500" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Editorial Headline -->
+<section class="mb-10">
+<h1 class="text-4xl font-extrabold text-primary tracking-tight leading-tight mb-2">Déposer Plainte</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">Initiez votre procédure judiciaire en toute sécurité. Suivez les étapes pour constituer votre dossier.</p>
+</section>
+<!-- Progress Stepper -->
+<div class="mb-12">
+<div class="flex justify-between mb-4">
+<span class="text-sm font-bold text-primary">Étape 2 sur 4 : Détails de l'incident</span>
+<span class="text-sm font-medium text-on-surface-variant">50% Complété</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-1/2 rounded-full"></div>
+</div>
+</div>
+<!-- Form Canvas -->
+<form class="space-y-10">
+<!-- Form Section: Classification -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<h2 class="text-xl font-bold tracking-tight">Classification</h2>
+</div>
+<div class="bg-surface-container-low p-1 rounded-xl">
+<label class="block mb-2 text-sm font-bold text-on-surface-variant ml-2">Type de plainte</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-5 text-on-surface focus:ring-2 focus:ring-primary appearance-none">
+<option>Litige Civil</option>
+<option>Affaire Pénale</option>
+<option>Conflit de Travail</option>
+<option>Litige Foncier</option>
+<option>Autre</option>
+</select>
+</div>
+</div>
+<!-- Form Section: Incident Details -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+<h2 class="text-xl font-bold tracking-tight">Description des faits</h2>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-1 rounded-xl">
+<label class="block mb-2 text-sm font-bold text-on-surface-variant ml-2">Date des faits</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-5 text-on-surface focus:ring-2 focus:ring-primary" type="date"/>
+</div>
+<div class="bg-surface-container-low p-1 rounded-xl">
+<label class="block mb-2 text-sm font-bold text-on-surface-variant ml-2">Lieu (Quartier)</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-5 text-on-surface focus:ring-2 focus:ring-primary" placeholder="ex: Niangon Sud" type="text"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-1 rounded-xl">
+<label class="block mb-2 text-sm font-bold text-on-surface-variant ml-2">Récit détaillé</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-5 text-on-surface focus:ring-2 focus:ring-primary resize-none leading-relaxed" placeholder="Décrivez précisément les événements, les personnes impliquées et le préjudice subi..." rows="6"></textarea>
+</div>
+</div>
+<!-- Form Section: Evidence Upload -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="attach_file" style="font-variation-settings: 'FILL' 1;">attach_file</span>
+<h2 class="text-xl font-bold tracking-tight">Pièces jointes</h2>
+</div>
+<div class="relative group cursor-pointer">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" multiple="" type="file"/>
+<div class="bg-surface-container-low border-2 border-dashed border-outline-variant/30 rounded-2xl p-10 flex flex-col items-center justify-center transition-all group-hover:bg-surface-container text-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<p class="font-bold text-on-surface mb-1">Téléverser vos documents</p>
+<p class="text-sm text-on-surface-variant max-w-[240px]">Photos, vidéos ou fichiers PDF (Max 10Mo par fichier)</p>
+</div>
+</div>
+<!-- Preview Grid (Mockup) -->
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-10 h-10 bg-tertiary-container/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold truncate">Preuve_A_001.pdf</p>
+<p class="text-[10px] text-on-surface-variant">1.2 MB</p>
+</div>
+<button class="text-error" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="pt-6 flex flex-col gap-4">
+<button class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95" type="submit">
+                    Suivant
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full h-14 text-primary font-bold hover:bg-slate-100 rounded-xl transition-all" type="button">
+                    Enregistrer le brouillon
+                </button>
+</div>
+</form>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface/80 glass-effect flex justify-around items-center px-4 pb-6 pt-3 z-50 rounded-t-3xl shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[11px] font-semibold mt-1">Accueil</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="text-[11px] font-semibold mt-1">Mes Plaintes</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-green-50 text-green-800 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="text-[11px] font-semibold mt-1">Déposer</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-green-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-semibold mt-1">Profil</span>
+</a>
+</nav>
+</body></html>

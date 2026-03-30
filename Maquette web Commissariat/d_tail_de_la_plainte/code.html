@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Détails de la Plainte - Portail Magistrat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "secondary": "#8a5100",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#171c22",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-highest": "#dee3eb",
+              "tertiary": "#3a5296",
+              "inverse-surface": "#2c3137",
+              "surface-container-low": "#f0f4fd",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-container": "#643900",
+              "secondary-container": "#fe9800",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "tertiary-container": "#536bb0",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-bright": "#f8f9ff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-container-high": "#e4e8f1",
+              "outline": "#6f7a69",
+              "surface-container": "#eaeef7",
+              "surface-tint": "#006e00",
+              "on-surface-variant": "#3f4a3a",
+              "on-tertiary-container": "#eff0ff",
+              "on-background": "#171c22",
+              "inverse-on-surface": "#edf1fa",
+              "inverse-primary": "#72de5e",
+              "surface-dim": "#d6dae3",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-variant": "#dee3eb",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary": "#ffffff",
+              "primary": "#006400",
+              "primary-fixed": "#8dfb77",
+              "on-primary-container": "#ccffba",
+              "primary-container": "#008000",
+              "outline-variant": "#becab6",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "background": "#f8f9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-sidebar { backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] z-40 bg-slate-50/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)] flex flex-col p-6 space-y-8">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Armoiries de la Côte d'Ivoire" class="w-12 h-12 rounded-lg object-contain shadow-sm" data-alt="Official coat of arms of Ivory Coast featuring an elephant head and national colors in a professional shield design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJvFR-Yiq4wW9YbMfBQ8VxfGAsYPE69jtLd_YHwOG1VRPiEtM_vJRV0-quulq5EYLuoHprvC6JEc3FMHd80AT7UW_lmeVtz3AtUbk8iK1OeEjxTCe-6sCyKznFiC7sAC264CoFQApdJ1vXPhqLIi2vj3EkSQlwsZ16DTVicGBmAKeW2Q1t6Bp-8zwYI5iGaq8onxK1-6AndFmVkoI9lV0bkqJd6avosAGi-wURBRDz_0ONxxU5GW_5arti9zT0Yuslq9If0TSRgT8"/>
+<div>
+<h1 class="text-xl font-bold tracking-tighter text-green-900 dark:text-green-500">Tribunal de Yopougon</h1>
+<p class="text-[10px] uppercase tracking-wider font-medium text-slate-500">Suivi des Plaintes</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2 overflow-y-auto no-scrollbar">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-green-900 dark:text-green-400 font-bold bg-white/50 dark:bg-slate-900/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="text-sm font-medium">Plaintes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">send_and_archive</span>
+<span class="text-sm font-medium">Transmission Parquet</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Rapports</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-slate-200/50 dark:border-slate-800/50 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 transition-all text-sm" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span>Mon Profil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-green-700 transition-all text-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:opacity-80 transition-all text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8 tonal-layering">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-50 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-lg font-semibold tracking-tight text-on-surface">Dossier N° 2024-YP-0482</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:bg-slate-50 rounded-full p-2">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full ring-2 ring-white"></span>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-200">
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">Mme. Koné Alima</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Magistrat Instructeur</p>
+</div>
+<img alt="Avatar de l'Agent Judiciaire" class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center font-bold text-xs" data-alt="Professional portrait of a West African female magistrate in official attire, soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcadYksqHX4sRLL-8dZfo1sUOhpXtJGU-KIbNXrrVVoHN4blnyr52SZSxZnEkfmmp0Ae2kRsJdD9OKoptsl40oZncfWEbERXirPUbm0rYoloeQbDLsZy2FWIGx5oDZsWBaHwhqd1ar56TbRlDn7Gnd4KXV3LzMWdxEgh3XV4EnkNGhgvK--x4cYELM-qn4D5eiv3DnjiiNi2CX246_2nRr6zIfhs2XQbwpDkAXzsEUeM9a82V6xOYjpz_JhT6yN4tAcGt-xm5kbi0"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-24 px-8 pb-12 flex gap-8">
+<!-- Left Column: Case Information Bento -->
+<div class="flex-1 space-y-6">
+<!-- Quick Action Header -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="space-y-1">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">En Instruction</span>
+<h3 class="text-2xl font-bold text-on-surface tracking-tight">Plainte pour Abus de Confiance</h3>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-white rounded-lg font-semibold text-sm shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                        Ajouter PV / Audition / Pièce
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-lg font-semibold text-sm shadow-lg hover:bg-secondary/90 transition-all">
+<span class="material-symbols-outlined text-lg">send_and_archive</span>
+                        Transmettre au Parquet
+                    </button>
+</div>
+</div>
+<!-- Bento Info Grid -->
+<div class="grid grid-cols-3 gap-6">
+<!-- Main Details Card -->
+<div class="col-span-2 bg-surface-container-low p-8 rounded-xl space-y-6">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-outline-variant/20 pb-2">Informations Générales</h4>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<div>
+<label class="block text-[10px] font-bold text-tertiary uppercase tracking-wider mb-1">Plaignant</label>
+<p class="text-sm font-semibold text-on-surface">M. Koffi Kouassi Jean</p>
+<p class="text-xs text-slate-500 italic">Commerçant, Résident à Yopougon Niangon</p>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-tertiary uppercase tracking-wider mb-1">Prévenu</label>
+<p class="text-sm font-semibold text-on-surface">Sté. Translogistique SARL</p>
+<p class="text-xs text-slate-500">Représentée par M. Traoré Bakary</p>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-[10px] font-bold text-tertiary uppercase tracking-wider mb-1">Date de Dépôt</label>
+<p class="text-sm font-semibold text-on-surface">14 Février 2024</p>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-tertiary uppercase tracking-wider mb-1">Lieu des Faits</label>
+<p class="text-sm font-semibold text-on-surface">Abidjan - Plateau</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<label class="block text-[10px] font-bold text-tertiary uppercase tracking-wider mb-2">Résumé des Faits</label>
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/10 leading-relaxed text-sm text-on-surface">
+                            Le plaignant allègue avoir versé la somme de 4.500.000 FCFA pour le dédouanement et le transport de deux véhicules (conteneur HL-992). La société mise en cause aurait disparu avec les fonds sans effectuer la prestation promise depuis plus de 3 mois.
+                        </div>
+</div>
+</div>
+<!-- Secondary Metadata -->
+<div class="bg-surface-container-high p-6 rounded-xl space-y-6 flex flex-col justify-between">
+<div>
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Pièces Jointes (4)</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 p-2 bg-surface-container-lowest rounded-lg text-xs font-medium text-on-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-error text-lg">picture_as_pdf</span>
+<span class="flex-1 truncate">Plainte_Signee.pdf</span>
+</li>
+<li class="flex items-center gap-3 p-2 bg-surface-container-lowest rounded-lg text-xs font-medium text-on-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-lg">description</span>
+<span class="flex-1 truncate">Recu_Paiement.docx</span>
+</li>
+<li class="flex items-center gap-3 p-2 bg-surface-container-lowest rounded-lg text-xs font-medium text-on-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-lg">image</span>
+<span class="flex-1 truncate">Photo_Conteneur.jpg</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-2 text-xs font-bold text-tertiary hover:bg-tertiary-fixed rounded-lg transition-colors border border-tertiary/20">
+                        Voir tout le scellé
+                    </button>
+</div>
+</div>
+<!-- Judicial Context Panel -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-tertiary">balance</span>
+<h4 class="text-sm font-bold text-on-surface">Analyse Juridique Préliminaire</h4>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-4 rounded-lg bg-surface border-l-4 border-secondary">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Qualification</span>
+<p class="text-sm font-semibold mt-1">Abus de Confiance (Art. 401 CP)</p>
+</div>
+<div class="p-4 rounded-lg bg-surface border-l-4 border-tertiary">
+<span class="text-[10px] font-bold text-tertiary uppercase tracking-tighter">Urgence</span>
+<p class="text-sm font-semibold mt-1">Moyenne - Risque de dissipation</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline & History -->
+<aside class="w-[420px] bg-surface-container-low rounded-xl p-8 flex flex-col space-y-6 sticky top-24 h-[calc(100vh-120px)] shadow-sm">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Chronologie du Dossier</h4>
+<span class="material-symbols-outlined text-slate-400 text-sm">history</span>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar space-y-8 pr-2">
+<!-- Timeline Item -->
+<div class="relative pl-8">
+<div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-secondary ring-4 ring-secondary/20"></div>
+<div class="absolute left-[7px] top-4 bottom-[-32px] w-[2px] bg-outline-variant/30"></div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400">18 Fév 2024 - 10:15</p>
+<p class="text-sm font-bold text-on-surface">Audition du Témoin</p>
+<p class="text-xs text-slate-500 leading-relaxed">M. Traoré a été entendu par le Greffier. PV d'audition n°23 ajouté au dossier.</p>
+<div class="flex items-center gap-2 mt-2">
+<img class="w-5 h-5 rounded-full" data-alt="Small avatar icon for a judicial clerk with professional neutral tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC2whSb29W83hbVtCjti8HAkXM3uFGlEA5fEPflfT-C_9dS7uY2roaLKxL7lE8GHzAIg2y4nkOHjPwtEA9snSCm44sfExm4LFpv82NTuTx0JirwxzII9iMtDmIsxbnbx7Yej4KufJ5jCT17SAPW4dE2NNODBjSYVMOuXQaVeWZHc6DFTSai5-taWSfSJiSjCoXT_kcFTlZ9-SievcuUzZitEF8jT5dYk5VnJaCxpOjAI2s9f7zUuz5dE-eZzi2wkGqevrE-84gdxQ"/>
+<span class="text-[10px] text-slate-400 font-medium">S. J. Barry (Clerc)</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="relative pl-8">
+<div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-tertiary ring-4 ring-tertiary/20"></div>
+<div class="absolute left-[7px] top-4 bottom-[-32px] w-[2px] bg-outline-variant/30"></div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400">16 Fév 2024 - 15:40</p>
+<p class="text-sm font-bold text-on-surface">Notification de Poursuite</p>
+<p class="text-xs text-slate-500 leading-relaxed">Émise à l'attention de la Direction de Translogistique SARL.</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="relative pl-8">
+<div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="absolute left-[7px] top-4 bottom-[-32px] w-[2px] bg-outline-variant/30"></div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400">14 Fév 2024 - 09:00</p>
+<p class="text-sm font-bold text-on-surface">Enregistrement Plainte</p>
+<p class="text-xs text-slate-500 leading-relaxed">Dépôt initial au guichet n°4. Dossier complet.</p>
+</div>
+</div>
+<!-- Timeline Item (Inactive/Future) -->
+<div class="relative pl-8 opacity-40">
+<div class="absolute left-0 top-0 w-4 h-4 rounded-full border-2 border-slate-300 bg-slate-50"></div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400">Prochaine étape</p>
+<p class="text-sm font-bold text-on-surface">Délibération Parquet</p>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<div class="bg-surface-container-lowest p-4 rounded-lg">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="text-[11px] font-bold text-on-surface uppercase tracking-tight">Observation Magistrate</p>
+</div>
+<p class="text-xs text-slate-500 leading-relaxed">Dossier prioritaire : suspicion de fuite du gérant vers un pays frontalier. Accélérer la transmission.</p>
+</div>
+</div>
+</aside>
+</main>
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#536bb0",
+              "secondary-container": "#fe9800",
+              "surface-container-high": "#e4e8f1",
+              "on-primary-fixed-variant": "#005300",
+              "outline": "#6f7a69",
+              "on-tertiary-container": "#eff0ff",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-tint": "#006e00",
+              "on-error": "#ffffff",
+              "surface-container": "#eaeef7",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#643900",
+              "inverse-primary": "#72de5e",
+              "error": "#ba1a1a",
+              "on-background": "#171c22",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-dim": "#d6dae3",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#ffdcbd",
+              "inverse-surface": "#2c3137",
+              "on-primary-fixed": "#002200",
+              "surface-container-highest": "#dee3eb",
+              "surface-variant": "#dee3eb",
+              "secondary-fixed-dim": "#ffb86f",
+              "primary-fixed": "#8dfb77",
+              "primary-fixed-dim": "#72de5e",
+              "surface-container-low": "#f0f4fd",
+              "outline-variant": "#becab6",
+              "on-surface-variant": "#3f4a3a",
+              "surface": "#f8f9ff",
+              "primary-container": "#008000",
+              "surface-bright": "#f8f9ff",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "primary": "#006400",
+              "on-secondary-fixed": "#2c1600",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "error-container": "#ffdad6",
+              "secondary": "#8a5100",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#00174a",
+              "inverse-on-surface": "#edf1fa",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#171c22",
+              "tertiary": "#3a5296",
+              "background": "#f8f9ff",
+              "on-primary-container": "#ccffba"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-no-border {
+        border: none !important;
+      }
+      .tonal-elevation-no-border {
+        border: none !important;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-background font-body min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none tonal-shift-no-border">
+<div class="flex justify-between items-center h-16 px-6 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-800 dark:text-green-400 text-2xl" data-icon="gavel">gavel</span>
+<h1 class="font-['Inter'] font-semibold tracking-wider uppercase text-sm text-green-800 dark:text-green-400">TRIBUNAL DE YOPOUGON</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-5 rounded-sm overflow-hidden relative shadow-sm" title="Ivorian Flag Accent">
+<div class="absolute inset-0 flex">
+<div class="w-1/3 h-full bg-[#f77f00]"></div>
+<div class="w-1/3 h-full bg-white"></div>
+<div class="w-1/3 h-full bg-[#009e60]"></div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="professional portrait of an ivorian citizen smiling gently in a clean studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXJ-AOedKlJEoTQKqt_V6YcTVZ8Nyg3Y_DEzSJNTKsOddgGj1OPbB8xFT67PZxbeS6sTukIz_8sEGeTJYpxA3DReHYwsyz3cAVym320SxavsEZRuqGT5YGx95AzkkQ0kB0MVVcEVVsn4dqUaUj5tyLjrBrOIU0GWPshY6OhLfho8-VG2nvzYfPmjIkDjggLRi4c5jOPoRvEFcsIXAd4edCKMuCO_-r8Mk-uontIFjwgkTudEqo60sYWWTbfk0r6q5o6gK9-_Z0wPs"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full flex flex-col items-center justify-center">
+<!-- Confirmation Hero Section -->
+<div class="w-full text-center space-y-6">
+<!-- Big Green Checkmark with Glassmorphism -->
+<div class="relative inline-flex items-center justify-center p-8 rounded-full bg-primary-container/10 mb-2">
+<div class="absolute inset-0 rounded-full bg-primary-container/5 blur-xl"></div>
+<span class="material-symbols-outlined text-primary text-7xl font-bold relative z-10" data-icon="check_circle" style="font-variation-settings: 'wght' 700;">check_circle</span>
+</div>
+<div class="space-y-2">
+<h2 class="text-on-background font-headline text-2xl md:text-3xl font-bold tracking-tight">Votre plainte a été enregistrée avec succès</h2>
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="label-md font-bold mr-2 uppercase tracking-widest text-[10px]">Référence :</span>
+<span class="font-mono font-bold text-primary">YP-2026-045</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Bento Grid for Confirmation Details -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 w-full mt-10">
+<!-- QR Code Card (Central) -->
+<div class="md:col-span-12 lg:col-span-12 bg-surface-container-lowest rounded-full p-8 shadow-[0_8px_24px_rgba(23,28,34,0.06)] flex flex-col items-center border border-outline-variant/10">
+<div class="bg-white p-6 rounded-2xl shadow-inner mb-4">
+<!-- Placeholder for QR Code with descriptive prompt -->
+<img alt="QR Code" class="w-40 h-40" data-alt="precise black and white qr code graphic on a white background with sharp edges for digital scanning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz5Kn8Yag6NuuBJxdhuXVUZYf721-BgGjN2BfSqYMZ-oW5e_MdiunCRe7jOazOKqJrInWo1QL8Q1HFg0beYcbki8QrBnr5OMAvxnReHBJoblEuJ32DUGKOPrVn-yrprQku4KP5YV9ZUqyz_YPnogWqyC_0ZjQP85mEAQNj_hgP7U6wJh6o_qnPvW6M7UTIaDLM3zlpU4dpQHgmtNlH80di7iKTYbuStWKsR9HIb5jwTWPEgK70cmZZecA41AOzTARwVDM0UUcqvok"/>
+</div>
+<p class="text-sm text-slate-500 max-w-xs text-center">Présentez ce code lors de votre passage au tribunal ou utilisez-le pour suivre votre dossier en ligne.</p>
+</div>
+<!-- Action Card: Status -->
+<div class="md:col-span-6 bg-surface-container-low rounded-xl p-5 flex items-start gap-4">
+<div class="p-3 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<div>
+<h3 class="title-md font-semibold text-on-surface">Statut Actuel</h3>
+<p class="body-lg text-slate-600">En attente de traitement</p>
+</div>
+</div>
+<!-- Action Card: Next Step -->
+<div class="md:col-span-6 bg-surface-container-low rounded-xl p-5 flex items-start gap-4">
+<div class="p-3 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+</div>
+<div>
+<h3 class="title-md font-semibold text-on-surface">Prochaine Étape</h3>
+<p class="body-lg text-slate-600">Examen par le greffe sous 48h</p>
+</div>
+</div>
+</div>
+<!-- Primary CTA -->
+<div class="w-full mt-12 mb-8">
+<button class="w-full py-4 bg-primary text-on-primary rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+<span>Retour à l'accueil</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Receipt Download Link -->
+<button class="flex items-center gap-2 text-tertiary font-semibold hover:underline">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+<span>Télécharger le récépissé (PDF)</span>
+</button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl rounded-t-3xl shadow-[0_-8px_24px_rgba(23,28,34,0.06)] tonal-elevation-no-border">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<!-- Accueil -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter mt-1">Accueil</span>
+</a>
+<!-- Mes Plaintes -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter mt-1">Mes Plaintes</span>
+</a>
+<!-- Déposer (Active) -->
+<a class="flex flex-col items-center justify-center bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter mt-1">Déposer</span>
+</a>
+<!-- Profil -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter mt-1">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

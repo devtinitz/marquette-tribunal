@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil Agent - Portail Magistrat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb86f",
+              "secondary": "#8a5100",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#171c22",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "surface-container-highest": "#dee3eb",
+              "tertiary": "#3a5296",
+              "inverse-surface": "#2c3137",
+              "surface-container-low": "#f0f4fd",
+              "on-tertiary-fixed": "#00174a",
+              "on-secondary-container": "#643900",
+              "secondary-container": "#fe9800",
+              "primary-fixed-dim": "#72de5e",
+              "on-primary-fixed": "#002200",
+              "tertiary-container": "#536bb0",
+              "on-secondary-fixed-variant": "#693c00",
+              "surface-bright": "#f8f9ff",
+              "secondary-fixed": "#ffdcbd",
+              "surface-container-high": "#e4e8f1",
+              "outline": "#6f7a69",
+              "surface-container": "#eaeef7",
+              "surface-tint": "#006e00",
+              "on-surface-variant": "#3f4a3a",
+              "on-tertiary-container": "#eff0ff",
+              "on-background": "#171c22",
+              "inverse-on-surface": "#edf1fa",
+              "inverse-primary": "#72de5e",
+              "surface-dim": "#d6dae3",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-variant": "#dee3eb",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary": "#ffffff",
+              "primary": "#006400",
+              "primary-fixed": "#8dfb77",
+              "on-primary-container": "#ccffba",
+              "primary-container": "#008000",
+              "outline-variant": "#becab6",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "background": "#f8f9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] z-40 bg-slate-50/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_48px_-12px_rgba(0,35,102,0.08)] flex flex-col p-6 space-y-8">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<img alt="Armoiries de la Côte d'Ivoire" class="w-10 h-10 object-contain" data-alt="Coat of arms of Ivory Coast featuring an elephant head and palm trees in clean vector style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_nYsBVdI_ulSrTjzM_0GElK7l6OSTwIFf-7tTbfSq89yr8liwdn0YfOnGdDmOJujis4y5bP27-pwsC7XNzp_dG48-6AXMwLLoxEqWLcPerEY7qdap_rAp4z6Nk8Aexzuk68KHvs-exHgMYuPZr1zYTrGgrbAEfr1ltdBFIGa2whBEXxrDzjgrTPAf3Alht1qPO5JQ8pPD37zR_SacEZFP8f2KL2-zOxy6WT_CjC7zaDp8s8yMzMZXikBg51ILSk7RCyxNECqoH0Y"/>
+<div>
+<h1 class="text-xl font-bold tracking-tighter text-green-900 dark:text-green-500 uppercase">Tribunal de Yopougon</h1>
+<p class="text-[10px] uppercase tracking-wider font-medium text-slate-500">Suivi des Plaintes</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Tableau de bord</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="text-sm font-medium">Plaintes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">send_and_archive</span>
+<span class="text-sm font-medium">Transmission Parquet</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Rapports</span>
+</a>
+</nav>
+<div class="pt-6 mt-6 border-t border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-green-900 dark:text-green-400 font-bold bg-white/50 dark:bg-slate-900/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-sm">Mon Profil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors hover:bg-slate-100/80 dark:hover:bg-slate-800/80 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm">Paramètres</span>
+</a>
+<button class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 transition-all rounded-lg mt-4">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-semibold">Déconnexion</span>
+</button>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8">
+<div class="flex items-center gap-4 flex-1 max-w-md">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Rechercher un dossier, un agent..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2 text-slate-500 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2 text-slate-500 transition-all">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="flex items-center gap-3 ml-2 pl-4 border-l border-slate-200 dark:border-slate-800">
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">Kouassi Koffi</p>
+<p class="text-[10px] text-slate-500">Commissaire Principal</p>
+</div>
+<img alt="Avatar de l'Agent Judiciaire" class="w-8 h-8 rounded-full border border-primary/20 object-cover" data-alt="Professional portrait of a West African man in formal attire, clean studio lighting, high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd5cMsX8v36EkxBm9VnOAo91ebb48sFOjKYK_ttu42dTP0dbWtHJrcxJt46vS9pub06OMmWptaFfmwLLvLfUcS1QUuZR_wryERVccjS_6JzwNAu2TG655yBUYwXV7J8UxA7wgqi59K8iHF6G1o0lS7yrM31vcO-MXWytSWbcoZe3iI9XS587YIP7QToM7AQ-ZAn4Rd8qRtbbETZjLTJ3SJTXRLQcMXsQT9VxMUjN-T4jzRs8e4si79YqCpEY2DRl-YMqTAhI3qsO4"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-24 p-8 min-h-screen bg-surface-container-low">
+<div class="max-w-6xl mx-auto space-y-8">
+<!-- Bento Layout Header -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Identity Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col md:flex-row gap-8 items-start">
+<div class="relative group">
+<img alt="Photo Agent" class="w-32 h-32 rounded-2xl object-cover shadow-lg" data-alt="Close up portrait of an African official in a suit, professional neutral background, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyuch1q8NG_yGjYrvnQwGHccACeGXVgj-Yo-g2OBi4sYrtlIiZOgTDKzzPs1t5Tf6aYF4XrgikFfkRIsRX1W1XcvXoevO5HCmcvJjyxpem_6oGNNdl5wag-uqRJvMQbFGaUxSVHXf87piVetHHJ88IEtIf3vamxYsk3yBGaSj8H-aY_FSv_zP1ZhkyUMn1M1Of-BDB-TTp0MwOkYoPVYfesjbj7mFtTngHVJrPwJNjW6ZN8s50bupRyz7lEVWeaqjLP120EzGWlNc"/>
+<button class="absolute -bottom-2 -right-2 bg-primary text-white p-2 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<div class="flex-1 space-y-4">
+<div>
+<span class="bg-secondary-container/20 text-on-secondary-container text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Actif • Service Judiciaire</span>
+<h2 class="text-3xl font-extrabold tracking-tight mt-2 text-on-surface">KOUASSI KOFFI JEAN-MARC</h2>
+<p class="text-tertiary font-medium">Commissaire Principal de Police</p>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-surface-container p-3 rounded-lg">
+<p class="text-[10px] uppercase text-slate-500 font-bold">Matricule</p>
+<p class="font-mono text-sm font-semibold">CI-2023-9982-A</p>
+</div>
+<div class="bg-surface-container p-3 rounded-lg">
+<p class="text-[10px] uppercase text-slate-500 font-bold">Affectation</p>
+<p class="text-sm font-semibold">Commissariat du 16ème Arrondissement</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Status Summary -->
+<div class="bg-primary-container text-on-primary-container p-8 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-4">verified_user</span>
+<h3 class="text-xl font-bold">Accréditation Niveau 4</h3>
+<p class="text-sm opacity-80 mt-2 leading-relaxed">Autorisé à valider les transmissions parquet et à accéder aux rapports sensibles.</p>
+</div>
+<div class="mt-6 pt-6 border-t border-white/20">
+<p class="text-xs uppercase font-bold">Dernière connexion</p>
+<p class="text-lg font-bold">Aujourd'hui, 08:42</p>
+</div>
+</div>
+</div>
+<!-- Settings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Account Preferences -->
+<section class="space-y-6">
+<h3 class="text-lg font-bold text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">tune</span>
+                        Préférences du compte
+                    </h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<!-- Appearance Toggle -->
+<div class="p-6 flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">contrast</span>
+<div>
+<p class="font-semibold text-sm">Mode d'affichage</p>
+<p class="text-xs text-slate-500">Alterner entre le mode clair et sombre</p>
+</div>
+</div>
+<div class="bg-surface-container p-1 rounded-full flex gap-1">
+<button class="bg-white px-4 py-1.5 rounded-full text-xs font-bold shadow-sm">Clair</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-medium text-slate-400">Sombre</button>
+</div>
+</div>
+<!-- Notification Settings -->
+<div class="p-6 space-y-4">
+<p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Notifications push</p>
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium">Nouvelles plaintes assignées</p>
+<div class="w-10 h-5 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium">Alertes de délai de transmission</p>
+<div class="w-10 h-5 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between opacity-50">
+<p class="text-sm font-medium">Rapports hebdomadaires (Email)</p>
+<div class="w-10 h-5 bg-slate-300 rounded-full relative cursor-not-allowed">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security & Access -->
+<section class="space-y-6">
+<h3 class="text-lg font-bold text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">security</span>
+                        Sécurité et Accès
+                    </h3>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-6">
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase text-slate-400">Mot de passe actuel</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/20" type="password" value="********"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase text-slate-400">Nouveau mot de passe</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Min. 12 caractères" type="password"/>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white font-bold py-3 rounded-lg text-sm shadow-md active:scale-[0.98] transition-transform">
+                                Mettre à jour le mot de passe
+                            </button>
+</div>
+<div class="pt-6 border-t border-surface-container space-y-4">
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary">phonelink_lock</span>
+<div>
+<p class="text-sm font-bold">Double Authentification (2FA)</p>
+<p class="text-xs text-slate-500">Configurez votre token de sécurité mobile</p>
+</div>
+<button class="ml-auto text-primary text-xs font-bold hover:underline">Activer</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Action Bar -->
+<div class="flex justify-end items-center gap-4 pt-8 border-t border-slate-200">
+<button class="px-6 py-2.5 text-slate-500 text-sm font-bold hover:bg-slate-100 rounded-lg transition-colors">
+                    Annuler les modifications
+                </button>
+<button class="px-8 py-2.5 bg-primary text-white text-sm font-bold rounded-lg shadow-xl shadow-primary/20 active:scale-[0.97] transition-transform">
+                    Enregistrer le profil
+                </button>
+</div>
+</div>
+</main>
+</body></html>
