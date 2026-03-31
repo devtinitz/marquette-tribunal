@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tribunal de Yopougon – Suivi des Plaintes</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#3f4a3a",
+                        "tertiary-fixed": "#dbe1ff",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "outline": "#6f7a69",
+                        "primary-fixed-dim": "#72de5e",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb86f",
+                        "on-tertiary-fixed": "#00174a",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#002200",
+                        "tertiary": "#3a5296",
+                        "secondary-container": "#fe9800",
+                        "secondary": "#8a5100",
+                        "on-secondary-fixed-variant": "#693c00",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#ffdcbd",
+                        "on-primary-fixed-variant": "#005300",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#72de5e",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#008000",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#eff0ff",
+                        "outline-variant": "#becab6",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed-variant": "#2a4386",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#643900",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#b3c5ff",
+                        "background": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#006400",
+                        "tertiary-container": "#536bb0",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#8dfb77",
+                        "surface-tint": "#006e00",
+                        "on-secondary-fixed": "#2c1600",
+                        "on-primary-container": "#ccffba",
+                        "surface": "#f9f9f9",
+                        "surface-container-low": "#f3f3f3",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bg-ivorian-gradient {
+            background: linear-gradient(135deg, #006400 0%, #008000 100%);
+        }
+
+        .hero-pattern {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(#006400 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <div class="flex gap-0.5 items-center h-5 w-8">
+                    <div class="h-full w-1/3 bg-[#FF9900]"></div>
+                    <div class="h-full w-1/3 bg-white border-x border-zinc-100"></div>
+                    <div class="h-full w-1/3 bg-[#008000]"></div>
+                </div>
+                <span
+                    class="text-lg font-bold text-green-900 dark:text-green-100 flex items-center gap-2 font-headline tracking-tight">TRIBUNAL
+                    DE YOPOUGON</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <span
+                    class="text-green-800 dark:text-green-500 font-inter tracking-tight font-medium text-sm">Application
+                    de suivi du cycle de vie des plaintes</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span
+                    class="material-symbols-outlined text-zinc-600 cursor-pointer hover:text-green-700 transition-colors">flag</span>
+                <button
+                    class="bg-primary-container text-on-primary-container px-5 py-2 rounded-full font-medium text-sm hover:opacity-90 active:scale-95 transition-all">
+                    Accéder aux maquettes
+                </button>
+            </div>
+        </div>
+        <div class="bg-zinc-100 dark:bg-zinc-800 h-[1px]"></div>
+    </nav>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative min-h-[870px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl opacity-10 pointer-events-none">
+                <img class="w-full h-auto grayscale contrast-125"
+                    data-alt="Stylized minimalist map of Ivory Coast with elegant geometric lines on a clean white background"
+                    data-location="Ivory Coast"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5jkc0i3Li739KNETQKd1qNqsjCcOGMFjUG4wBxCUqtSRSk8ddvrfzWFUxsuxkU9ip4Kt8Bv4hS57zxyBaehpk8QwLKIkknoZMw4O9oTiNaG3rOzph8ca7znYpccrOgPjQrlu5ZA2aGiho9OkdVqhYcrH-X9f4CXm-Rpnl-_EO51Loa-Qo0nzCXC3yPAIf9qYznqgqIyLkQDB-bt2KiTDRgxlALBlRdvrINsY2b7rYnZEhpdVmKVG-vLKFaMpDlir-PzlnfYaQl0o" />
+            </div>
+            <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold tracking-widest uppercase">
+                        <span class="material-symbols-outlined text-sm"
+                            style="font-variation-settings: 'FILL' 1;">gavel</span>
+                        Justice Digitale
+                    </div>
+                    <h1
+                        class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-primary leading-[1.1]">
+                        Suivez votre plainte <br /><span class="text-secondary">de A à Z</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl font-medium text-on-surface-variant max-w-xl leading-relaxed">
+                        Une application unique pour les Plaignants, les Commissariats et le Parquet du Tribunal de
+                        Yopougon.
+                    </p>
+                    <p class="text-lg text-zinc-600 max-w-lg">
+                        Déposez, suivez en temps réel et recevez toutes les notifications jusqu’au jugement définitif.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="px-8 py-4 rounded-full bg-secondary text-white font-bold text-lg shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all flex items-center gap-3">
+                            Découvrir les maquettes
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-end">
+                    <div
+                        class="relative w-80 h-[600px] bg-surface-container-lowest rounded-[3rem] shadow-2xl border-[8px] border-zinc-900 overflow-hidden">
+                        <div class="absolute top-0 w-full h-6 bg-zinc-900 flex justify-center items-end pb-1">
+                            <div class="w-20 h-4 bg-zinc-900 rounded-full"></div>
+                        </div>
+                        <div class="p-6 pt-10 space-y-6">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                                    <span class="material-symbols-outlined">person</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-zinc-400 font-bold uppercase tracking-wider">Plaignant</p>
+                                    <p class="font-bold text-sm">M. Koffi Kouassi</p>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container-low p-4 rounded-xl space-y-3">
+                                <p class="text-xs font-bold text-primary">DOSSIER #2024-YP-482</p>
+                                <div class="h-2 w-full bg-zinc-200 rounded-full overflow-hidden">
+                                    <div class="h-full w-2/3 bg-primary rounded-full"></div>
+                                </div>
+                                <p class="text-[10px] text-zinc-500">Statut : <span class="text-green-700 font-bold">En
+                                        cours d'instruction</span></p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex gap-3">
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] text-white">
+                                            ✓</div>
+                                        <div class="w-0.5 h-8 bg-primary"></div>
+                                    </div>
+                                    <p class="text-xs font-medium pt-1">Plainte déposée (Commissariat)</p>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] text-white">
+                                            ✓</div>
+                                        <div class="w-0.5 h-8 bg-primary"></div>
+                                    </div>
+                                    <p class="text-xs font-medium pt-1">Transmission au Parquet</p>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-6 h-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
+                                            <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs font-bold pt-1 text-primary">Instruction en cours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Presentation Section -->
+        <section class="py-24 bg-surface-container">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-8">Modernisation du
+                            Service Public de la Justice</h2>
+                        <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                            <p>
+                                Le projet de suivi du cycle de vie des plaintes est une initiative majeure du Tribunal
+                                de Yopougon visant à assurer une transparence totale entre les citoyens et l'institution
+                                judiciaire.
+                            </p>
+                            <p>
+                                Notre écosystème se compose d'une <span class="font-bold text-primary">application
+                                    mobile intuitive</span> pour les plaignants et d'interfaces <span
+                                    class="font-bold text-tertiary">web robustes</span> dédiées aux commissariats et au
+                                parquet.
+                            </p>
+                            <div
+                                class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/20">
+                                <h4 class="font-bold text-on-surface mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">verified_user</span>
+                                    Un cycle complet et sécurisé
+                                </h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-3 py-1 bg-zinc-100 rounded-md text-sm font-medium">Dépôt</span>
+                                    <span class="material-symbols-outlined text-zinc-300 text-sm">arrow_forward</span>
+                                    <span class="px-3 py-1 bg-zinc-100 rounded-md text-sm font-medium">Enquête</span>
+                                    <span class="material-symbols-outlined text-zinc-300 text-sm">arrow_forward</span>
+                                    <span class="px-3 py-1 bg-zinc-100 rounded-md text-sm font-medium">Poursuite</span>
+                                    <span class="material-symbols-outlined text-zinc-300 text-sm">arrow_forward</span>
+                                    <span
+                                        class="px-3 py-1 bg-zinc-100 rounded-md text-sm font-medium">Instruction</span>
+                                    <span class="material-symbols-outlined text-zinc-300 text-sm">arrow_forward</span>
+                                    <span class="px-3 py-1 bg-zinc-100 rounded-md text-sm font-medium">Jugement</span>
+                                    <span class="material-symbols-outlined text-zinc-300 text-sm">arrow_forward</span>
+                                    <span class="px-3 py-1 bg-zinc-100 rounded-md text-sm font-medium">Exécution</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div
+                                class="h-64 bg-primary/10 rounded-2xl flex flex-col items-center justify-center p-6 text-center group hover:bg-primary/20 transition-colors">
+                                <span class="material-symbols-outlined text-5xl text-primary mb-4"
+                                    style="font-variation-settings: 'FILL' 1;">security</span>
+                                <p class="font-bold">Sécurité Maximale</p>
+                                <p class="text-xs text-zinc-500 mt-2">Données cryptées et accès authentifiés</p>
+                            </div>
+                            <div
+                                class="h-48 bg-secondary/10 rounded-2xl flex flex-col items-center justify-center p-6 text-center group hover:bg-secondary/20 transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-5xl text-secondary mb-4">notifications_active</span>
+                                <p class="font-bold">Temps Réel</p>
+                                <p class="text-xs text-zinc-500 mt-2">Alertes SMS et push à chaque étape</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-12">
+                            <div
+                                class="h-48 bg-tertiary/10 rounded-2xl flex flex-col items-center justify-center p-6 text-center group hover:bg-tertiary/20 transition-colors">
+                                <span class="material-symbols-outlined text-5xl text-tertiary mb-4">analytics</span>
+                                <p class="font-bold">Statistiques</p>
+                                <p class="text-xs text-zinc-500 mt-2">Pilotage pour le Tribunal</p>
+                            </div>
+                            <div
+                                class="h-64 bg-primary-fixed/30 rounded-2xl flex flex-col items-center justify-center p-6 text-center group hover:bg-primary-fixed/40 transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-5xl text-on-primary-fixed-variant mb-4">account_balance</span>
+                                <p class="font-bold">Transparence</p>
+                                <p class="text-xs text-zinc-500 mt-2">Confiance citoyenne restaurée</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Access to Mockups Section -->
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-5xl font-headline font-extrabold tracking-tight mb-4">Accédez aux maquettes
+                </h2>
+                <div class="h-1.5 w-24 bg-secondary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <a class="group bg-surface-container-lowest p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-xl hover:translate-y-[-8px] transition-all duration-300"
+                    href="#" target="_blank">
+                    <div
+                        class="w-14 h-14 bg-primary-container/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">smartphone</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Maquette Mobile Plaignant – V1</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Interface optimisée pour le dépôt initial et la consultation
+                        rapide.</p>
+                    <div class="flex items-center gap-2 text-primary font-bold text-sm">
+                        Voir la maquette
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a class="group bg-surface-container-lowest p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-xl hover:translate-y-[-8px] transition-all duration-300"
+                    href="Maquette mobile/V1/" target="_blank">
+                    <div
+                        class="w-14 h-14 bg-primary-container/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">smartphone</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Maquette Mobile Plaignant – V2</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Version enrichie avec messagerie sécurisée et gestion
+                        documentaire.</p>
+                    <div class="flex items-center gap-2 text-primary font-bold text-sm">
+                        Voir la maquette
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a class="group bg-secondary-fixed/20 p-8 rounded-2xl border border-secondary-fixed shadow-sm hover:shadow-xl hover:translate-y-[-8px] transition-all duration-300"
+                    href="Nouvelle version/Commissariat/fusion/connexion.html" target="_blank">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-14 h-14 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">desktop_windows</span>
+                        </div>
+                        <span class="material-symbols-outlined text-secondary opacity-40">policy</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Maquette Web Commissariat</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Gestion des procès-verbaux et transmission numérique au
+                        parquet.</p>
+                    <div class="flex items-center gap-2 text-secondary font-bold text-sm">
+                        Accès réservé
+                        <span class="material-symbols-outlined text-sm">lock</span>
+                    </div>
+                </a>
+                <!-- Card 4 -->
+                <a class="group bg-tertiary-fixed/20 p-8 rounded-2xl border border-tertiary-fixed shadow-sm hover:shadow-xl hover:translate-y-[-8px] transition-all duration-300"
+                    href="Nouvelle version/Parquet/fusion/connexion.html" target="_blank">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-14 h-14 bg-tertiary/10 text-tertiary rounded-xl flex items-center justify-center group-hover:bg-tertiary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">balance</span>
+                        </div>
+                        <span class="material-symbols-outlined text-tertiary opacity-40">account_balance</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-[#002366]">Maquette Web Parquet</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Suivi des dossiers d'instruction et ordonnancement des
+                        jugements.</p>
+                    <div class="flex items-center gap-2 text-tertiary font-bold text-sm">
+                        Accès réservé
+                        <span class="material-symbols-outlined text-sm">lock</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-zinc-50 dark:bg-zinc-950 w-full py-12 border-t border-zinc-200 dark:border-zinc-800">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <p class="text-green-900 dark:text-green-100 font-bold font-headline mb-2">TRIBUNAL DE YOPOUGON</p>
+                <p class="text-sm font-inter leading-relaxed text-zinc-500 dark:text-zinc-400">Tribunal de Yopougon –
+                    Premier projet 2026</p>
+            </div>
+            <div class="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 text-sm italic">
+                <span class="material-symbols-outlined text-sm">info</span>
+                <span>Maquettes générées pour validation fonctionnelle</span>
+            </div>
+            <div class="flex gap-6 text-sm">
+                <a class="text-zinc-500 dark:text-zinc-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                    href="#">Mentions Légales</a>
+                <a class="text-zinc-500 dark:text-zinc-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                    href="#">Aide</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

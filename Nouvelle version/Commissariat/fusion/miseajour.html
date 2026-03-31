@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mise à jour enquête - Tribunal de Yopougon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#f9f9f9",
+              "outline": "#6f7a69",
+              "surface-tint": "#006e00",
+              "surface-variant": "#e2e2e2",
+              "secondary-fixed-dim": "#ffb86f",
+              "on-primary-container": "#ccffba",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-container-high": "#e8e8e8",
+              "tertiary": "#3a5296",
+              "on-secondary-container": "#643900",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f3f3f3",
+              "on-background": "#1a1c1c",
+              "on-tertiary-fixed": "#00174a",
+              "surface-dim": "#dadada",
+              "secondary-fixed": "#ffdcbd",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary": "#8a5100",
+              "on-secondary-fixed": "#2c1600",
+              "inverse-surface": "#2f3131",
+              "surface-container-highest": "#e2e2e2",
+              "tertiary-fixed": "#dbe1ff",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "primary-container": "#008000",
+              "tertiary-container": "#536bb0",
+              "primary-fixed-dim": "#72de5e",
+              "on-surface": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#72de5e",
+              "surface": "#f9f9f9",
+              "primary-fixed": "#8dfb77",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "surface-bright": "#f9f9f9",
+              "on-tertiary-container": "#eff0ff",
+              "on-primary-fixed": "#002200",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "outline-variant": "#becab6",
+              "on-surface-variant": "#3f4a3a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary-fixed-variant": "#693c00",
+              "secondary-container": "#fe9800",
+              "primary": "#006400"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.85); }
+        .transmission-gradient { background: linear-gradient(180deg, #8a5100 0%, #fe9800 100%); }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed h-screen w-72 left-0 top-0 flex flex-col border-r border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950 z-40">
+<div class="p-8">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-black text-lg">T</div>
+<div>
+<h2 class="text-lg font-black text-green-900 leading-tight">Commissariat</h2>
+<p class="text-xs font-medium tracking-wide text-stone-500">Yopougon, Abidjan</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Accueil</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-white dark:bg-stone-900 text-green-800 border-l-4 border-green-700 font-semibold shadow-sm hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span>Créer un dossier</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span>Dossiers créés</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">send</span>
+<span>Plaintes envoyées</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Rapports</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span>Profil</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6">
+<button class="w-full transmission-gradient text-white py-4 rounded-xl font-bold text-sm tracking-wider flex items-center justify-center gap-2 shadow-lg hover:opacity-90 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                TRANSMETTRE AU PARQUET
+            </button>
+</div>
+</aside>
+<main class="ml-72 flex-1 relative">
+<!-- TopNavBar -->
+<header class="bg-white/85 backdrop-blur-xl sticky top-0 z-30 shadow-sm shadow-stone-200/40 px-8 py-3 flex justify-between items-center w-full">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-green-900 border-l-4 border-orange-500 pl-3">TRIBUNAL DE YOPOUGON</span>
+<span class="text-stone-300 text-2xl font-thin mx-2">/</span>
+<span class="text-stone-600 font-medium">Enquête N° 2024-YP-482</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="p-2 text-stone-500 hover:bg-stone-100 rounded-full transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-2 text-stone-500 hover:bg-stone-100 rounded-full transition-colors"><span class="material-symbols-outlined">settings</span></button>
+</div>
+<div class="flex items-center gap-3 pl-6 border-l border-stone-200">
+<div class="text-right">
+<p class="text-sm font-bold text-stone-900 leading-none">Agent de Liaison</p>
+<p class="text-[10px] text-stone-500 uppercase tracking-widest mt-1">Service Enquêtes</p>
+</div>
+<img alt="Agent Avatar" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/10" data-alt="portrait of a professional officer in uniform, neutral expression, soft studio lighting, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANgDM1Kzue6oqtNnKXw_6hZ_12Rxq7G4UrfbTODVC5Ykn6-g0CB-hpwU49V4qD4aO7JeOPAxNXnqb8rrWFr4L7eW2C86EuOdVVY8Xy9V-EP9lLEXuSldwdUl8V87cfBkyp3Ka0zTSsPgnp8fkM3ocM9bZ6kjz8ydlfwd0Mb2aPhsci93uTaWIXonwjrPSqW_je_0BZqRE2HVUNTa90RaLneUtkwQ_TUDcAy9xlUGVPZCEJfKPVB1VGnlddX4y4TicQjGtkI5CSYKus"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="p-10 max-w-6xl mx-auto">
+<div class="flex justify-between items-end mb-10">
+<div>
+<span class="label-md text-secondary font-bold tracking-[0.2em] mb-2 block uppercase">Action Administrative</span>
+<h1 class="text-[2.75rem] font-bold text-stone-900 tracking-tight leading-none">Mise à jour enquête</h1>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 text-stone-500 font-medium hover:text-stone-900 transition-colors">Annuler</button>
+<button class="bg-primary text-white px-8 py-3 rounded-xl font-bold shadow-sm hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">save</span>
+                        Sauvegarder l'évolution
+                    </button>
+</div>
+</div>
+<!-- Bento Layout for Form -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Section: Type de mise à jour & Titre -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-black/[0.02]">
+<h3 class="text-xl font-semibold text-stone-900 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+                            Éléments du dossier
+                        </h3>
+<div class="grid grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">Objet de l'acte</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all text-stone-900 font-medium" placeholder="Ex: Audition du témoin principal M. Kouassi" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">Type de document</label>
+<select class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all text-stone-900 font-medium">
+<option>Procès-Verbal (PV)</option>
+<option>Compte-rendu d'audition</option>
+<option>Rapport de constatations</option>
+<option>Saisie de pièces à conviction</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">Date de l'acte</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all text-stone-900 font-medium" type="date"/>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">Notes descriptives et observations</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all text-stone-900 font-medium leading-relaxed" placeholder="Saisissez ici les détails substantiels de l'intervention ou les résumés d'auditions..." rows="6"></textarea>
+</div>
+</div>
+</div>
+<!-- Upload Area -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-black/[0.02]">
+<h3 class="text-xl font-semibold text-stone-900 mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">attach_file</span>
+                            Pièces jointes &amp; Preuves
+                        </h3>
+<p class="text-sm text-stone-500 mb-6 italic">Ajoutez des photos de scène de crime, scans de documents ou enregistrements.</p>
+<div class="border-2 border-dashed border-stone-200 rounded-2xl p-12 flex flex-col items-center justify-center bg-stone-50/50 hover:bg-stone-50 transition-colors cursor-pointer group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_upload</span>
+</div>
+<p class="text-stone-900 font-bold">Glissez vos fichiers ici</p>
+<p class="text-sm text-stone-500 mt-1">PNG, JPG ou PDF jusqu'à 25MB</p>
+<button class="mt-6 text-primary font-bold text-sm border-b-2 border-primary/20 hover:border-primary pb-0.5 transition-all">Parcourir les fichiers localement</button>
+</div>
+<div class="grid grid-cols-4 gap-4 mt-8">
+<div class="relative aspect-square bg-stone-200 rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="close-up of a legal document on a desk with a gavel and scales of justice in soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoQGxF8MzA_uC0jBH25lU_fusMwSVJURX7SXCTkie-GGacfyOGwk0FyGuwOF7COk2Q91_oUioYsEnIKsNYJrahvrcb17lWojX2kEUf-tZ3ZZFhvDvZRGfX2cR3QKaaWn0rMkDpgDWF5lL6xq2zsSoPLrN8TD3VE6uI9AlpE3u8CeOFFmpJx9Zsf89CfYmpKZoXNhaluk1oyB_XRgVofxqNs3or8YeKXyPGAmUxZlhs8EVJN0UA_0v4NGjXSWVwEgDZohWv8a8s9W3u"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="relative aspect-square bg-stone-200 rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="crime scene with yellow tape and evidence markers on a pavement under bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8y10VqPCh2__uD_pAnbhd4iZxrI3-faTllFnp67dzI1XcXo4utQ--bxzb6yeuThf-m5uwkZDsjXV9rGnZCjsIjzg9mgNP2yF-wNMa4i97TsWPhDYn9IERSL0iWqvi0eqW_bTnFNUw-o1xRywtwwT4DxgKDoU4kbTizYzTSIVB7t3c6znrobYrMwngHk0Nlz1SYzbI9JT74dm3mc-eGLD64tBwVmfUvBdBqFOxbT111OAVH-39Nt1Pm7PLgcC2aAa2JVUk9sfDs81m"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Content: Summary & Status -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-surface-container-high p-8 rounded-xl space-y-6">
+<div>
+<h4 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-4">Récapitulatif Dossier</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-black/[0.05]">
+<span class="text-stone-600 text-sm">Référence</span>
+<span class="text-stone-900 font-bold">2024-YP-482</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-black/[0.05]">
+<span class="text-stone-600 text-sm">Plaignant</span>
+<span class="text-stone-900 font-bold">M. Koffi Jean</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-black/[0.05]">
+<span class="text-stone-600 text-sm">Nature</span>
+<span class="text-stone-900 font-bold">Abus de confiance</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-black/[0.05]">
+<span class="text-stone-600 text-sm">État actuel</span>
+<span class="bg-tertiary-container/20 text-tertiary text-[10px] font-black px-2 py-0.5 rounded-full uppercase">En cours</span>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-4">Urgence de traitement</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 text-[10px] font-bold rounded-md bg-stone-200 text-stone-600 uppercase">Faible</button>
+<button class="py-2 text-[10px] font-bold rounded-md bg-white border border-stone-300 text-stone-900 shadow-sm uppercase">Moyen</button>
+<button class="py-2 text-[10px] font-bold rounded-md bg-error-container text-error uppercase">Urgent</button>
+</div>
+</div>
+<div class="bg-white/50 p-4 rounded-lg border border-black/[0.03]">
+<p class="text-xs text-stone-500 leading-relaxed italic">
+<span class="material-symbols-outlined text-orange-500 text-sm align-middle mr-1">info</span>
+                                La transmission définitive au parquet nécessite la signature électronique de l'officier responsable.
+                            </p>
+</div>
+</div>
+<!-- Secondary Action: Detailed View -->
+<div class="bg-stone-900 text-white p-8 rounded-xl flex flex-col justify-between h-[280px] relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[180px]">gavel</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-xl font-bold mb-2">Prêt pour transfert ?</h4>
+<p class="text-stone-400 text-sm leading-relaxed">Si tous les éléments sont réunis, vous pouvez visualiser le dossier complet avant la transmission finale.</p>
+</div>
+<button class="relative z-10 w-full py-4 bg-white text-stone-900 rounded-lg font-bold text-sm tracking-wide hover:bg-stone-100 transition-colors">
+                            Voir le récapitulatif complet
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

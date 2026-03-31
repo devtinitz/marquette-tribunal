@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Connexion - Tribunal de Yopougon</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#f9f9f9",
+            "outline": "#6f7a69",
+            "surface-tint": "#006e00",
+            "surface-variant": "#e2e2e2",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-high": "#e8e8e8",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f3f3f3",
+            "on-background": "#1a1c1c",
+            "on-tertiary-fixed": "#00174a",
+            "surface-dim": "#dadada",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2f3131",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#dbe1ff",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#1a1c1c",
+            "surface-container": "#eeeeee",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "surface": "#f9f9f9",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f9f9f9",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-primary-fixed-variant": "#005300",
+            "on-secondary-fixed-variant": "#693c00",
+            "secondary-container": "#fe9800",
+            "primary": "#006400"
+          },
+          fontFamily: {
+            "headline": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .signature-gradient {
+      background: linear-gradient(to bottom, #8a5100, #fe9800);
+    }
+
+    .ivorian-accent {
+      background: linear-gradient(to right, #ff8200 33%, #ffffff 33%, #ffffff 66%, #009e49 66%);
+      height: 4px;
+      width: 64px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface flex items-center justify-center min-h-screen">
+  <div
+    class="relative w-full max-w-6xl mx-auto flex flex-col md:flex-row shadow-2xl overflow-hidden rounded-xl bg-surface-container-lowest">
+    <div class="hidden md:flex md:w-1/2 relative bg-primary-container items-center justify-center p-12 overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full"
+          data-alt="Close up of a wooden judicial gavel on a mahogany desk with warm atmospheric legal office lighting."
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWi4b0Qb3urzi2CGes3xQMaQ2OZWxNjYPo3bvvyIC1nLrhL-j96SM6IgamkIIqGhO_phwHKrNTKqYBPBveOMRaclQv80N_L6nip15PbTxczv0YD4FJtbnZG4Facm7jcJd0uEEvDv_L_fl7XvuEnIvIAmni1fNHeeWvV5oaiqON1x54R906ML2djhzeB1IUuSJw87cyq8Amy8XL-Issanj7Uj423GmtsTP_1xuKF6spozXxvMNrxMnQ4IZpS6n1OHpWtN_ZeCXuUafS'); background-size: cover;">
+        </div>
+      </div>
+      <div class="relative z-10 text-white space-y-6">
+        <div class="flex items-center space-x-4">
+          <div class="ivorian-accent rounded-full"></div>
+          <span class="label-md tracking-widest text-on-primary-container font-bold uppercase">République de Côte
+            d'Ivoire</span>
+        </div>
+        <h1 class="text-5xl font-black leading-tight tracking-tighter">
+          TRIBUNAL DE <br /> YOPOUGON
+        </h1>
+        <p class="text-lg text-on-primary-container opacity-90 max-w-md font-medium leading-relaxed">
+          Accédez au portail sécurisé du commissariat pour la gestion et la transmission des dossiers judiciaires.
+        </p>
+        <div class="flex items-center space-x-2 pt-8">
+          <span class="material-symbols-outlined text-4xl" data-icon="verified_user">verified_user</span>
+          <span class="text-sm font-semibold">Système de Gestion Souverain</span>
+        </div>
+      </div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary opacity-10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-surface-container-lowest">
+      <div class="mb-10 md:hidden flex flex-col items-center">
+        <div class="ivorian-accent mb-4"></div>
+        <h2 class="text-2xl font-bold text-primary">TRIBUNAL DE YOPOUGON</h2>
+      </div>
+      <div class="max-w-md mx-auto w-full">
+        <header class="mb-8">
+          <h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Authentification Agent</h2>
+          <p class="text-on-surface-variant font-medium">Veuillez saisir vos identifiants de service pour continuer.</p>
+        </header>
+        <form class="space-y-6">
+          <div class="space-y-2">
+            <label class="label-md font-bold text-on-surface-variant block" for="matricule">Matricule (Serial
+              ID)</label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant"
+                data-icon="badge">badge</span>
+              <input
+                class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all duration-200 placeholder:text-outline-variant font-medium"
+                id="matricule" placeholder="Ex: PN-2024-8842" type="text" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label class="label-md font-bold text-on-surface-variant block" for="code">Code Confidentiel</label>
+              <a class="text-xs font-bold text-tertiary hover:underline" href="#">Mot de passe oublié</a>
+            </div>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant"
+                data-icon="lock">lock</span>
+              <input
+                class="w-full pl-12 pr-12 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all duration-200 placeholder:text-outline-variant"
+                id="code" placeholder="••••••••" type="password" />
+              <button
+                class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant hover:text-primary"
+                data-icon="visibility" type="button">visibility</button>
+            </div>
+          </div>
+          <div class="pt-2">
+
+            <button
+              class="w-full py-4 px-6 bg-primary text-on-primary font-bold rounded-xl flex items-center justify-center space-x-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+              type="submit">
+              <a href="dashboard.html">
+                <span>Se Connecter au Portail</span>
+                <span class="material-symbols-outlined" data-icon="login">login</span>
+              </a>
+            </button>
+          </div>
+        </form>
+        <div class="mt-8 flex items-center justify-between">
+          <div class="h-px flex-1 bg-surface-container-high"></div>
+          <span class="px-4 label-md text-outline-variant font-bold">OU UTILISER</span>
+          <div class="h-px flex-1 bg-surface-container-high"></div>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <button
+            class="flex items-center justify-center space-x-3 py-3 px-4 bg-surface-container-low border border-outline-variant/10 rounded-xl hover:bg-surface-container-high transition-colors">
+            <span class="material-symbols-outlined text-primary" data-icon="fingerprint">fingerprint</span>
+            <span class="text-sm font-bold text-on-surface">Biométrie</span>
+          </button>
+          <button
+            class="flex items-center justify-center space-x-3 py-3 px-4 bg-surface-container-low border border-outline-variant/10 rounded-xl hover:bg-surface-container-high transition-colors">
+            <span class="material-symbols-outlined text-secondary" data-icon="smart_card">smart_card_reader</span>
+            <span class="text-sm font-bold text-on-surface">Carte Pro</span>
+          </button>
+        </div>
+        <footer class="mt-12 text-center">
+          <p class="text-xs text-outline-variant font-medium">
+            Accès réservé au personnel assermenté. <br />
+            Toute tentative d'accès non autorisé est passible de poursuites pénales selon la loi ivoirienne.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <div class="fixed bottom-6 right-6 md:flex hidden flex-col items-end space-y-2 opacity-50">
+    <div class="flex space-x-1">
+      <div class="w-2 h-2 bg-secondary-container rounded-full"></div>
+      <div class="w-2 h-2 bg-primary rounded-full"></div>
+      <div class="w-2 h-2 bg-tertiary-container rounded-full"></div>
+    </div>
+    <span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">v2.4.0 Sovereign Ledger</span>
+  </div>
+</body>
+
+</html>

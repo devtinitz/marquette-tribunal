@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Tribunal de Yopougon - Dashboard Commissariat</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#f9f9f9",
+            "outline": "#6f7a69",
+            "surface-tint": "#006e00",
+            "surface-variant": "#e2e2e2",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-high": "#e8e8e8",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f3f3f3",
+            "on-background": "#1a1c1c",
+            "on-tertiary-fixed": "#00174a",
+            "surface-dim": "#dadada",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2f3131",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#dbe1ff",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#1a1c1c",
+            "surface-container": "#eeeeee",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "surface": "#f9f9f9",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f9f9f9",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-primary-fixed-variant": "#005300",
+            "on-secondary-fixed-variant": "#693c00",
+            "secondary-container": "#fe9800",
+            "primary": "#006400"
+          },
+          fontFamily: {
+            "headline": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #1a1c1c;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .active-nav-border {
+      border-left: 4px solid #006400;
+    }
+
+    .transmission-gradient {
+      background: linear-gradient(180deg, #8a5100 0%, #fe9800 100%);
+    }
+  </style>
+</head>
+
+<body class="flex min-h-screen">
+  <!-- SideNavBar Component -->
+  <aside
+    class="fixed h-screen w-72 left-0 top-0 bg-stone-100 dark:bg-stone-950 flex flex-col border-r border-stone-200 dark:border-stone-800 z-40">
+    <div class="p-8 flex flex-col items-start gap-2">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-inner">
+          <span class="material-symbols-outlined text-white" data-icon="gavel">gavel</span>
+        </div>
+        <div>
+          <h1 class="text-lg font-black text-green-900 tracking-tight leading-none uppercase">Commissariat</h1>
+          <p class="text-[10px] font-bold text-secondary tracking-widest uppercase">Yopougon, Abidjan</p>
+        </div>
+      </div>
+    </div>
+    <nav class="flex-1 px-4 py-4 space-y-1">
+      <!-- Active: Accueil -->
+      <a class="flex items-center gap-4 px-4 py-3 bg-white dark:bg-stone-900 text-green-800 border-l-4 border-green-700 font-semibold shadow-sm rounded-r-md hover:translate-x-1 transition-transform duration-200"
+        href="dashboard.html">
+        <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+        <span class="font-sans text-sm font-medium tracking-wide">Accueil</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 rounded-md"
+        href="creerundossier.html">
+        <span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+        <span class="font-sans text-sm font-medium tracking-wide">Créer un dossier</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 rounded-md"
+        href="listedesdossiers.html">
+        <span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+        <span class="font-sans text-sm font-medium tracking-wide">Dossiers créés</span>
+      </a>
+      <a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 rounded-md"
+        href="listesdesplaintestransmises.html">
+        <span class="material-symbols-outlined" data-icon="send">send</span>
+        <span class="font-sans text-sm font-medium tracking-wide">Plaintes envoyées</span>
+      </a>
+      <!-- <a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 rounded-md"
+        href="profilrapport.html">
+        <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+        <span class="font-sans text-sm font-medium tracking-wide">Rapports</span>
+      </a> -->
+      <a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 rounded-md"
+       href="profilrapport.html">
+        <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+        <span class="font-sans text-sm font-medium tracking-wide">Profil</span>
+      </a>
+    </nav>
+    <div class="p-6">
+      <button
+        class="w-full py-4 transmission-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 active:opacity-90 transition-all uppercase tracking-widest text-xs">
+        <a href="listesdesplaintestransmises.html">
+          <span class="material-symbols-outlined" data-icon="publish">publish</span>
+          Transmettre au Parquet </a>
+      </button>
+    </div>
+  </aside>
+  <!-- Main Content Canvas -->
+  <main class="ml-72 flex-1 min-h-screen bg-surface flex flex-col">
+    <!-- TopAppBar Component -->
+    <header
+      class="bg-white/85 dark:bg-stone-900/85 backdrop-blur-xl sticky top-0 z-30 flex justify-between items-center w-full px-8 py-4 shadow-sm shadow-stone-200/40 dark:shadow-none">
+      <div class="flex items-center gap-6">
+        <h2
+          class="text-xl font-bold tracking-tight text-green-900 dark:text-green-600 border-l-4 border-orange-500 pl-3 uppercase">
+          TRIBUNAL DE YOPOUGON</h2>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2 text-stone-500 mr-4">
+          <span class="material-symbols-outlined" data-icon="search">search</span>
+          <input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-medium"
+            placeholder="Rechercher un dossier..." type="text" />
+        </div>
+        <div class="flex items-center gap-4">
+          <button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-colors text-stone-600">
+            <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+          </button>
+          <button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-colors text-stone-600">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+          </button>
+          <div class="h-8 w-[1px] bg-stone-200 mx-2"></div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <p class="text-xs font-bold text-stone-900 uppercase">Agent de Liaison</p>
+              <p class="text-[10px] text-stone-500">Badge #YP-402</p>
+            </div>
+            <img alt="Agent Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-stone-100"
+              data-alt="professional portrait of an African male judicial officer in formal attire with a neutral background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkYq1gutTdRF2J518CLqDiaJutpRXWb7qw8STkVz6mp2EhrDwpz-rQp6F1gOLE9CX9cVChXDzrW4pHQ3l3fmqAePyAnyPSpl69AF2Er4Xn7WYL3xsymthHghSIwzUHBwlCGmU-4Ag8XPM1RtrVCj89DXqEqoCQ3uY_1EGtcx9_TOsiyif6p3BDy6no0B5nPkSyyVtEIf0h0uN7Hgmc8NMH_WGDtBEwCkXaEpdM8qRpl-ecU3RluZ6HCTlOfoWRe53xlpgaiBr2k8N1" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Dashboard Content -->
+    <div class="p-10 space-y-10">
+      <!-- Hero Header -->
+      <div class="flex justify-between items-end">
+        <div>
+          <h3 class="text-[2.75rem] font-extrabold text-on-background leading-tight font-headline">Tableau de Bord</h3>
+          <p class="text-stone-500 font-medium mt-2">Vue d'ensemble de l'activité du Commissariat • <span
+              class="text-primary font-bold">24 Mai 2024</span></p>
+        </div>
+        <div class="flex gap-3">
+          <button
+            class="px-6 py-3 bg-white text-stone-700 font-bold rounded-xl shadow-sm border border-stone-100 hover:bg-stone-50 transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+            Filtrer par date
+          </button>
+          <button
+            class="px-6 py-3 bg-tertiary text-white font-bold rounded-xl shadow-lg hover:opacity-90 transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined" data-icon="download">download</span>
+            Exporter le registre
+          </button>
+        </div>
+      </div>
+      <!-- Statistics Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Stat Card 1 -->
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.04)] relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <span class="material-symbols-outlined text-8xl" data-icon="description">description</span>
+          </div>
+          <p class="text-label-md font-bold uppercase tracking-widest text-stone-400 mb-2">Plaintes Reçues Aujourd'hui
+          </p>
+          <div class="flex items-baseline gap-3">
+            <h4 class="text-5xl font-black text-on-background">42</h4>
+            <span
+              class="text-xs font-bold text-primary flex items-center gap-1 bg-primary-container/10 px-2 py-1 rounded-full">
+              <span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+              +12%
+            </span>
+          </div>
+          <div class="mt-6 w-full bg-stone-100 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-primary h-full w-[65%]"></div>
+          </div>
+        </div>
+        <!-- Stat Card 2 -->
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.04)] relative overflow-hidden group border-t-4 border-tertiary">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500 text-tertiary">
+            <span class="material-symbols-outlined text-8xl" data-icon="pending_actions">pending_actions</span>
+          </div>
+          <p class="text-label-md font-bold uppercase tracking-widest text-stone-400 mb-2">Dossiers en cours de
+            Traitement</p>
+          <div class="flex items-baseline gap-3">
+            <h4 class="text-5xl font-black text-on-background">15</h4>
+            <span class="text-xs font-bold text-stone-400 flex items-center gap-1 bg-stone-100 px-2 py-1 rounded-full">
+              <span class="material-symbols-outlined text-[14px]" data-icon="horizontal_rule">horizontal_rule</span>
+              Stable
+            </span>
+          </div>
+          <div class="mt-6 w-full bg-stone-100 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-tertiary h-full w-[40%]"></div>
+          </div>
+        </div>
+        <!-- Stat Card 3 -->
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.04)] relative overflow-hidden group border-t-4 border-secondary">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500 text-secondary">
+            <span class="material-symbols-outlined text-8xl" data-icon="gavel">gavel</span>
+          </div>
+          <p class="text-label-md font-bold uppercase tracking-widest text-stone-400 mb-2">Transmises au Parquet</p>
+          <div class="flex items-baseline gap-3">
+            <h4 class="text-5xl font-black text-on-background">27</h4>
+            <span
+              class="text-xs font-bold text-primary flex items-center gap-1 bg-primary-container/10 px-2 py-1 rounded-full">
+              <span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+              Optimisé
+            </span>
+          </div>
+          <div class="mt-6 w-full bg-stone-100 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-secondary h-full w-[80%]"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Urgent Complaints Section -->
+      <section
+        class="bg-surface-container-lowest rounded-xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.04)] overflow-hidden">
+        <div class="px-8 py-6 border-b border-stone-50 flex justify-between items-center">
+          <div class="flex items-center gap-3">
+            <div class="w-2 h-8 bg-error rounded-full"></div>
+            <h3 class="text-1.5rem font-semibold text-on-background headline-sm">Plaintes Urgentes</h3>
+          </div>
+          <span
+            class="px-3 py-1 bg-error-container text-error text-[10px] font-bold uppercase tracking-widest rounded-full">Priorité
+            Haute</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-surface-dim/30">
+                <th class="px-8 py-4 text-xs font-bold text-stone-500 uppercase tracking-widest">ID Dossier</th>
+                <th class="px-8 py-4 text-xs font-bold text-stone-500 uppercase tracking-widest">Plaignant</th>
+                <th class="px-8 py-4 text-xs font-bold text-stone-500 uppercase tracking-widest">Infraction Présumée
+                </th>
+                <th class="px-8 py-4 text-xs font-bold text-stone-500 uppercase tracking-widest">Date &amp; Heure</th>
+                <th class="px-8 py-4 text-xs font-bold text-stone-500 uppercase tracking-widest">Statut</th>
+                <th class="px-8 py-4 text-xs font-bold text-stone-500 uppercase tracking-widest text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-50">
+              <!-- Row 1 -->
+              <tr class="hover:bg-stone-50/50 transition-colors group">
+                <td class="px-8 py-6 font-mono text-sm font-bold text-tertiary">#YOP-2024-0891</td>
+                <td class="px-8 py-6">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-600">
+                      KB</div>
+                    <span class="font-medium text-on-background">Koffi Bakayoko</span>
+                  </div>
+                </td>
+                <td class="px-8 py-6 text-sm text-stone-600">Vol avec violence aggravée</td>
+                <td class="px-8 py-6 text-sm text-stone-500">Aujourd'hui, 08:15</td>
+                <td class="px-8 py-6">
+                  <span
+                    class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-wider rounded-full">En
+                    cours</span>
+                </td>
+                <td class="px-8 py-6 text-right">
+                  <button class="text-stone-400 hover:text-primary transition-colors">
+                    <a href="detaildudossier.html">
+                    <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                    </a>
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 2 (Zebra) -->
+              <tr class="bg-surface-container-low/50 hover:bg-stone-50/50 transition-colors group">
+                <td class="px-8 py-6 font-mono text-sm font-bold text-tertiary">#YOP-2024-0888</td>
+                <td class="px-8 py-6">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-600">
+                      AD</div>
+                    <span class="font-medium text-on-background">Awa Diabaté</span>
+                  </div>
+                </td>
+                <td class="px-8 py-6 text-sm text-stone-600">Abus de confiance commercial</td>
+                <td class="px-8 py-6 text-sm text-stone-500">Hier, 17:40</td>
+                <td class="px-8 py-6">
+                  <span
+                    class="px-3 py-1 bg-error-container text-on-error-container text-[10px] font-bold uppercase tracking-wider rounded-full">Urgent</span>
+                </td>
+                <td class="px-8 py-6 text-right">
+                  <button class="text-stone-400 hover:text-primary transition-colors">
+                    <a href="detaildudossier.html">
+                    <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                    </a>
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 3 -->
+              <tr class="hover:bg-stone-50/50 transition-colors group">
+                <td class="px-8 py-6 font-mono text-sm font-bold text-tertiary">#YOP-2024-0885</td>
+                <td class="px-8 py-6">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-xs font-bold text-stone-600">
+                      SY</div>
+                    <span class="font-medium text-on-background">Seydou Yacouba</span>
+                  </div>
+                </td>
+                <td class="px-8 py-6 text-sm text-stone-600">Nuisances sonores récurrentes</td>
+                <td class="px-8 py-6 text-sm text-stone-500">Hier, 14:22</td>
+                <td class="px-8 py-6">
+                  <span
+                    class="px-3 py-1 bg-on-primary-container text-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Validé</span>
+                </td>
+                <td class="px-8 py-6 text-right">
+                  <button class="text-stone-400 hover:text-primary transition-colors">
+                    <a href="detaildudossier.html">
+                    <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                    </a>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="px-8 py-6 bg-stone-50/30 flex justify-center">
+          <button class="text-sm font-bold text-tertiary flex items-center gap-2 hover:underline">
+            <a href="listedesdossiers.html">Voir tout le registre des plaintes</a>
+            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </button>
+        </div>
+      </section>
+      <!-- Bottom Asymmetric Grid (Utility & Recent Transmission) -->
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <!-- Activity Feed (2/5) -->
+        <div class="lg:col-span-2 bg-white rounded-xl p-8 shadow-sm border border-stone-100">
+          <h4 class="text-lg font-bold text-on-background mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+            Activité Récente
+          </h4>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 bg-primary rounded-full mt-2 ring-4 ring-primary/10"></div>
+              <div>
+                <p class="text-sm font-bold text-on-background">Transmission Réussie</p>
+                <p class="text-xs text-stone-500">Dossier #YOP-442 envoyé au Parquet.</p>
+                <span class="text-[10px] text-stone-400 mt-1 block">Il y a 12 min</span>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 bg-secondary rounded-full mt-2 ring-4 ring-secondary/10"></div>
+              <div>
+                <p class="text-sm font-bold text-on-background">Nouveau Dossier Créé</p>
+                <p class="text-xs text-stone-500">Plainte déposée par Marc Kouassi.</p>
+                <span class="text-[10px] text-stone-400 mt-1 block">Il y a 45 min</span>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 bg-tertiary rounded-full mt-2 ring-4 ring-tertiary/10"></div>
+              <div>
+                <p class="text-sm font-bold text-on-background">Rapport Généré</p>
+                <p class="text-xs text-stone-500">Statistiques hebdomadaires disponibles.</p>
+                <span class="text-[10px] text-stone-400 mt-1 block">Il y a 2 heures</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Action / Map (3/5) -->
+        <div class="lg:col-span-3 bg-stone-900 rounded-xl overflow-hidden relative group min-h-[300px]">
+          <div class="absolute inset-0 opacity-40">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              data-alt="close-up of a dark textured legal book or register with embossed gold lettering and a professional judicial atmosphere"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC47qeyQbFkd3qQbenZbtVZfZ-uzooZGpWtux1NC05LXp-gAaA6JTVnskRFnbkD27prlLndvi5dN2QEKDpC7a3t5VQj8ulf52gEKJZ8golfcqycfWDZXnKzBE-p_xFAq3XE0VLBMZUMtt98bFGrhrXStdi2w74NrNJmAey5FIWmn3oF61tN5YFox5sl9JUtI-00vYVXXWM2azuzVPvmfm6oEwcH7_koT2p1xk3blUAh8oXsc949fAhOIKJlbTB3fI0jzN5n7heqQSsp" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent"></div>
+          <div class="relative h-full p-8 flex flex-col justify-end items-start">
+            <span
+              class="px-3 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest rounded mb-4">Urgent
+              : Action Requise</span>
+            <h4 class="text-2xl font-bold text-white mb-2">Transmettre les dossiers de la matinée</h4>
+            <p class="text-stone-300 text-sm mb-6 max-w-md">Le Parquet attend la validation finale de 14 dossiers
+              urgents pour l'audience de demain matin.</p>
+            <button
+              class="transmission-gradient px-8 py-3 text-white font-bold rounded-xl shadow-xl flex items-center gap-3 hover:scale-105 transition-all">
+              Finaliser la Transmission
+              <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mt-auto p-8 text-center text-[10px] font-bold text-stone-400 uppercase tracking-[0.2em]">
+      © 2024 Ministère de la Justice et des Droits de l'Homme • République de Côte d'Ivoire
+    </footer>
+  </main>
+</body>
+
+</html>

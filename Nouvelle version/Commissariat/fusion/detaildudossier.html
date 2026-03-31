@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Détail du Dossier - TRIBUNAL DE YOPOUGON</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#f9f9f9",
+              "outline": "#6f7a69",
+              "surface-tint": "#006e00",
+              "surface-variant": "#e2e2e2",
+              "secondary-fixed-dim": "#ffb86f",
+              "on-primary-container": "#ccffba",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-container-high": "#e8e8e8",
+              "tertiary": "#3a5296",
+              "on-secondary-container": "#643900",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f3f3f3",
+              "on-background": "#1a1c1c",
+              "on-tertiary-fixed": "#00174a",
+              "surface-dim": "#dadada",
+              "secondary-fixed": "#ffdcbd",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary": "#8a5100",
+              "on-secondary-fixed": "#2c1600",
+              "inverse-surface": "#2f3131",
+              "surface-container-highest": "#e2e2e2",
+              "tertiary-fixed": "#dbe1ff",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "primary-container": "#008000",
+              "tertiary-container": "#536bb0",
+              "primary-fixed-dim": "#72de5e",
+              "on-surface": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#72de5e",
+              "surface": "#f9f9f9",
+              "primary-fixed": "#8dfb77",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "surface-bright": "#f9f9f9",
+              "on-tertiary-container": "#eff0ff",
+              "on-primary-fixed": "#002200",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "outline-variant": "#becab6",
+              "on-surface-variant": "#3f4a3a",
+              "on-primary-fixed-variant": "#005300",
+              "on-secondary-fixed-variant": "#693c00",
+              "secondary-container": "#fe9800",
+              "primary": "#006400"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.85); }
+        .sidebar-active { border-left: 4px solid #006400; background-color: #ffffff; font-weight: 600; color: #006400; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .btn-transmit { background: linear-gradient(to bottom, #8a5100, #fe9800); }
+    </style>
+</head>
+<body class="flex min-h-screen bg-surface">
+<!-- SideNavBar -->
+<aside class="fixed h-screen w-72 left-0 top-0 flex flex-col h-full border-r border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950 z-40">
+<div class="p-8 flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+<img alt="Ivory Coast Flag" class="w-6 h-4 object-cover" data-alt="Close-up of the Ivory Coast national flag with vibrant orange, white, and green vertical stripes in a clean professional finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHrk2evJrSI2mbCyKHpMOwV7vy1SyEyAIWdLOjx9Wbkr_u7slgFX-rjw1gBPRYSaBFVgZDTSBGICpIyDY1DAQCJyyhr0XBtGkkCfp0pRw1xBhDs-0ml2xkbH1hw4hu_bvDMn59luMETKVPHs8DGpleizr8aiNydYY-xtBkx_iwo38OSDWMub9juG5eKOiCdTd3EbU9PyxtG2h2P3Rn2qMhC_HnL52p9qRxcH_O4Cg3I6_Nqoszwaxc1hZyrksxC78kT6Ve3ELmrcQN"/>
+</div>
+<div>
+<h2 class="text-lg font-black text-green-900 leading-none">Commissariat</h2>
+<p class="text-[10px] font-bold tracking-widest uppercase text-stone-500">Yopougon, Abidjan</p>
+</div>
+</div>
+</div>
+<nav class="mt-4 flex-grow px-4 space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-stone-600 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Accueil</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-stone-600 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+<span>Créer un dossier</span>
+</a>
+<a class="sidebar-active flex items-center gap-4 px-4 py-3 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Dossiers créés</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-stone-600 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+<span>Plaintes envoyées</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-stone-600 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Rapports</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-stone-600 hover:bg-stone-200/50 hover:translate-x-1 transition-transform duration-200 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span>Profil</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<button class="w-full btn-transmit text-white py-4 px-4 rounded-lg font-bold text-sm shadow-lg flex items-center justify-center gap-2 active:opacity-90 transition-all">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+                Transmettre au Parquet
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-72 flex-1 min-h-screen relative">
+<!-- TopNavBar -->
+<header class="bg-white/85 backdrop-blur-xl docked full-width top-0 sticky z-30 shadow-sm shadow-stone-200/40 flex justify-between items-center w-full px-8 py-4">
+<div class="flex items-center gap-6">
+<div class="text-xl font-bold tracking-tight text-green-900 border-l-4 border-orange-500 pl-3">TRIBUNAL DE YOPOUGON</div>
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="bg-surface-container-highest border-none rounded-lg pl-10 pr-4 py-2 text-sm w-64 focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Rechercher un dossier..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100 rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-stone-100 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-px bg-stone-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-xs font-bold text-stone-900 leading-none">Agent de Liaison</p>
+<p class="text-[10px] text-stone-500">Badge #YP-902</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden">
+<img alt="Agent Avatar" data-alt="Portrait of a professional African police officer in uniform looking confidently at the camera, neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd4hsGI7lB-h87XFBla2VTHUsVuxk0EnDvt_qQi-hm0EdbQyB89Pr8jyJAZCCEStZzgq5LxnBC8bYhzaTUNC3v3cjoWWv457eg6zJF5DYHlt45v5mUlcS0amLhzu5cj8Zq8jLmEgKqBv21f6ZuVzE5IVllCi-CJAqK9JfQ9qOCRQT6lSHa7TFeuvT7ebkclGlf_EJrced-YfggbkToLhP_IePHDP4nMKhM-Elqw4s85xAM-tT_UohWaEhbkids73V6bVwSuxhlblj2"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-8 max-w-7xl mx-auto">
+<!-- Hero Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Dossier en cours</span>
+<span class="text-stone-400 text-sm font-medium">Créé le 24 Octobre 2023 à 14:30</span>
+</div>
+<h1 class="text-4xl font-bold text-on-background tracking-tight">Affaire N° 2023-YP-7412</h1>
+<p class="text-lg text-stone-600 mt-2 font-medium">Vol avec violence - Quartier Niangon Lokoa</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 border border-stone-200 rounded-lg text-stone-700 font-semibold hover:bg-stone-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+                        Imprimer
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 btn-transmit text-white rounded-lg font-bold shadow-lg scale-100 hover:scale-105 active:opacity-80 transition-all">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                        Transmettre au parquet
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Dossier Data (Col 1-8) -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Critical Details Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+                                Détails de la Plainte
+                            </h3>
+<button class="text-tertiary font-bold text-sm hover:underline">Modifier</button>
+</div>
+<div class="grid grid-cols-2 gap-y-8 gap-x-12">
+<div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Plaignant</p>
+<p class="text-on-background font-semibold">M. Kouassi Jean-Baptiste</p>
+<p class="text-sm text-stone-500">Contact: +225 07 45 88 99 12</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Prévenu (Suspect)</p>
+<p class="text-on-background font-semibold">Inconnu (En fuite)</p>
+<p class="text-sm text-stone-500">Signalement: Homme, environ 25 ans, cicatrice joue gauche</p>
+</div>
+<div class="col-span-2">
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Nature des Faits</p>
+<p class="text-on-background leading-relaxed">Le plaignant rapporte avoir été agressé par deux individus à moto le soir du 23 Octobre vers 21h00. Les agresseurs étaient munis d'armes blanches. Ils ont dérobé un sac contenant des effets personnels et une somme de 150.000 FCFA.</p>
+</div>
+</div>
+</div>
+<!-- Evidence & Documents Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<h3 class="text-xl font-bold flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="attachment">attachment</span>
+                            Pièces Jointes &amp; Preuves
+                        </h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="border border-stone-100 rounded-lg p-4 group cursor-pointer hover:bg-stone-50 transition-colors">
+<div class="w-full h-32 bg-stone-100 rounded flex items-center justify-center mb-3 overflow-hidden">
+<span class="material-symbols-outlined text-stone-400 text-4xl group-hover:scale-110 transition-transform" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<p class="text-xs font-bold truncate">PV_Audition_001.pdf</p>
+<p class="text-[10px] text-stone-400">1.2 MB • PDF Document</p>
+</div>
+<div class="border border-stone-100 rounded-lg p-4 group cursor-pointer hover:bg-stone-50 transition-colors">
+<div class="w-full h-32 bg-stone-100 rounded mb-3 overflow-hidden relative">
+<img alt="ID Card evidence" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Official identity card laid flat on a neutral background, showing professional scanning perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIPBFPP6wjsDeGu96FF59baQffciTtH8BFKgZYG_La-98RW5_ZISsWBNV2lMqRkhLHVZLgcbfOFSz9do0tGlVyXw35AIMp6ZsFnsOgHnuCkXNZxiPSi9pDxmeNKegBjQguqadN6KqpgzSEkmn_852VUs1HqJ-qxfLhR4N56zXv5KBJmcBEQfuZBeqe4rj_lMsyeG7zsbrFFAQcod6nIUuaadqwu279MbUdc-wSvDUDU3QeJQ_YeuQX-MZneOp9S-srUMgMnpc7FS7K"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="visibility">visibility</span>
+</div>
+</div>
+<p class="text-xs font-bold truncate">CNI_Plaignant.jpg</p>
+<p class="text-[10px] text-stone-400">2.4 MB • Image</p>
+</div>
+<div class="border border-dashed border-stone-200 rounded-lg p-4 flex flex-col items-center justify-center text-stone-400 hover:text-primary hover:bg-primary/5 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="add_circle">add_circle</span>
+<p class="text-xs font-bold">Ajouter une pièce</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline & Status (Col 9-12) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Workflow Timeline -->
+<div class="bg-surface-container-high rounded-xl p-8 shadow-sm">
+<h3 class="text-xl font-bold flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+                            Historique du Dossier
+                        </h3>
+<div class="space-y-8 relative">
+<!-- Vertical line -->
+<div class="absolute left-3.5 top-2 bottom-2 w-0.5 bg-stone-300"></div>
+<div class="relative flex gap-6">
+<div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center z-10">
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold">Plainte Enregistrée</p>
+<p class="text-xs text-stone-500">Par Agent Traoré • 23 Oct, 22:15</p>
+<p class="text-[11px] text-stone-600 mt-2 bg-white p-2 rounded border border-stone-200">Déclaration initiale effectuée au poste de garde.</p>
+</div>
+</div>
+<div class="relative flex gap-6">
+<div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center z-10">
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold">PV d'Audition Finalisé</p>
+<p class="text-xs text-stone-500">Par Agent Kouamé • 24 Oct, 09:30</p>
+</div>
+</div>
+<div class="relative flex gap-6">
+<div class="w-7 h-7 bg-stone-200 rounded-full flex items-center justify-center z-10 ring-4 ring-surface-container-high">
+<div class="w-2.5 h-2.5 bg-stone-400 rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-stone-400 italic">En attente de transmission</p>
+<p class="text-xs text-stone-400">Prochaine étape: Validation Parquet</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Officer Notes -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border-l-4 border-secondary-container">
+<h4 class="text-xs font-bold text-secondary uppercase tracking-widest mb-3">Note de l'Officier</h4>
+<p class="text-sm text-on-surface italic leading-relaxed">
+                            "L'enquête de voisinage n'a pas encore porté ses fruits. Cependant, la description du suspect concorde avec un individu déjà fiché pour des faits similaires à Niangon. À transmettre rapidement au parquet pour mandatement."
+                        </p>
+<div class="mt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-stone-400" data-icon="edit_note">edit_note</span>
+<span class="text-[10px] text-stone-500 font-bold uppercase">Dernière modification: Il y a 2 heures</span>
+</div>
+</div>
+<!-- Map/Location Context -->
+<div class="rounded-xl overflow-hidden shadow-sm h-48 bg-stone-200 relative group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Stylized map view of Yopougon district in Abidjan with geographic markers and street grids in soft grey and green tones" data-location="Yopougon, Abidjan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4vVDVZ4cfC-jTPCHupPvtSaMIMEjgxsangrqFnf_8P0J_okQGbtj6Qj20Ec0GFKMvdDd81B3riF61-0DgnqDUH6C8zUX6SDcwFh7NqwK8EzeBy1DzJm_Z0hjCCAmipZcpPGoHPzFBTk_-g-_WGEa8Jgshuvv79G5Dnkxf74qd3mcNvcq8T5YKiz72GLgEsmFh9GD3EbDz7UMtaO3fjzY-lX_EaCeOASzzidzW5Vzi9vj4xRINsc8J5vpMz71qcjtJqLfb1ZQdTkDs')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-white">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-wider opacity-80">Lieu des faits</p>
+<p class="text-sm font-bold">Niangon Lokoa, Zone Sud</p>
+</div>
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed-dim": "#72de5e",
+            "secondary-fixed": "#ffdcbd",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-error-container": "#93000a",
+            "surface-dim": "#dadada",
+            "on-secondary-fixed": "#2c1600",
+            "on-background": "#1a1c1c",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-primary-container": "#ccffba",
+            "on-surface": "#1a1c1c",
+            "on-primary-fixed-variant": "#005300",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-low": "#f3f3f3",
+            "on-primary-fixed": "#002200",
+            "surface": "#f9f9f9",
+            "secondary-container": "#fe9800",
+            "on-tertiary-container": "#eff0ff",
+            "background": "#f9f9f9",
+            "primary": "#006400",
+            "outline-variant": "#becab6",
+            "error": "#ba1a1a",
+            "primary-fixed": "#8dfb77",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "surface-tint": "#006e00",
+            "surface-container": "#eeeeee",
+            "secondary": "#8a5100",
+            "inverse-primary": "#72de5e",
+            "on-tertiary-fixed": "#00174a",
+            "tertiary-container": "#536bb0",
+            "primary-container": "#008000",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "tertiary": "#3a5296",
+            "tertiary-fixed": "#dbe1ff",
+            "outline": "#6f7a69",
+            "surface-variant": "#e2e2e2",
+            "surface-bright": "#f9f9f9",
+            "inverse-surface": "#2f3131",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-highest": "#e2e2e2",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#3f4a3a",
+            "on-secondary-container": "#643900",
+            "on-secondary-fixed-variant": "#693c00"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .judicial-gradient {
+      background: linear-gradient(135deg, #006400 0%, #008000 100%);
+    }
+
+    .tonal-transition {
+      background: #e2e2e2;
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface flex min-h-screen">
+  <!-- SideNavBar Component -->
+  <aside class="bg-slate-100 fixed left-0 h-screen w-64 flex flex-col p-4 gap-2 z-40">
+    <div class="py-8 px-4">
+      <h1 class="text-lg font-black text-blue-950 uppercase tracking-wide">LE PARQUET</h1>
+      <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Palais de Justice de Yopougon</p>
+    </div>
+    <nav class="flex-1 space-y-1 mt-4">
+      <!-- Active Tab: Accueil -->
+      <a class="bg-white text-blue-900 shadow-sm rounded-md flex items-center px-4 py-3 transition-transform duration-200 hover:translate-x-1"
+        href="dashboard.html">
+        <span class="material-symbols-outlined mr-3">home</span>
+        <span class="font-medium text-sm">Accueil</span>
+      </a>
+      <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-3 transition-transform duration-200 hover:translate-x-1"
+        href="creationdedossier.html">
+        <span class="material-symbols-outlined mr-3">add_box</span>
+        <span class="font-medium text-sm">Créer un dossier</span>
+      </a>
+      <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-3 transition-transform duration-200 hover:translate-x-1"
+        href="listedesdossiers.html">
+        <span class="material-symbols-outlined mr-3">folder_open</span>
+        <span class="font-medium text-sm">Dossiers créés</span>
+      </a>
+      <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-3 transition-transform duration-200 hover:translate-x-1"
+        href="dossiertransmis.html">
+        <span class="material-symbols-outlined mr-3">folder_shared</span>
+        <span class="font-medium text-sm">Dossiers recus</span>
+      </a>
+      <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-3 transition-transform duration-200 hover:translate-x-1"
+        href="audience.html">
+        <span class="material-symbols-outlined mr-3">gavel</span>
+        <span class="font-medium text-sm">Jugements &amp; Audiences</span>
+      </a>
+      
+      <!-- <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-3 transition-transform duration-200 hover:translate-x-1"
+        href="#">
+        <span class="material-symbols-outlined mr-3">person</span>
+        <span class="font-medium text-sm">Profil</span>
+      </a> -->
+    </nav>
+    <div class="mt-auto pt-4 space-y-1">
+      <a href="creationdedossier.html">
+        <button
+          class="judicial-gradient text-white w-full py-3 rounded-md text-xs font-bold uppercase tracking-wider mb-4 active:scale-95 transition-all">
+          Nouvelle Procédure
+        </button>
+      </a>
+      <!-- <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-2 transition-transform duration-200 hover:translate-x-1"
+        href="#">
+        <span class="material-symbols-outlined mr-3 text-sm">settings</span>
+        <span class="font-medium text-xs">Paramètres</span>
+      </a> -->
+      <a class="text-slate-500 hover:bg-slate-200 flex items-center px-4 py-2 transition-transform duration-200 hover:translate-x-1"
+        href="connexionv2.html">
+        <span class="material-symbols-outlined mr-3 text-sm">logout</span>
+        <span class="font-medium text-xs">Déconnexion</span>
+      </a>
+    </div>
+  </aside>
+  <!-- Main Content Canvas -->
+  <main class="ml-64 flex-1 p-8">
+    <!-- Top Navigation Anchor (Non-shell content) -->
+    <header class="flex justify-between items-center mb-10">
+      <div>
+        <h2 class="text-2xl font-bold text-on-surface tracking-tight">Tableau de Bord</h2>
+        <p class="text-slate-500 text-sm">Activité du Parquet • Mardi 24 Octobre 2023</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-surface-container-low p-2 rounded-lg flex items-center gap-3 px-4">
+          <span class="material-symbols-outlined text-primary">search</span>
+          <input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Rechercher un dossier..."
+            type="text" />
+        </div>
+        <button class="relative p-2 text-slate-600 hover:bg-surface-container transition-colors rounded-full">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full border-2 border-surface"></span>
+        </button>
+        <div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-white font-bold">
+          PM
+        </div>
+      </div>
+    </header>
+    <!-- Stats Grid (Section Stats) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <!-- Stat Card 1 -->
+      <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary shadow-sm">
+        <div class="flex justify-between items-start mb-4">
+          <span class="material-symbols-outlined text-primary bg-primary-container/20 p-2 rounded-lg">inbox</span>
+          <span class="text-[10px] font-bold text-primary bg-primary-container/20 px-2 py-1 rounded">+12%</span>
+        </div>
+        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Dossiers reçus aujourd'hui</p>
+        <h3 class="text-3xl font-black text-on-surface mt-1">42</h3>
+      </div>
+      <!-- Stat Card 2 -->
+      <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-tertiary shadow-sm">
+        <div class="flex justify-between items-start mb-4">
+          <span class="material-symbols-outlined text-tertiary bg-tertiary-container/20 p-2 rounded-lg">gavel</span>
+          <span class="text-[10px] font-bold text-tertiary bg-tertiary-container/20 px-2 py-1 rounded">Actif</span>
+        </div>
+        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Poursuites engagées</p>
+        <h3 class="text-3xl font-black text-on-surface mt-1">18</h3>
+      </div>
+      <!-- Stat Card 3 -->
+      <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-slate-400 shadow-sm">
+        <div class="flex justify-between items-start mb-4">
+          <span class="material-symbols-outlined text-slate-600 bg-slate-200 p-2 rounded-lg">folder_delete</span>
+          <span class="text-[10px] font-bold text-slate-500 px-2 py-1">-4%</span>
+        </div>
+        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Classements sans suite</p>
+        <h3 class="text-3xl font-black text-on-surface mt-1">07</h3>
+      </div>
+      <!-- Stat Card 4 -->
+      <div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary shadow-sm">
+        <div class="flex justify-between items-start mb-4">
+          <span class="material-symbols-outlined text-secondary bg-secondary-container/20 p-2 rounded-lg">event</span>
+          <span class="text-[10px] font-bold text-secondary bg-secondary-container/20 px-2 py-1 rounded">Urgent</span>
+        </div>
+        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Audiences à venir</p>
+        <h3 class="text-3xl font-black text-on-surface mt-1">05</h3>
+      </div>
+    </section>
+    <!-- Urgent Dossiers Table (Section Liste) -->
+    <section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+      <div class="px-8 py-6 flex justify-between items-center">
+        <h2 class="text-sm font-black text-secondary uppercase tracking-[0.15em]">DOSSIERS URGENTS - ACTION REQUISE</h2>
+        <button class="text-xs font-bold text-tertiary flex items-center hover:underline">
+          Voir tous les dossiers <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+        </button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-surface-container-low">
+              <th class="px-8 py-4 text-[11px] font-black text-slate-500 uppercase tracking-wider">N° Dossier</th>
+              <th class="px-8 py-4 text-[11px] font-black text-slate-500 uppercase tracking-wider">Origine</th>
+              <th class="px-8 py-4 text-[11px] font-black text-slate-500 uppercase tracking-wider">Prévenu</th>
+              <th class="px-8 py-4 text-[11px] font-black text-slate-500 uppercase tracking-wider">Délit</th>
+              <th class="px-8 py-4 text-[11px] font-black text-slate-500 uppercase tracking-wider">Temps restant</th>
+              <th class="px-8 py-4 text-[11px] font-black text-slate-500 uppercase tracking-wider text-right">Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <!-- Row 1 -->
+            <tr class="hover:bg-surface-container-low/50 transition-colors">
+              <td class="px-8 py-5">
+                <span class="font-bold text-on-surface">YP-2023-0842</span>
+              </td>
+              <td class="px-8 py-5 text-sm text-slate-600">Commisariat 16ème</td>
+              <td class="px-8 py-5">
+                <div class="text-sm font-semibold text-on-surface">KOFFI Kouamé Jean</div>
+              </td>
+              <td class="px-8 py-5">
+                <span class="text-xs font-medium px-2 py-1 bg-error-container text-on-error-container rounded">Vol à
+                  main armée</span>
+              </td>
+              <td class="px-8 py-5">
+                <div class="flex items-center text-error font-bold text-xs">
+                  <span class="material-symbols-outlined text-sm mr-1">timer</span>
+                  02h 45m
+                </div>
+              </td>
+              <td class="px-8 py-5 text-right">
+                <button
+                  class="text-tertiary font-bold text-xs px-4 py-2 hover:bg-tertiary-container/10 rounded">TRAITER</button>
+              </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr class="hover:bg-surface-container-low/50 transition-colors">
+              <td class="px-8 py-5">
+                <span class="font-bold text-on-surface">YP-2023-0845</span>
+              </td>
+              <td class="px-8 py-5 text-sm text-slate-600">Gendarmerie Toit Rouge</td>
+              <td class="px-8 py-5">
+                <div class="text-sm font-semibold text-on-surface">DIALLO Mamadou</div>
+              </td>
+              <td class="px-8 py-5">
+                <span
+                  class="text-xs font-medium px-2 py-1 bg-secondary-container/20 text-on-secondary-container rounded">Abus
+                  de confiance</span>
+              </td>
+              <td class="px-8 py-5">
+                <div class="flex items-center text-secondary font-bold text-xs">
+                  <span class="material-symbols-outlined text-sm mr-1">timer</span>
+                  08h 12m
+                </div>
+              </td>
+              <td class="px-8 py-5 text-right">
+                <button
+                  class="text-tertiary font-bold text-xs px-4 py-2 hover:bg-tertiary-container/10 rounded">TRAITER</button>
+              </td>
+            </tr>
+            <!-- Row 3 -->
+            <tr class="hover:bg-surface-container-low/50 transition-colors">
+              <td class="px-8 py-5">
+                <span class="font-bold text-on-surface">YP-2023-0849</span>
+              </td>
+              <td class="px-8 py-5 text-sm text-slate-600">Police Criminelle</td>
+              <td class="px-8 py-5">
+                <div class="text-sm font-semibold text-on-surface">YAO Akissi Marie</div>
+              </td>
+              <td class="px-8 py-5">
+                <span
+                  class="text-xs font-medium px-2 py-1 bg-primary-container/20 text-on-primary-fixed-variant rounded">Stupéfiants</span>
+              </td>
+              <td class="px-8 py-5">
+                <div class="flex items-center text-slate-500 font-bold text-xs">
+                  <span class="material-symbols-outlined text-sm mr-1">timer</span>
+                  14h 30m
+                </div>
+              </td>
+              <td class="px-8 py-5 text-right">
+                <button
+                  class="text-tertiary font-bold text-xs px-4 py-2 hover:bg-tertiary-container/10 rounded">TRAITER</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Secondary Grid for context -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
+      <!-- Recent Activity -->
+      <div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+        <h3 class="text-sm font-black text-on-surface uppercase tracking-widest mb-6">ACTIVITÉ RÉCENTE DU PARQUET</h3>
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+            <div>
+              <p class="text-sm font-medium">Réquisitoire définitif déposé pour le dossier <span
+                  class="text-primary font-bold">YP-2023-0712</span></p>
+              <p class="text-xs text-slate-400 mt-1">Il y a 14 minutes • Procureur Adjoint</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start border-l-2 border-slate-100 pl-4 ml-1">
+            <div class="w-2 h-2 rounded-full bg-secondary mt-2"></div>
+            <div>
+              <p class="text-sm font-medium">Alerte : Délai de garde à vue arrivant à expiration (Dossier YP-2023-0842)
+              </p>
+              <p class="text-xs text-slate-400 mt-1">Il y a 1 heure • Système</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start border-l-2 border-slate-100 pl-4 ml-1">
+            <div class="w-2 h-2 rounded-full bg-tertiary mt-2"></div>
+            <div>
+              <p class="text-sm font-medium">Nouvelle plainte enregistrée : Plaignant SARL TRANS-IVOIRE</p>
+              <p class="text-xs text-slate-400 mt-1">Il y a 3 heures • Bureau d'ordre</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Court Schedule -->
+      <div class="bg-surface-container-high/50 p-8 rounded-xl border border-outline-variant/10">
+        <h3 class="text-sm font-black text-on-surface uppercase tracking-widest mb-6">AUDIENCES DU JOUR</h3>
+        <div class="space-y-4">
+          <div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm border-l-4 border-primary">
+            <p class="text-[10px] font-bold text-primary uppercase">Chambre 1 • 09:00</p>
+            <p class="text-sm font-bold mt-1">Flagrants Délits</p>
+            <p class="text-xs text-slate-500">12 Dossiers au rôle</p>
+          </div>
+          <div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm border-l-4 border-tertiary">
+            <p class="text-[10px] font-bold text-tertiary uppercase">Chambre 4 • 11:30</p>
+            <p class="text-sm font-bold mt-1">Correctionnel</p>
+            <p class="text-xs text-slate-500">08 Dossiers au rôle</p>
+          </div>
+          <button
+            class="w-full py-3 border border-dashed border-slate-300 rounded-lg text-xs font-bold text-slate-500 hover:bg-white transition-colors">
+            VOIR LE RÔLE COMPLET
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FAB Overlay (Hidden on Dashboard as per suppression rules but usually here) -->
+  <div class="fixed bottom-8 right-8 z-50">
+    <button
+      class="judicial-gradient text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+      <span class="material-symbols-outlined text-2xl">add</span>
+    </button>
+  </div>
+</body>
+
+</html>

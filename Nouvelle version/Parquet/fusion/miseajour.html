@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#72de5e",
+              "secondary-fixed": "#ffdcbd",
+              "secondary-fixed-dim": "#ffb86f",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dadada",
+              "on-secondary-fixed": "#2c1600",
+              "on-background": "#1a1c1c",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-primary-container": "#ccffba",
+              "on-surface": "#1a1c1c",
+              "on-primary-fixed-variant": "#005300",
+              "surface-container-high": "#e8e8e8",
+              "surface-container-low": "#f3f3f3",
+              "on-primary-fixed": "#002200",
+              "surface": "#f9f9f9",
+              "secondary-container": "#fe9800",
+              "on-tertiary-container": "#eff0ff",
+              "background": "#f9f9f9",
+              "primary": "#006400",
+              "outline-variant": "#becab6",
+              "error": "#ba1a1a",
+              "primary-fixed": "#8dfb77",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "surface-tint": "#006e00",
+              "surface-container": "#eeeeee",
+              "secondary": "#8a5100",
+              "inverse-primary": "#72de5e",
+              "on-tertiary-fixed": "#00174a",
+              "tertiary-container": "#536bb0",
+              "primary-container": "#008000",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "tertiary": "#3a5296",
+              "tertiary-fixed": "#dbe1ff",
+              "outline": "#6f7a69",
+              "surface-variant": "#e2e2e2",
+              "surface-bright": "#f9f9f9",
+              "inverse-surface": "#2f3131",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-container-highest": "#e2e2e2",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#3f4a3a",
+              "on-secondary-container": "#643900",
+              "on-secondary-fixed-variant": "#693c00"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .judicial-paper {
+            background-image: linear-gradient(#f0f0f0 1.1px, transparent 1.1px);
+            background-size: 100% 2.4rem;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="bg-slate-100 dark:bg-slate-950 flex flex-col h-screen w-64 fixed left-0 top-0 z-40 p-4 gap-2 no-line-rule tonal-transition font-inter text-sm font-medium tracking-wide">
+<div class="mb-8 px-2 pt-4">
+<h1 class="text-lg font-black text-blue-950 dark:text-white uppercase">LE PARQUET</h1>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Palais de Justice de Yopougon</p>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span>Accueil</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-slate-900 text-blue-900 dark:text-blue-300 shadow-sm rounded-md scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span>Créer un dossier</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span>Dossiers reçus</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span>Jugements &amp; Audiences</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span>Rapports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profil</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200 pt-4 space-y-1">
+<button class="w-full bg-primary text-white py-2.5 rounded-md font-bold text-xs uppercase tracking-tighter mb-4 shadow-sm active:scale-95 transition-all">
+                Nouvelle Procédure
+            </button>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-900 text-error" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-grow p-8 bg-surface-container-low min-h-screen">
+<!-- Header Section -->
+<header class="mb-10 flex justify-between items-end">
+<div>
+<nav class="flex items-center gap-2 text-xs font-bold text-outline uppercase tracking-widest mb-2">
+<span>Dossiers</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Mise à jour judiciaire</span>
+</nav>
+<h2 class="text-3xl font-black text-on-surface tracking-tight">Rédaction d'Acte Officiel</h2>
+<p class="text-on-surface-variant mt-1">Référencement au Dossier Correctionnel <span class="font-bold text-tertiary">N° 2024-XP-89</span></p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-lowest text-tertiary-fixed-variant border border-outline-variant/30 rounded-md font-bold text-sm hover:bg-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined">save</span>
+                    BROUILLON
+                </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-md font-bold text-sm hover:opacity-90 transition-opacity shadow-lg">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                    GÉNÉRER PDF OFFICIEL
+                </button>
+</div>
+</header>
+<!-- Drafting Interface -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Editor Column -->
+<section class="col-span-8 bg-surface-container-lowest shadow-[0px_12px_32px_rgba(0,35,102,0.06)] rounded-sm min-h-[1100px] overflow-hidden flex flex-col relative">
+<!-- Judicial Paper Header -->
+<div class="p-12 border-b border-surface-container-high bg-white">
+<div class="flex justify-between items-start mb-12">
+<div class="text-center">
+<p class="font-bold text-sm uppercase tracking-tighter">République de Côte d'Ivoire</p>
+<p class="text-[10px] uppercase font-medium">Union - Discipline - Travail</p>
+<div class="w-16 h-[2px] bg-secondary mx-auto mt-2"></div>
+</div>
+<div class="text-right">
+<p class="font-bold text-xs">ANNÉE JUDICIAIRE 2024</p>
+<p class="text-xs">Service du Parquet de Yopougon</p>
+</div>
+</div>
+<!-- Editor Controls (Hidden in PDF) -->
+<div class="space-y-6">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline">Type d'acte</label>
+<select class="border-none bg-surface-container-low px-4 py-3 rounded-md text-sm font-semibold text-primary focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option>Ordonnance</option>
+<option selected="">Jugement</option>
+<option>Réquisitoire</option>
+<option>Mandat de dépôt</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline">Titre du document</label>
+<input class="border-none bg-transparent p-0 text-xl font-black text-on-surface focus:ring-0 placeholder:text-surface-dim uppercase" placeholder="Saisir le titre de l'acte..." type="text" value="JUGEMENT N° 1245 - AFFAIRE MINISTÈRE PUBLIC C/ KOUADIO ET AUTRES"/>
+</div>
+</div>
+</div>
+<!-- Rich Text Editor Simulation -->
+<div class="flex-grow p-12 bg-white relative">
+<div class="flex gap-4 mb-6 border-b border-surface-container py-2 sticky top-0 bg-white z-10">
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">format_bold</span></button>
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">format_italic</span></button>
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">format_underlined</span></button>
+<div class="w-px h-6 bg-surface-container-high self-center"></div>
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">format_align_left</span></button>
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">format_align_center</span></button>
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">format_align_justify</span></button>
+<div class="w-px h-6 bg-surface-container-high self-center"></div>
+<button class="p-2 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined text-xl">history</span></button>
+</div>
+<div class="prose prose-slate max-w-none focus:outline-none min-h-[600px] leading-relaxed text-on-surface font-body judicial-paper" contenteditable="true">
+<p class="mb-4"><strong>AU NOM DU PEUPLE IVOIRIEN,</strong></p>
+<p class="mb-4">Le Tribunal de Première Instance de Yopougon, siégeant en matière correctionnelle, en son audience publique du [DATE], a rendu l'acte suivant :</p>
+<p class="mb-4">Attendu que le prévenu est poursuivi pour les faits de vol en réunion avec violence, faits prévus et punis par les articles du code pénal en vigueur...</p>
+<p class="mb-4">Considérant les pièces du dossier de la procédure enregistrée sous le numéro 2024-XP-89 ;</p>
+<p class="mb-4">Par ces motifs, statuant publiquement, contradictoirement, en matière correctionnelle et en premier ressort...</p>
+</div>
+<!-- Signatory Section -->
+<div class="mt-20 border-t border-dashed border-outline-variant/30 pt-8 flex justify-end">
+<div class="w-1/2 space-y-4">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline block">Signataire habilité</label>
+<div class="flex items-center gap-4 bg-surface-container-low p-4 rounded-md">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" data-alt="portrait of a professional West African man in a formal dark suit, serious expression, office background, high key professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAptlsSeSVKmgM7oTdP6C3M1K_26hPTLTwlGSOFP4_fxb7kHuth4x7Q8M-JoZK-gJTJ2dZNvlnpqbT_Uz6zET4DTpRBJ4HnkE6K-fVN2FycJF_ZlLeHeBrnWdIS68sdjgP_RBu2rAtiUZj09fxes69U8jKIajP438Zk-_6ogmUpl4q-OaaSscrG5FU6xRN8zIgnZTHleAoRCpzovvsFYvonxGa7mJvk8SPoQo3Lgdc7GJVxd4uK47xLVvbmAoEMUV7ytnyDTbVYj9k"/>
+<div>
+<p class="font-bold text-sm">M. SORO BAKARY</p>
+<p class="text-[10px] uppercase text-tertiary font-bold tracking-tight">Procureur de la République</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-primary">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Metadata & Context Column -->
+<aside class="col-span-4 space-y-6">
+<!-- Action Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-outline-variant/10">
+<h3 class="text-xs font-black uppercase tracking-widest text-on-surface mb-4">Statut de soumission</h3>
+<div class="flex items-center gap-3 mb-6 p-4 bg-primary-container/10 rounded-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">info</span>
+<p class="text-xs text-on-primary-fixed-variant font-medium">Cet acte sera automatiquement horodaté et scellé numériquement lors de la validation.</p>
+</div>
+<button class="w-full py-4 bg-tertiary text-on-tertiary rounded-md font-bold text-sm flex items-center justify-center gap-3 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+                        AJOUTER AU DOSSIER N° 2024-XP-89
+                    </button>
+<p class="text-center text-[10px] text-outline mt-3">Action irréversible une fois confirmée par le greffe.</p>
+</div>
+<!-- History of Changes -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<h3 class="text-xs font-black uppercase tracking-widest text-on-surface mb-4">Historique de rédaction</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div class="w-[1px] h-full bg-surface-container-high"></div>
+</div>
+<div>
+<p class="text-xs font-bold">Version actuelle (V2)</p>
+<p class="text-[10px] text-outline">Modifié par Soro Bakary • Il y a 5 min</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 bg-surface-variant rounded-full"></div>
+<div class="w-[1px] h-full bg-surface-container-high"></div>
+</div>
+<div>
+<p class="text-xs font-medium text-outline">Version initiale (V1)</p>
+<p class="text-[10px] text-outline">Créé par Système Automatique • 14:02</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contextual Card -->
+<div class="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">gavel</span>
+<h4 class="text-xs font-bold text-primary uppercase">Rappel Juridique</h4>
+</div>
+<p class="text-xs leading-relaxed text-on-surface-variant">
+                        Conformément à l'article 42 du Code de Procédure Pénale, tout réquisitoire doit être motivé et signé sous peine de nullité de la procédure.
+                    </p>
+</div>
+</aside>
+</div>
+</main>
+</body></html>
