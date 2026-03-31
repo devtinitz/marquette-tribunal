@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Créer un Compte - Tribunal de Yopougon</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f1f5e9",
+            "on-tertiary-fixed": "#00174a",
+            "on-background": "#181d15",
+            "surface-dim": "#d7dccf",
+            "surface-container-high": "#e5eadd",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "outline": "#6f7a69",
+            "background": "#f7fbee",
+            "surface-variant": "#e0e4d8",
+            "surface-tint": "#006e00",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#eef2e6",
+            "surface": "#f7fbee",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f7fbee",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-secondary-fixed-variant": "#693c00",
+            "on-primary-fixed-variant": "#005300",
+            "secondary-container": "#fe9800",
+            "primary": "#006400",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#181d15",
+            "surface-container": "#ebf0e3",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2d322a",
+            "tertiary-fixed": "#dbe1ff",
+            "surface-container-highest": "#e0e4d8"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+
+    .glass-header {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #fe9800;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+  <header class="fixed top-0 w-full z-50 glass-header shadow-[0_12px_32px_rgba(0,35,102,0.06)]">
+    <div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-green-800 dark:text-green-500" data-icon="gavel">gavel</span>
+        <h1 class="text-xl font-black text-green-900 font-headline tracking-tight">Tribunal de Yopougon</h1>
+      </div>
+      <span class="material-symbols-outlined text-zinc-500" data-icon="account_balance">account_balance</span>
+    </div>
+  </header>
+  <main class="flex-grow pt-24 pb-32 px-6 w-full max-w-md mx-auto">
+    <div class="mb-8">
+      <h2 class="text-[2.75rem] font-black leading-tight tracking-tighter text-primary mb-2">Inscription</h2>
+      <p class="text-on-surface-variant font-medium">Rejoignez le portail citoyen pour vos démarches juridiques.</p>
+    </div>
+    <form class="space-y-6">
+      <div class="space-y-4">
+        <div class="flex flex-col gap-1.5">
+          <label
+            class="text-[0.75rem] font-bold tracking-[0.05em] text-on-surface-variant uppercase px-1">Prénom</label>
+          <input
+            class="w-full h-14 px-5 rounded-2xl bg-surface-container-high border-none text-on-surface placeholder:text-outline-variant font-medium"
+            placeholder="Entrez votre prénom" type="text" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-[0.75rem] font-bold tracking-[0.05em] text-on-surface-variant uppercase px-1">Nom</label>
+          <input
+            class="w-full h-14 px-5 rounded-2xl bg-surface-container-high border-none text-on-surface placeholder:text-outline-variant font-medium"
+            placeholder="Entrez votre nom" type="text" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-[0.75rem] font-bold tracking-[0.05em] text-on-surface-variant uppercase px-1">Numéro de
+            téléphone</label>
+          <div class="relative">
+            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-outline-variant font-bold">+225</span>
+            <input
+              class="w-full h-14 pl-16 pr-5 rounded-2xl bg-surface-container-high border-none text-on-surface placeholder:text-outline-variant font-medium"
+              placeholder="00 00 00 00 00" type="tel" />
+          </div>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-[0.75rem] font-bold tracking-[0.05em] text-on-surface-variant uppercase px-1">Pièce
+            d'Identité (CNI / Passeport)</label>
+          <div class="relative group">
+            <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" type="file" />
+            <div
+              class="w-full min-h-[160px] flex flex-col items-center justify-center gap-3 rounded-3xl bg-surface-container-low border-2 border-dashed border-outline-variant transition-all group-active:scale-[0.98] group-hover:bg-surface-container">
+              <div
+                class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-container shadow-sm">
+                <span class="material-symbols-outlined text-3xl" data-icon="cloud_upload">cloud_upload</span>
+              </div>
+              <div class="text-center">
+                <p class="text-on-surface font-bold">Cliquez pour télécharger</p>
+                <p class="text-xs text-on-surface-variant">Format JPG, PNG ou PDF (Max 5Mo)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-4 flex flex-col gap-4">
+
+        <button
+          class="w-full h-16 rounded-3xl bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-lg active:scale-95 transition-transform duration-200 flex items-center justify-center gap-3"
+          type="submit">
+       <a href="connexion_screen.html">  Valider mon compte
+          <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></a>
+        </button>
+        <p class="text-center text-sm text-on-surface-variant px-4">
+          En créant un compte, vous acceptez nos <a class="text-secondary font-bold underline" href="#">Conditions
+            d'Utilisation</a> et notre politique de confidentialité.
+        </p>
+      </div>
+    </form>
+  </main>
+  <div
+    class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background via-background to-transparent pointer-events-none md:hidden">
+    <div class="h-6 w-full"></div>
+  </div>
+</body>
+
+</html>

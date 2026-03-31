@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#ffdcbd",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f1f5e9",
+              "on-tertiary-fixed": "#00174a",
+              "on-background": "#181d15",
+              "surface-dim": "#d7dccf",
+              "surface-container-high": "#e5eadd",
+              "tertiary": "#3a5296",
+              "on-secondary-container": "#643900",
+              "outline": "#6f7a69",
+              "background": "#f7fbee",
+              "surface-variant": "#e0e4d8",
+              "surface-tint": "#006e00",
+              "secondary-fixed-dim": "#ffb86f",
+              "on-primary-container": "#ccffba",
+              "inverse-on-surface": "#eef2e6",
+              "surface": "#f7fbee",
+              "primary-fixed": "#8dfb77",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "surface-bright": "#f7fbee",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "on-tertiary-container": "#eff0ff",
+              "on-primary-fixed": "#002200",
+              "outline-variant": "#becab6",
+              "on-surface-variant": "#3f4a3a",
+              "on-secondary-fixed-variant": "#693c00",
+              "on-primary-fixed-variant": "#005300",
+              "secondary-container": "#fe9800",
+              "primary": "#006400",
+              "tertiary-container": "#536bb0",
+              "primary-fixed-dim": "#72de5e",
+              "on-surface": "#181d15",
+              "surface-container": "#ebf0e3",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#72de5e",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "primary-container": "#008000",
+              "secondary": "#8a5100",
+              "on-secondary-fixed": "#2c1600",
+              "inverse-surface": "#2d322a",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-container-highest": "#e0e4d8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 100, 0, 0.1);
+            border-top: 3px solid #008000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .flag-gradient {
+            background: linear-gradient(to right, #FF9900 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #008000 66.66%);
+        }
+        .mesh-bg {
+            background-color: #f7fbee;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(254, 152, 0, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 128, 0, 0.1) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background flex flex-col items-center justify-center min-h-screen mesh-bg">
+<!-- Content Wrapper to prevent overflow and ensure centering -->
+<main class="relative w-full max-w-[430px] px-8 flex flex-col items-center justify-between h-[751px] text-center">
+<!-- Top Section: Flag Motif -->
+<header class="w-full flex flex-col items-center gap-4">
+<div class="w-24 h-1.5 rounded-full flag-gradient opacity-80 mb-2"></div>
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="gavel">gavel</span>
+</header>
+<!-- Middle Section: Brand Identity -->
+<section class="flex flex-col items-center gap-6">
+<div class="space-y-1">
+<h1 class="text-4xl md:text-5xl font-black text-primary tracking-tighter uppercase leading-none">
+                  <a href="inscription_screen.html"> Tribunal <span class="text-on-background">de</span><br/>
+<span class="text-secondary-container">Yopougon</span></a>
+</h1>
+<div class="h-1 w-12 bg-secondary-container mx-auto rounded-full mt-4"></div>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline font-bold">
+                    Notre Mission
+                </p>
+<div class="flex items-center justify-center gap-3 text-sm font-medium text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                        Justice
+                    </span>
+<span class="text-outline-variant">/</span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-white border border-outline-variant"></span>
+                        Intégrité
+                    </span>
+<span class="text-outline-variant">/</span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                        Modernité
+                    </span>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Loading & Footer -->
+<footer class="w-full flex flex-col items-center gap-10">
+<div class="flex flex-col items-center gap-4">
+<div class="spinner"></div>
+<p class="text-xs font-medium text-outline tracking-wide">Sécurisation des données en cours...</p>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface">République de Côte d'Ivoire</p>
+<div class="flex gap-2">
+<div class="w-3 h-1 bg-[#FF9900] rounded-sm"></div>
+<div class="w-3 h-1 bg-white border border-zinc-200 rounded-sm"></div>
+<div class="w-3 h-1 bg-[#008000] rounded-sm"></div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Background Decorative Elements (Non-Overflowing) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
+</div>
+</body></html>

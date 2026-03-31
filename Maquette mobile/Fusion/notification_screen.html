@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#ffdcbd",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f1f5e9",
+              "on-tertiary-fixed": "#00174a",
+              "on-background": "#181d15",
+              "surface-dim": "#d7dccf",
+              "surface-container-high": "#e5eadd",
+              "tertiary": "#3a5296",
+              "on-secondary-container": "#643900",
+              "outline": "#6f7a69",
+              "background": "#f7fbee",
+              "surface-variant": "#e0e4d8",
+              "surface-tint": "#006e00",
+              "secondary-fixed-dim": "#ffb86f",
+              "on-primary-container": "#ccffba",
+              "inverse-on-surface": "#eef2e6",
+              "surface": "#f7fbee",
+              "primary-fixed": "#8dfb77",
+              "tertiary-fixed-dim": "#b3c5ff",
+              "surface-bright": "#f7fbee",
+              "on-tertiary-fixed-variant": "#2a4386",
+              "on-tertiary-container": "#eff0ff",
+              "on-primary-fixed": "#002200",
+              "outline-variant": "#becab6",
+              "on-surface-variant": "#3f4a3a",
+              "on-secondary-fixed-variant": "#693c00",
+              "on-primary-fixed-variant": "#005300",
+              "secondary-container": "#fe9800",
+              "primary": "#006400",
+              "tertiary-container": "#536bb0",
+              "primary-fixed-dim": "#72de5e",
+              "on-surface": "#181d15",
+              "surface-container": "#ebf0e3",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#72de5e",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "primary-container": "#008000",
+              "secondary": "#8a5100",
+              "on-secondary-fixed": "#2c1600",
+              "inverse-surface": "#2d322a",
+              "tertiary-fixed": "#dbe1ff",
+              "surface-container-highest": "#e0e4d8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-[0_12px_32px_rgba(0,35,102,0.06)]">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-800 dark:text-green-500" data-icon="gavel">gavel</span>
+<h1 class="font-['Inter'] tracking-tight font-bold text-lg text-green-800 dark:text-green-500">Tribunal de Yopougon</h1>
+</div>
+<span class="material-symbols-outlined text-zinc-500 hover:bg-zinc-100 p-2 rounded-full transition-colors active:scale-95 duration-200" data-icon="account_balance">account_balance</span>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto space-y-8">
+<!-- Title & Filter Section -->
+<section class="flex flex-col gap-2">
+<h2 class="text-[2.75rem] font-black leading-tight tracking-tighter text-on-surface">Alertes</h2>
+<p class="text-on-surface-variant leading-relaxed">Restez informé de l'évolution de vos procédures judiciaires.</p>
+<div class="flex gap-2 mt-4 overflow-x-auto no-scrollbar pb-2">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap active:scale-95 transition-transform">Toutes</button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap active:scale-95 transition-transform">Non lues</button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap active:scale-95 transition-transform">Procès</button>
+</div>
+</section>
+<!-- Notification Feed -->
+<section class="space-y-4">
+<!-- Group Heading -->
+<div class="flex items-center gap-4 py-2">
+<span class="text-[0.75rem] font-bold tracking-[0.1em] text-outline uppercase">Aujourd'hui</span>
+<div class="h-px flex-1 bg-surface-container-high"></div>
+</div>
+<!-- Notification Card: Unread -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex gap-4 relative overflow-hidden group hover:bg-surface-container transition-colors duration-300">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex-shrink-0 w-12 h-12 bg-primary-container/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-on-surface leading-tight">Audience confirmée</h3>
+<span class="text-[10px] font-bold text-primary bg-primary-container/30 px-2 py-0.5 rounded-full">NOUVEAU</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Votre plainte #2024-YP-098 a été programmée pour le 15 Octobre à 09:00.</p>
+<p class="text-[11px] text-outline font-medium pt-1">Il y a 2 heures • Bureau 4B</p>
+</div>
+</div>
+<!-- Notification Card: Unread Message -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex gap-4 relative overflow-hidden group hover:bg-surface-container transition-colors duration-300">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex-shrink-0 w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="quick_phrases">quick_phrases</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-on-surface leading-tight">Message du Greffier</h3>
+<div class="w-2.5 h-2.5 bg-primary rounded-full ring-4 ring-primary/10"></div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Des pièces complémentaires sont requises pour finaliser votre dossier civil.</p>
+<p class="text-[11px] text-outline font-medium pt-1">Il y a 5 heures • Dossier #882</p>
+</div>
+</div>
+<!-- Group Heading -->
+<div class="flex items-center gap-4 py-2 mt-6">
+<span class="text-[0.75rem] font-bold tracking-[0.1em] text-outline uppercase">Hier</span>
+<div class="h-px flex-1 bg-surface-container-high"></div>
+</div>
+<!-- Notification Card: Read -->
+<div class="bg-surface-container-low/50 p-5 rounded-xl flex gap-4 opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div class="flex-1 space-y-1">
+<h3 class="font-semibold text-on-surface leading-tight">Document scanné</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">L'acte de naissance fourni a été validé par le service de vérification.</p>
+<p class="text-[11px] text-outline font-medium pt-1">Hier, 14:20</p>
+</div>
+</div>
+<!-- Notification Card: System Alert -->
+<div class="bg-surface-container-low/50 p-5 rounded-xl flex gap-4 opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div class="flex-1 space-y-1">
+<h3 class="font-semibold text-on-surface leading-tight">Connexion sécurisée</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Une nouvelle connexion a été détectée depuis un appareil mobile à Abidjan.</p>
+<p class="text-[11px] text-outline font-medium pt-1">Hier, 08:45</p>
+</div>
+</div>
+</section>
+<!-- Empty State Anchor (Hidden by default, for structure) -->
+<section class="hidden flex flex-col items-center justify-center py-20 text-center px-8">
+<div class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-outline-variant" data-icon="notifications_off">notifications_off</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Tout est calme</h3>
+<p class="text-on-surface-variant text-sm">Vous n'avez pas de nouvelles notifications pour le moment.</p>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md z-50 rounded-t-[1.5rem] shadow-[0_-8px_24px_rgba(0,35,102,0.04)]">
+<!-- Accueil -->
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Accueil</span>
+</a>
+<!-- Mes Plaintes -->
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="folder_shared">folder_shared</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Mes Plaintes</span>
+</a>
+<!-- Notifications (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-900 dark:text-orange-400 rounded-2xl px-3 py-1.5 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Alertes</span>
+</a>
+<!-- Profil -->
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Profil</span>
+</a>
+</nav>
+</body></html>

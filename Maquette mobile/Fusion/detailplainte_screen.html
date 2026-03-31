@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f1f5e9",
+            "on-tertiary-fixed": "#00174a",
+            "on-background": "#181d15",
+            "surface-dim": "#d7dccf",
+            "surface-container-high": "#e5eadd",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "outline": "#6f7a69",
+            "background": "#f7fbee",
+            "surface-variant": "#e0e4d8",
+            "surface-tint": "#006e00",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#eef2e6",
+            "surface": "#f7fbee",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f7fbee",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-secondary-fixed-variant": "#693c00",
+            "on-primary-fixed-variant": "#005300",
+            "secondary-container": "#fe9800",
+            "primary": "#006400",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#181d15",
+            "surface-container": "#ebf0e3",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2d322a",
+            "tertiary-fixed": "#dbe1ff",
+            "surface-container-highest": "#e0e4d8"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-body min-h-screen pb-24">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-[0_12px_32px_rgba(0,35,102,0.06)]">
+    <div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+      <button
+        class="text-green-800 dark:text-green-500 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <h1 class="font-['Inter'] tracking-tight font-bold text-lg text-green-800 dark:text-green-500">Tribunal de
+        Yopougon</h1>
+      <div class="text-green-800 dark:text-green-500">
+        <span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+      </div>
+    </div>
+  </header>
+  <main class="pt-20 px-4 max-w-md mx-auto space-y-6">
+    <!-- Status Header Section -->
+    <section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+      <div class="flex justify-between items-start mb-4">
+        <div class="space-y-1">
+          <span class="text-label-medium uppercase tracking-[0.05em] text-on-surface-variant text-xs font-bold">DOSSIER
+            N° 2024-YP-882</span>
+          <h2 class="text-headline-small font-bold text-on-surface leading-tight">Litige Foncier - Quartier Maroc</h2>
+        </div>
+        <div
+          class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+          En cours
+        </div>
+      </div>
+      <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+          <span class="material-symbols-outlined">account_balance</span>
+        </div>
+        <div>
+          <p class="text-xs text-on-surface-variant">Juge en charge</p>
+          <p class="text-sm font-semibold">M. le Juge Kouamé N'guessan</p>
+        </div>
+      </div>
+    </section>
+    <!-- Document Download Section (Bento Style) -->
+    <section class="space-y-3">
+      <h3 class="text-label-medium uppercase tracking-[0.05em] text-on-surface-variant font-bold px-1">Pièces Jointes
+      </h3>
+      <div class="grid grid-cols-2 gap-3">
+        <div
+          class="bg-surface-container-high p-4 rounded-xl flex flex-col justify-between aspect-square active:scale-95 transition-transform">
+          <span class="material-symbols-outlined text-tertiary text-3xl">picture_as_pdf</span>
+          <div>
+            <p class="text-sm font-bold line-clamp-1">Acte de Cession</p>
+            <p class="text-[10px] text-on-surface-variant">PDF • 2.4 MB</p>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-high p-4 rounded-xl flex flex-col justify-between aspect-square active:scale-95 transition-transform">
+          <span class="material-symbols-outlined text-tertiary text-3xl">description</span>
+          <div>
+            <p class="text-sm font-bold line-clamp-1">Plainte Initiale</p>
+            <p class="text-[10px] text-on-surface-variant">DOCX • 1.1 MB</p>
+          </div>
+        </div>
+        <div
+          class="col-span-2 bg-surface-container-high p-4 rounded-xl flex items-center gap-4 active:scale-95 transition-transform">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-tertiary">
+            <span class="material-symbols-outlined">image</span>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-bold">Photos du Site</p>
+            <p class="text-[10px] text-on-surface-variant">ZIP • 15.8 MB</p>
+          </div>
+          <span class="material-symbols-outlined text-on-surface-variant">download</span>
+        </div>
+      </div>
+    </section>
+    <!-- Vertical Timeline (The Progress Totem) -->
+    <section class="space-y-4">
+      <h3 class="text-label-medium uppercase tracking-[0.05em] text-on-surface-variant font-bold px-1">Historique du
+        Dossier</h3>
+      <div
+        class="relative pl-8 space-y-8 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant">
+        <!-- Timeline Item 1 -->
+        <div class="relative">
+          <div
+            class="absolute -left-8 mt-1 w-[24px] h-[24px] rounded-full bg-primary flex items-center justify-center z-10">
+            <span class="material-symbols-outlined text-white text-[16px]">check</span>
+          </div>
+          <div class="bg-surface-container-low p-4 rounded-xl">
+            <p class="text-[10px] font-bold text-primary mb-1 uppercase tracking-wider">12 MARS 2024 • 09:30</p>
+            <h4 class="text-sm font-bold">Dépôt de la plainte</h4>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Dossier reçu et validé par le secrétariat du
+              Greffe central de Yopougon.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="relative">
+          <div
+            class="absolute -left-8 mt-1 w-[24px] h-[24px] rounded-full bg-primary flex items-center justify-center z-10">
+            <span class="material-symbols-outlined text-white text-[16px]">check</span>
+          </div>
+          <div class="bg-surface-container-low p-4 rounded-xl">
+            <p class="text-[10px] font-bold text-primary mb-1 uppercase tracking-wider">15 MARS 2024 • 14:15</p>
+            <h4 class="text-sm font-bold">Assignation du Juge</h4>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Le dossier a été transmis au cabinet n°4
+              pour instruction préliminaire.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 3 (Current/Active) -->
+        <div class="relative">
+          <div
+            class="absolute -left-8 mt-1 w-[24px] h-[24px] rounded-full bg-secondary-container flex items-center justify-center z-10 ring-4 ring-orange-100 animate-pulse">
+            <span class="material-symbols-outlined text-on-secondary-container text-[16px]">schedule</span>
+          </div>
+          <div class="bg-surface-container-lowest border-2 border-secondary-container p-4 rounded-xl shadow-sm">
+            <p class="text-[10px] font-bold text-secondary mb-1 uppercase tracking-wider">EN COURS • PRÉVU LE 28 MARS
+            </p>
+            <h4 class="text-sm font-bold text-on-surface">Audience de Conciliation</h4>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Veuillez vous présenter en Salle C munis de
+              vos originaux.</p>
+            <div class="mt-3 flex gap-2">
+              <button
+                class="bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-lg flex items-center gap-1">
+                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                RAPPEL
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Timeline Item 4 (Future) -->
+        <div class="relative">
+          <div
+            class="absolute -left-8 mt-1 w-[24px] h-[24px] rounded-full bg-outline-variant flex items-center justify-center z-10">
+            <span class="material-symbols-outlined text-white text-[16px]">radio_button_unchecked</span>
+          </div>
+          <div class="opacity-50 p-4">
+            <p class="text-[10px] font-bold text-on-surface-variant mb-1 uppercase tracking-wider">ÉTAPE SUIVANTE</p>
+            <h4 class="text-sm font-bold">Délibéré Final</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Help Card -->
+    <section class="bg-tertiary-container rounded-2xl p-6 text-on-tertiary-container flex items-center justify-between">
+      <div class="space-y-1">
+        <h4 class="font-bold">Besoin d'assistance ?</h4>
+        <p class="text-xs opacity-90">Contactez le greffe pour plus d'infos</p>
+      </div>
+      <button class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+        <span class="material-symbols-outlined">support_agent</span>
+      </button>
+    </section>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="fixed bottom-0 left-0 right-0 w-full bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md z-50 rounded-t-[1.5rem] shadow-[0_-8px_24px_rgba(0,35,102,0.04)]">
+    <div class="fixed bottom-0 left-0 right-0 w-full flex justify-around items-center px-4 pb-6 pt-3">
+      <div
+        class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all duration-200">
+       <span class="material-symbols-outlined" data-icon="home"><a href="code.html"> home</a></span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Accueil</span>
+      </div>
+      
+      <div
+        class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-900 dark:text-orange-400 rounded-2xl px-3 py-1.5 transition-all active:scale-90 duration-200">
+        <span class="material-symbols-outlined" data-icon="folder_shared"
+          style="font-variation-settings: 'FILL' 1;"><a href="mesplaintes_screen.html">folder_shared</a></span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Mes Plaintes</span>
+      </div>
+      
+      <div
+        class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all duration-200">
+        <span class="material-symbols-outlined" data-icon="add_circle"><a href="deposerplainte_screen.html">add_circle</a></span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Déposer</span>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all duration-200">
+        <span class="material-symbols-outlined" data-icon="person"><a href="profil_screen.html">person</a></span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Profil</span>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>

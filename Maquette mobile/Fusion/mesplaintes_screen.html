@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Tribunal de Yopougon - Mes Plaintes</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f1f5e9",
+            "on-tertiary-fixed": "#00174a",
+            "on-background": "#181d15",
+            "surface-dim": "#d7dccf",
+            "surface-container-high": "#e5eadd",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "outline": "#6f7a69",
+            "background": "#f7fbee",
+            "surface-variant": "#e0e4d8",
+            "surface-tint": "#006e00",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#eef2e6",
+            "surface": "#f7fbee",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f7fbee",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-secondary-fixed-variant": "#693c00",
+            "on-primary-fixed-variant": "#005300",
+            "secondary-container": "#fe9800",
+            "primary": "#006400",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#181d15",
+            "surface-container": "#ebf0e3",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2d322a",
+            "tertiary-fixed": "#dbe1ff",
+            "surface-container-highest": "#e0e4d8"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fbee;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_12px_32px_rgba(0,35,102,0.06)]">
+    <div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+      <span class="material-symbols-outlined text-green-800" data-icon="gavel">gavel</span>
+      <h1 class="font-['Inter'] tracking-tight font-bold text-lg text-green-800">Tribunal de Yopougon</h1>
+      <span class="material-symbols-outlined text-green-800" data-icon="account_balance">account_balance</span>
+    </div>
+  </header>
+  <main class="pt-20 pb-28 px-4 max-w-md mx-auto">
+    <!-- Editorial Header -->
+    <header class="mb-8 mt-4">
+      <span class="text-[0.75rem] font-bold tracking-[0.05em] uppercase text-secondary mb-2 block">Portail
+        Citoyen</span>
+      <h2 class="text-3xl font-extrabold tracking-tight text-on-background leading-tight">Mes Plaintes</h2>
+      <p class="text-on-surface-variant text-sm mt-2 leading-relaxed">Consultez l'état d'avancement de vos procédures
+        judiciaires en temps réel.</p>
+    </header>
+    <!-- Filter Chips Section -->
+    <div class="flex gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar">
+      <button
+        class="bg-primary text-on-primary px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap active:scale-95 transition-all">Tout</button>
+      <button
+        class="bg-surface-container-high text-on-surface-variant px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap active:scale-95 transition-all">En
+        cours</button>
+      <button
+        class="bg-surface-container-high text-on-surface-variant px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap active:scale-95 transition-all">Validées</button>
+      <button
+        class="bg-surface-container-high text-on-surface-variant px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap active:scale-95 transition-all">Archivées</button>
+    </div>
+    <!-- Complaints Vertical List -->
+    <div class="space-y-4">
+      <!-- Complaint Card 1 -->
+       <a href="detailplainte_screen.html">
+      <div
+        class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border-l-4 border-secondary flex flex-col gap-3 active:scale-[0.98] transition-transform">
+        <div class="flex justify-between items-start">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-outline">N° 2024-YP-0892</span>
+          <div class="flex items-center gap-1.5 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            <span class="text-[10px] font-bold uppercase">En instruction</span>
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-on-surface leading-snug">Litige de propriété foncière - Quartier Niangon</h3>
+        <div class="flex items-center justify-between mt-1">
+          <div class="flex items-center gap-2 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+            <span class="text-xs font-medium">Déposée le 12 Mars 2024</span>
+          </div>
+          <span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward_ios"
+            style="font-size: 16px;">arrow_forward_ios</span>
+        </div>
+      </div>
+      </a>
+      <!-- Complaint Card 2 -->
+      <div
+        class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border-l-4 border-primary flex flex-col gap-3 active:scale-[0.98] transition-transform">
+        <div class="flex justify-between items-start">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-outline">N° 2024-YP-0421</span>
+          <div class="flex items-center gap-1.5 bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span class="text-[10px] font-bold uppercase">Validée</span>
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-on-surface leading-snug">Plainte pour nuisances sonores nocturnes</h3>
+        <div class="flex items-center justify-between mt-1">
+          <div class="flex items-center gap-2 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+            <span class="text-xs font-medium">Déposée le 05 Février 2024</span>
+          </div>
+          <span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward_ios"
+            style="font-size: 16px;">arrow_forward_ios</span>
+        </div>
+      </div>
+      <!-- Complaint Card 3 -->
+      <div
+        class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border-l-4 border-tertiary flex flex-col gap-3 active:scale-[0.98] transition-transform opacity-80">
+        <div class="flex justify-between items-start">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-outline">N° 2023-YP-1105</span>
+          <div class="flex items-center gap-1.5 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            <span class="text-[10px] font-bold uppercase">Clôturée</span>
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-on-surface leading-snug">Demande d'acte de notoriété - Succession</h3>
+        <a href="jugementfinal_screen.html">
+        <div class="flex items-center justify-between mt-1">
+          <div class="flex items-center gap-2 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+            <span class="text-xs font-medium">Déposée le 20 Déc. 2023</span>
+          </div>
+          <span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward_ios"
+            style="font-size: 16px;">arrow_forward_ios</span>
+        </div>
+        </a>
+      </div>
+      <!-- Complaint Card 4 (Draft) -->
+      <div
+        class="bg-surface-container-high p-5 rounded-xl border-dashed border-2 border-outline-variant flex flex-col gap-3 active:scale-[0.98] transition-transform">
+        <div class="flex justify-between items-start">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Brouillon</span>
+          <div class="flex items-center gap-1.5 bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full">
+            <span class="material-symbols-outlined text-[14px]" data-icon="edit">edit</span>
+            <a href="deposerplainte_screen.html"><span class="text-[10px] font-bold uppercase">Reprendre</span></a>
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-on-surface-variant/70 leading-snug italic">Sans titre</h3>
+        <div class="flex items-center justify-between mt-1">
+          <div class="flex items-center gap-2 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px]" data-icon="update">update</span>
+            <span class="text-xs font-medium">Modifié il y a 2 jours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Empty State Visual Cue (Subtle) -->
+    <div class="mt-12 text-center p-8 border-2 border-dashed border-outline-variant/30 rounded-3xl">
+      <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-4">
+        <span class="material-symbols-outlined text-3xl text-outline-variant" data-icon="note_add">note_add</span>
+      </div>
+      <p class="text-on-surface-variant text-sm font-medium">Besoin d'aide pour une nouvelle démarche ?</p>
+      <button class="mt-4 text-primary font-bold text-sm underline decoration-2 underline-offset-4">Consulter le guide
+        juridique</button>
+    </div>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="fixed bottom-0 left-0 right-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/70 backdrop-blur-md rounded-t-[1.5rem] shadow-[0_-8px_24px_rgba(0,35,102,0.04)] z-50">
+    <a class="flex flex-col items-center justify-center text-zinc-500 px-3 py-1.5 active:scale-90 transition-transform"
+      href="code.html">
+      <span class="material-symbols-outlined" data-icon="home">home</span>
+      <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Accueil</span>
+    </a>
+    <a class="flex flex-col items-center justify-center bg-orange-100 text-orange-900 rounded-2xl px-3 py-1.5 transition-all active:scale-90"
+      href="mesplaintes_screen.html">
+      <span class="material-symbols-outlined" data-icon="folder_shared"
+        style="font-variation-settings: 'FILL' 1;">folder_shared</span>
+      <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Mes Plaintes</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-zinc-500 px-3 py-1.5 active:scale-90 transition-transform"
+      href="deposerplainte_screen.html">
+      <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+      <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Déposer</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-zinc-500 px-3 py-1.5 active:scale-90 transition-transform"
+      href="profil_screen.html">
+      <span class="material-symbols-outlined" data-icon="person">person</span>
+      <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Profil</span>
+    </a>
+  </nav>
+</body>
+
+</html>

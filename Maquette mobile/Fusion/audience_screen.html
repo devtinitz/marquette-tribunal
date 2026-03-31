@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f1f5e9",
+            "on-tertiary-fixed": "#00174a",
+            "on-background": "#181d15",
+            "surface-dim": "#d7dccf",
+            "surface-container-high": "#e5eadd",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "outline": "#6f7a69",
+            "background": "#f7fbee",
+            "surface-variant": "#e0e4d8",
+            "surface-tint": "#006e00",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#eef2e6",
+            "surface": "#f7fbee",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f7fbee",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-secondary-fixed-variant": "#693c00",
+            "on-primary-fixed-variant": "#005300",
+            "secondary-container": "#fe9800",
+            "primary": "#006400",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#181d15",
+            "surface-container": "#ebf0e3",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2d322a",
+            "tertiary-fixed": "#dbe1ff",
+            "surface-container-highest": "#e0e4d8"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen pb-24">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-[0_12px_32px_rgba(0,35,102,0.06)]">
+    <div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-green-800 dark:text-green-500" data-icon="gavel">gavel</span>
+        <h1 class="font-['Inter'] tracking-tight font-bold text-lg text-green-900 dark:text-green-50">Tribunal de
+          Yopougon</h1>
+      </div>
+      <span class="material-symbols-outlined text-zinc-500" data-icon="account_balance">account_balance</span>
+    </div>
+  </header>
+  <main class="pt-20 px-4 max-w-md mx-auto space-y-6">
+    <!-- Header Section: Editorial Voice -->
+    <section class="mt-4">
+      <span class="text-[0.75rem] font-bold tracking-[0.05em] text-secondary uppercase">Convocation Officielle</span>
+      <h2 class="text-[2.75rem] font-extrabold leading-tight tracking-tighter text-on-surface mt-1">Détails de
+        l'Audience</h2>
+    </section>
+    <!-- Case Summary Card: Modern Docket Style -->
+    <div
+      class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border-l-4 border-primary">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <p class="text-[0.75rem] font-bold tracking-[0.05em] text-outline uppercase mb-1">N° DE DOSSIER</p>
+          <p class="text-xl font-bold text-on-surface">CIV-2023-4492</p>
+        </div>
+        <div class="bg-primary/10 px-3 py-1 rounded-full">
+          <span class="text-primary text-xs font-bold uppercase">Confirmée</span>
+        </div>
+      </div>
+      <h3 class="text-lg font-semibold text-on-surface mb-2">Litige Foncier : Zone Industrielle vs. Particuliers</h3>
+      <p class="text-on-surface-variant text-sm leading-relaxed">Présence obligatoire du plaignant et des témoins cités
+        dans le dossier.</p>
+    </div>
+    <!-- Time and Room: Bento-lite Layout -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-2">
+        <span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+        <div>
+          <p class="text-[0.65rem] font-bold text-outline uppercase">DATE</p>
+          <p class="text-md font-bold text-on-surface">14 Nov. 2023</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-2">
+        <span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+        <div>
+          <p class="text-[0.65rem] font-bold text-outline uppercase">HEURE</p>
+          <p class="text-md font-bold text-on-surface">08:30 GMT</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-high p-4 rounded-xl col-span-2 flex items-center gap-4">
+        <div class="bg-secondary rounded-lg p-2 text-white flex items-center justify-center">
+          <span class="material-symbols-outlined" data-icon="meeting_room">meeting_room</span>
+        </div>
+        <div>
+          <p class="text-[0.65rem] font-bold text-outline uppercase">SALLE D'AUDIENCE</p>
+          <p class="text-lg font-bold text-on-surface">Chambre Civile 3 - 1er Étage</p>
+        </div>
+      </div>
+    </div>
+    <!-- Map Section: Tonal Layering -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between">
+        <h4 class="text-md font-bold text-on-surface">Localisation du Tribunal</h4>
+        <span class="text-xs font-medium text-tertiary">Yopougon, Abidjan</span>
+      </div>
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-sm group">
+        <img alt="Map of Yopougon" class="w-full h-full object-cover grayscale-[20%]"
+          data-alt="Modern satellite map view of Abidjan Yopougon urban grid with a pin marker on a large governmental judicial building complex"
+          data-location="Yopougon, Ivory Coast"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9kk1Wki7d8JM3vmOPZpMRK150R9dbuz6717ydNTaIaza0PmZAwb9bXZYkVmjMqKXPAAMLvDzvDo4eZvJbe9CMSiGbuzK8A51CRbT1pzY8-42_nuyPKdQgMS352sd9LQOXex7io02ZYwLas3iAjeylM_9T5DASE5OIvpl-oKUIWnUX6sFh8SdNcYuYtDlvfDndZp6uHTy_bjnlYHudfXxCK_64NZuu2e7dXkMUaYAOWmF4MQCiqTnNurPhUnUp5skG964meTuZn6wU" />
+        <div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent"></div>
+        <!-- Map Marker Overlay -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <div class="bg-primary text-white p-3 rounded-full shadow-lg border-2 border-white animate-bounce">
+            <span class="material-symbols-outlined" data-icon="location_on"
+              style="font-variation-settings: 'FILL' 1;">location_on</span>
+          </div>
+          <div class="mt-2 bg-white px-3 py-1 rounded-lg shadow-md">
+            <p class="text-[10px] font-bold text-on-surface whitespace-nowrap">TRIBUNAL DE YOPOUGON</p>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <button
+            class="w-full bg-white/90 backdrop-blur-md text-on-surface font-bold py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow-lg">
+            <span class="material-symbols-outlined text-secondary" data-icon="near_me">near_me</span>
+            Itinéraire avec Google Maps
+          </button>
+        </div>
+      </div>
+      <p class="text-xs text-on-surface-variant flex items-start gap-2 italic">
+        <span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+        Le tribunal est situé à proximité du Palais de Justice, accessible par la voie principale de Yopougon-Andokoi.
+      </p>
+    </section>
+    <!-- Progress Totem Placeholder -->
+    <div class="bg-surface-container-low p-6 rounded-xl space-y-4">
+      <p class="text-[0.75rem] font-bold text-outline uppercase tracking-widest">ÉTAPE ACTUELLE</p>
+      <div class="flex items-center gap-4">
+        <div class="relative">
+          <div class="w-4 h-4 rounded-full bg-secondary ring-4 ring-secondary/20"></div>
+          <div class="absolute top-4 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-outline-variant/30"></div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-bold text-on-surface">Audience de Mise en État</span>
+          <span class="text-xs text-on-surface-variant">En attente de comparution</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="fixed bottom-0 w-full z-50 rounded-t-[1.5rem] bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-[0_-8px_24px_rgba(0,35,102,0.04)]">
+    <div class="fixed bottom-0 left-0 right-0 w-full flex justify-around items-center px-4 pb-6 pt-3">
+      <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all"
+        href="code.html">
+        <span class="material-symbols-outlined" data-icon="home">home</span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Accueil</span>
+      </a>
+      <a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-900 dark:text-orange-400 rounded-2xl px-3 py-1.5 active:scale-90 transition-all"
+        href="mesplaintes_screen.html">
+        <span class="material-symbols-outlined" data-icon="folder_shared"
+          style="font-variation-settings: 'FILL' 1;">folder_shared</span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Mes Plaintes</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all"
+        href="deposerplainte_screen.html">
+        <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Déposer</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1.5 hover:text-green-700 active:scale-90 transition-all"
+        href="profil_screen.html">
+        <span class="material-symbols-outlined" data-icon="person">person</span>
+        <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Profil</span>
+      </a>
+    </div>
+  </nav>
+</body>
+
+</html>

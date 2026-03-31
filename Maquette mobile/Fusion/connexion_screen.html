@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Custom focused state for inputs as per design system */
+    .input-focus-ring:focus-within {
+      box-shadow: 0 0 0 2px #fe9800;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdcbd",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f1f5e9",
+            "on-tertiary-fixed": "#00174a",
+            "on-background": "#181d15",
+            "surface-dim": "#d7dccf",
+            "surface-container-high": "#e5eadd",
+            "tertiary": "#3a5296",
+            "on-secondary-container": "#643900",
+            "outline": "#6f7a69",
+            "background": "#f7fbee",
+            "surface-variant": "#e0e4d8",
+            "surface-tint": "#006e00",
+            "secondary-fixed-dim": "#ffb86f",
+            "on-primary-container": "#ccffba",
+            "inverse-on-surface": "#eef2e6",
+            "surface": "#f7fbee",
+            "primary-fixed": "#8dfb77",
+            "tertiary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f7fbee",
+            "on-tertiary-fixed-variant": "#2a4386",
+            "on-tertiary-container": "#eff0ff",
+            "on-primary-fixed": "#002200",
+            "outline-variant": "#becab6",
+            "on-surface-variant": "#3f4a3a",
+            "on-secondary-fixed-variant": "#693c00",
+            "on-primary-fixed-variant": "#005300",
+            "secondary-container": "#fe9800",
+            "primary": "#006400",
+            "tertiary-container": "#536bb0",
+            "primary-fixed-dim": "#72de5e",
+            "on-surface": "#181d15",
+            "surface-container": "#ebf0e3",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#72de5e",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-container": "#008000",
+            "secondary": "#8a5100",
+            "on-secondary-fixed": "#2c1600",
+            "inverse-surface": "#2d322a",
+            "tertiary-fixed": "#dbe1ff",
+            "surface-container-highest": "#e0e4d8"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface-container-lowest text-on-surface min-h-screen flex flex-col items-center justify-center p-6 selection:bg-secondary-fixed">
+  <!-- Background Decorative Elements (Subtle Ivory Accents) -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-surface-container-low rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-surface-container-low rounded-full blur-3xl opacity-40"></div>
+  </div>
+  <!-- Main Container -->
+  <main class="w-full max-w-md flex flex-col space-y-10 relative z-10">
+    <!-- Branding Section -->
+    <header class="flex flex-col items-center text-center space-y-4">
+      <div class="w-20 h-20 bg-primary-container/10 flex items-center justify-center rounded-3xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-4xl" data-icon="gavel">gavel</span>
+      </div>
+      <div class="space-y-1">
+        <h1 class="text-3xl font-black text-primary tracking-tight font-headline">Tribunal de Yopougon</h1>
+        <p class="text-on-surface-variant font-medium text-sm tracking-wide">CITOYENNETÉ &amp; JUSTICE NUMÉRIQUE</p>
+      </div>
+    </header>
+    <!-- Form Section -->
+    <section class="space-y-8">
+      <div class="space-y-6">
+        <!-- Phone Number Field -->
+        <div class="space-y-2">
+          <label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.08em] ml-1">Numéro de
+            Téléphone</label>
+          <div
+            class="flex items-center bg-surface-container-high rounded-xl px-4 h-14 transition-all duration-200 input-focus-ring group">
+            <div class="flex items-center space-x-2 pr-3 border-r border-outline-variant/30">
+              <img alt="Côte d'Ivoire Flag" class="w-5 h-auto rounded-sm"
+                data-alt="close-up of the Ivory Coast national flag with orange, white and green vertical stripes in high resolution"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu4tf_ygeySUq4-TZqGKDgTwCUpEy9UqabBbyz2br4NrdJjFtmXXsA7NwbpnE9P9rFNxOchtE6kBgQBL5jfOtrHJgogOCiZveuZz2n4rV2VIIGvsFGSufN-XABevQfM7UVwAe-T8nfOuWlXnVXzWMaEqLyB6DDXsF-T8125McMZIgAmRaTVq43XuQjdDYMYE3ih5KFii6pF0dzQlPihuM74Snk5CeL8fAa5Dcady4OwzroZWAcS1usZbWvA44Gt_tGuhHNuRY_OdDq" />
+              <span class="text-on-surface font-semibold text-sm">+225</span>
+            </div>
+            <input
+              class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline/60 font-medium px-4 h-full outline-none appearance-none"
+              placeholder="00 00 00 00 00" type="tel" />
+            <span class="material-symbols-outlined text-outline/40 group-focus-within:text-secondary"
+              data-icon="smartphone">smartphone</span>
+          </div>
+        </div>
+        <!-- OTP Field -->
+        <div class="space-y-2">
+          <div class="flex justify-between items-end ml-1">
+            <label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.08em]">Code de
+              Vérification (OTP)</label>
+            <button
+              class="text-[10px] font-bold text-secondary uppercase tracking-wider hover:underline transition-all">Renvoyer</button>
+          </div>
+          <div
+            class="flex items-center bg-surface-container-high rounded-xl px-4 h-14 transition-all duration-200 input-focus-ring group">
+            <input
+              class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline/60 font-medium px-2 h-full outline-none tracking-[0.2em]"
+              maxlength="6" placeholder="Entrez le code à 6 chiffres" type="text" />
+            <span class="material-symbols-outlined text-outline/40 group-focus-within:text-secondary"
+              data-icon="lock_open">lock_open</span>
+          </div>
+        </div>
+      </div>
+      <!-- Action Buttons -->
+      <div class="space-y-4 pt-4">
+        <a href="code.html">
+          <button
+            class="w-full h-16 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-2">
+            <span>Se connecter</span>
+            <span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+          </button>
+        </a>
+        <div class="flex flex-col items-center space-y-4 pt-2">
+          <a class="text-sm font-semibold text-secondary hover:text-on-secondary-container transition-colors duration-200"
+            href="inscription_screen.html">
+            Créer un compte
+          </a>
+          <div class="flex items-center space-x-2 w-full">
+            <div class="h-[1px] flex-1 bg-outline-variant/20"></div>
+            <span class="text-[10px] font-bold text-outline/50 uppercase tracking-widest">Aide</span>
+            <div class="h-[1px] flex-1 bg-outline-variant/20"></div>
+          </div>
+          <p class="text-[11px] text-on-surface-variant/60 text-center leading-relaxed max-w-[280px]">
+            En vous connectant, vous acceptez les <span
+              class="text-tertiary underline decoration-tertiary/20">Conditions Générales d'Utilisation</span> du
+            portail judiciaire.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Branding -->
+    <footer class="mt-auto pt-10 text-center">
+      <div class="flex items-center justify-center space-x-4 opacity-30 grayscale contrast-125">
+        <span class="material-symbols-outlined text-2xl" data-icon="account_balance">account_balance</span>
+        <span class="material-symbols-outlined text-2xl" data-icon="shield">shield</span>
+        <span class="material-symbols-outlined text-2xl" data-icon="verified_user">verified_user</span>
+      </div>
+      <p class="mt-4 text-[10px] font-medium text-outline/40 uppercase tracking-[0.2em]">Ministère de la Justice • Côte
+        d'Ivoire</p>
+    </footer>
+  </main>
+  <!-- Support FAB (Contextual for Login) -->
+  <div class="fixed bottom-8 right-6">
+    <button
+      class="w-14 h-14 bg-surface-container-highest/80 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-sm text-tertiary active:scale-90 transition-all border border-white/20">
+      <span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+    </button>
+  </div>
+</body>
+
+</html>
